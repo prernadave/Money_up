@@ -1,0 +1,242 @@
+/* NavBar Media Query */
+@media only screen and (max-width: 670px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+
+    #nav-menu>div {
+        display: none;
+    }
+
+    .openbtn {
+        display: block;
+    }
+
+    .hidden {
+        display: block;
+        right: 0;
+    }
+
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .hidden {
+        display: none;
+    }
+
+    #nav-menu>div {
+        right: 0;
+        left: initial;
+    }
+
+    #nav-menu>div {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+}
+
+/* ---------------------------NAVBAR MEDIA QUERY ENDED--------------------------------------------- */
+
+/* ---------------------------BUTTON MEDIA QUERY ENDED--------------------------------------------- */
+
+@media all {
+    .button {
+        display: inline-block;
+        line-height: 1;
+        background-color: #818a91;
+        font-size: 15px;
+        padding: 12px 24px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        color: #fff;
+        fill: #fff;
+        text-align: center;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .animation-grow {
+        transition-duration: .3s;
+        transition-property: transform;
+    }
+
+    #button-tag {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        text-decoration: none;
+    }
+
+    #button-tag:visited {
+        color: #5fd657;
+    }
+
+    #button-tag:hover {
+        color: #1f88e4;
+    }
+}
+
+@media all {
+    .button {
+        width: auto;
+    }
+
+    /* .button:visited {
+        color: #aa2020;
+    } */
+
+    .button.size {
+        font-size: 16px;
+        padding: 15px 30px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        background-color: #8b4dfe;
+    }
+
+    .button:hover,
+    .button:visited {
+        color: #30db1d;
+    }
+
+    .animation-grow:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    #button-tag {
+        min-width: 238px;
+    }
+}
+
+/* ----------------------------ICON PARTS MEDIA QUERY--------------------------- */
+
+@media all {
+    li {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .icon-list-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-size: inherit;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .inline-item {
+        word-break: break-word;
+    }
+
+    .icon-list-item {
+        margin-right: 8px;
+        margin-left: 8px;
+        margin-right: calc(10px/2);
+        margin-left: calc(10px/2);
+    }
+}
+
+
+
+@media all {
+    .icon-list-item:after {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: auto;
+    }
+
+
+
+    .icon-list-item:after {
+        width: auto;
+        left: auto;
+        right: auto;
+        position: relative;
+        height: 100%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        border-top: 0;
+        border-bottom: 0;
+        border-right: 0;
+        border-left-width: 1px;
+        border-style: solid;
+        right: -8px;
+    }
+}
+
+@media all {
+
+
+    .icon-span {
+        display: flex;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        text-align: var(--e-icon-list-icon-align);
+    }
+
+    .icon-span+.icon-list-text {
+        -ms-flex-item-align: center;
+        align-self: center;
+        padding-left: 5px;
+    }
+
+    .icon-list-item .icon-list-text {
+        display: inline-block;
+    }
+}
+
+@media all {
+    i {
+        font-style: italic;
+    }
+
+    .fab {
+        display: inline-block;
+        font-family: "Font Awesome 5 Brands";
+        font-weight: 400;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+    }
+
+    .icon-span i {
+        width: 1.25em;
+        font-size: var(--e-icon-list-icon-size);
+    }
+}
+
+@media all {
+    .fa-apple:before {
+        content: "\f179";
+    }
+
+    .fa-android:before {
+        content: "\f17b";
+    }
+}

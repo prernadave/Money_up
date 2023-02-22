@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <link rel="stylesheet" href="./style/account.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="main_container">
+        <div id="account_header">Add / Edit Accounts
+            <p>Always keep a track of your money</p>
+        </div>
+        <div id="net_total"><label>Net Total : </label>160000</div>
+        <div id="render_container">
+            <div class="acc_box">
+                <div class="bnkname"><label>Bank : </label>Bank of Baroda</div>
+                <div class="accno"><label>Account.No : </label>121230909090</div>
+                <div class="bal"><label>Balance : </label>30000</div>
+                <button class="accbtn edit">Edit</button>
+                <button class="accbtn delete">Delete</button>
+            </div>
+            <div class="acc_box">
+                <div class="bnkname"><label>Bank : </label>Axis Bank</div>
+                <div class="accno"><label>Account.No : </label>121230904080</div>
+                <div class="bal"><label>Balance : </label>30000</div>
+                <button class="accbtn edit">Edit</button>
+                <button class="accbtn delete">Delete</button>
+            </div>
+            <div class="acc_box">
+                <div class="bnkname"><label>Bank : </label>Central Bank of India</div>
+                <div class="accno"><label>Account.No : </label>121230309090</div>
+                <div class="bal"><label>Balance : </label>100000</div>
+                <button class="accbtn edit">Edit</button>
+                <button class="accbtn delete">Delete</button>
+            </div>
+        </div>
+        <div id="add_box">
+            <form action=""id="add_form">
+                <input id="name" type="text" placeholder="Enter Bank Name" required>
+                <input id="acc_no" type="number" placeholder="Enter Account Number" required>
+                <input id="balance" type="number" placeholder="Enter Account Balance" required>
+                <!-- <input id="submit" type="submit" value="Create"> -->
+                <button type="submit" id="submit">Create</button>
+            </form>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
+<script src=""></script>

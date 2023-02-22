@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Roboto;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* ---------------------------NAVBAR STARTS--------------------------------------------- */
+
+#nav-menu {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    transition: all 0.5s ease-out;
+    padding: 3px;
+    max-width: 100%;
+    z-index: 3;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-colored {
+    background-color: #960018;
+    width: 100%;
+    z-index: 2;
+}
+
+#nav-menu>div {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+#nav-menu>div>a {
+    padding: 6px 11px;
+    font-size: 21px;
+    margin: 4px 10px;
+    color: rgb(35, 164, 85);
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: rgb(228, 222, 25);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    color: rgb(43, 212, 24);
+    font-size: larger;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #c02fdd;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bold;
+    color: rgb(43, 212, 24);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar>div {
+    margin-top: 51px;
+}
+
+.sidebar a:hover {
+    color: rgb(19, 19, 87);
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(53, 222, 44);
+    color: rgb(13, 20, 90);
+    padding: 10px 15px;
+    border: none;
+    display: none;
+}
+
+.openbtn:hover {
+    background-color: rgb(245, 227, 30);
+}
+
+#main {
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+    transition: all 0.5s ease-out;
+    z-index: 3;
+}
+
+/* ---------------------------NAVBAR ENDED--------------------------------------------- */
+
+
+.main_heading {
+    color: rgb(35, 164, 85);
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Roboto;
+    font-size: 40px;
+    line-height: 48px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    font-weight: 600;
+    text-transform: none;
+    text-decoration: none solid rgb(35, 164, 85);
+    text-align: center;
+    text-indent: 0px;
+    margin-top: 2%;
+
+}
+
+.small_para {
+    color: rgb(85, 89, 92);
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 27px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align: center;
+    text-indent: 0px;
+    text-decoration: none solid rgb(85, 89, 92);
+    margin-top: 1%;
+
+}
+
+/* --------------------------------BUTTON PART---------------------------------------------- */
+
+.button_part {
+    justify-content: center;
+    text-align: center;
+    margin-top: 1%;
+}
+
+ #button-tag {
+    min-width: 200px;
+    
+ } 
+
+.button {
+    font-family: "freight-sans-pro", Sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 40px 40px 40px 40px;
+
+}
+
+
+@media all {
+
+    .animation-grow:active,
+    .animation-grow:hover {
+        transform: scale(1.1);
+    }
+
+    span {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .button-content-wrapper {
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    span {
+        text-decoration: inherit;
+    }
+
+    .button-text {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+        order: 10;
+        display: inline-block;
+        color: #ffffff;
+    }
+}
+
+/* ---------------------------BUTTON PART ENDS------------------------------------------------------------------ */
+
+/* ----------------------------icons part starts----------------------------------------------------- */
+
+.icon-list-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 1%;
+}
+
+ul.icon-list-items.inline-items {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.icon-list-items.inline-items {
+    margin-right: -8px;
+    margin-left: -8px;
+    margin-right: calc(-10px/2);
+    margin-left: calc(-10px/2);
+}
+
+.inline-items {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.icon-list-item:not(:last-child):after {
+    content: "";
+    height: 100%;
+    border-color: #23a455;
+    border-left-width: 1px;
+    border-left-style: solid;
+}
+
+.icon-list-item:after {
+    right: calc(-10px/2);
+}
+
+.icon-list-item>.icon-list-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #23a455;
+}
+
+.icon-span i {
+    color: #23a455;
+}
+/* ----------------------------icons part ends----------------------------------------------------- */
+.spacer-inner  { 
+    height: 100px;
+} 
+
+
+.sec3{
+background-color: #23a455;
+padding: 120px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+.flex-div-text{
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    font-weight: 600;
+    text-transform: none;
+    text-indent: 0px;
+    
+}
+
+.flex-para{
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    font-weight: 400;
+    text-transform: none;
+    text-indent: 0px;
+    margin-bottom: 1%;
+}
+.flex-button{
+    font-family: "freight-sans-pro", Sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 40px 40px 40px 40px;
+    background: #ffffff;
+    padding: 2%;
+    border: none;
+}
+
+
+.sec5{
+    display: flex;
+ justify-content: space-around;
+}

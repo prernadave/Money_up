@@ -1,0 +1,201 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    /* background-color: rgba(194, 194, 194, 0.445); */
+    background-color: rgba(194, 194, 194, 0.548); 
+    /* background-color: #D0F0C0; */
+}
+
+#navbar{
+    width:100%;
+    height:65px;
+    background-color: rgb(62,163,100);
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+#main_container{
+    width:100%;
+    height: auto;
+    /* border:.5px solid red; */
+}
+
+#account_header{
+    width:100%;
+    background-color: none;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(62,163,100);
+    font-weight: 600;
+    padding: 8px 0px;
+}
+
+#account_header p{
+    font-size: 20px;
+    color: black;
+    font-weight: normal;
+}
+
+#add_box{
+    width:100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: none;
+}
+
+#add_box input{
+    padding:6px 30px;
+}
+#add_form{
+    width: 100%;
+}
+#submit{
+    background-color: rgb(62,163,100);
+    border: 1.5px solid rgb(62,163,100);
+    color: white;
+    padding: 4px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#submit:hover{
+    background-color:white;
+    color:rgb(62,163,100);
+}
+
+#net_total{
+    width:100%;
+    text-align: center;
+    /* background-color: aliceblue;  */
+    padding: 5px 0px;
+    font-size: 30px;
+    color: rgb(62,163,100);
+}
+
+
+
+
+#render_container{
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    min-height: 300px;
+    max-height: auto;
+}
+.acc_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(194, 194, 194, 0.548); 
+    /* background-color: #D0F0C0;  */
+    margin: 8px 0px;
+    font-size: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.bnkname{
+    width: 28%;
+    /* background-color: aliceblue; */
+}
+.accno{
+    width:28%;
+    /* background-color: aliceblue; */
+}
+.bal{
+    width:18%;
+     /* background-color: aliceblue;  */
+}
+.accbtn{
+    width:80px;
+    height:27px;
+    font-size: 16px;
+    background-color: rgb(62,163,100);
+    color: white;
+    border: 1.5px solid rgb(62,163,100);
+    border-radius: 5px;
+}
+.accbtn:hover{
+    background-color: white;
+    color: rgb(62,163,100);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 300px) and (max-width:749px) {
+    #add_form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    #render_container{
+        width: 80%;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        min-height: 300px;
+        max-height: auto;
+    }
+    .acc_box{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+        background-color: rgba(194, 194, 194, 0.548); 
+        /* background-color: #D0F0C0;  */
+        margin: 8px 0px;
+        font-size: 20px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .bnkname{
+        width: 28%;
+        /* background-color: aliceblue; */
+    }
+    .accno{
+        width:28%;
+        /* background-color: aliceblue; */
+    }
+    .bal{
+        width:18%;
+         /* background-color: aliceblue;  */
+    }
+    .accbtn{
+        width:80px;
+        height:27px;
+        font-size: 16px;
+        background-color: rgb(62,163,100);
+        color: white;
+        border: 1.5px solid rgb(62,163,100);
+        border-radius: 5px;
+    }
+    .accbtn:hover{
+        background-color: white;
+        color: rgb(62,163,100);
+    }
+
+
+
+
+
+}

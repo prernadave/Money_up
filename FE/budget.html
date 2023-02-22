@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/budget.css">
+</head>
+<body>
+    <!-- <nav></nav> -->
+
+
+    <!-- budget data mid-container -->
+    <div id="mid-container">
+      <h1 id="mid-cont-title">Budget For The Month</h1>
+      <div id="mid-cont-head">
+        <ul id="mid-main-head">
+            <div id="mid-main-task">Task Name</div>
+            <div id="mid-main-amnt">Amount</div>
+            <div id="mid-main-edit">Edit</div>
+            <div id="mid-main-delt">Delete</div>
+            <div id="mid-main-cmpl">Completed</div>
+        </ul>
+     </div>
+     <div id="main-data-container">
+        <div class="main-task-div">
+            <ul class="main-task-ul">
+                <div class="main-name-div">
+                    <input class="main-task-name" type="text" value="Coffe" readonly required>
+                </div>
+                <div class="main-amout-div">
+                    <input class="main-task-amount" type="Number" value="5000" readonly required>
+                </div>
+                <div class="main-edit-div">
+                    <img src="./budgetImages/edit_img.png" alt=""  class="main-task-edit">
+                </div>
+               <div  class="main-delete-div">
+                <img src="./budgetImages/delete_img.png" alt="" class="main-task-delete">
+               </div>
+                <div class="main-btn-div">
+                    <button class="main-task-completed">No</button>
+                </div>
+            </ul>
+        </div>
+     </div>
+    </div>
+    
+
+    <!-- form for create budget  -->
+    <div id="mid-bottom-form">
+        <form id="budget-fill-form">
+            <div id="task-name-div">
+                <label for="taskname">Task Name:</label>
+                <input id="ip-task-name" type="text" name="taskname" placeholder="Enter your task here...">
+            </div>
+            <div id="task-amt-div">
+                <label for="taskamt">Enter Amount:</label>
+                <input id="ip-task-amt" type="number" name="taskamt" placeholder="Enter your amout here...">
+            </div>
+           <div id="sub-btn-div">
+            <button id="submit-btn-butdget">Add Task</button>
+           </div>
+            <div id="ttl-amt-div">
+                <label for="amtspent">Amount Spended:</label>
+                <input id="ip-amt-spent" type="number" name="amtspent" placeholder="₹00,000/-" readonly>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="./script/budget.js"></script>
+</html>

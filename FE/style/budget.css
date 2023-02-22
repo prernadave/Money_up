@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#mid-container{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    margin-top: 2%;
+    height: 600px;
+    background-color: rgb(247, 245, 245);
+    border-radius: 8px;
+    padding:10px ;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+#mid-cont-title{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #D0F0C0;
+    text-align: center;
+    color: #00A550;
+}
+#mid-cont-head{
+    margin-top: 10px;
+    padding: 10px;
+}
+#mid-main-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    list-style: none;
+}
+#mid-main-task,#mid-main-amnt,#mid-main-edit,#mid-main-delt,#mid-main-cmpl{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 5px;
+    background-color: #50C878;
+    color: white;
+}
+#mid-main-task{
+    width: 34%;
+}
+#mid-main-amnt{
+    width: 20%;
+}
+#mid-main-edit,#mid-main-delt,#mid-main-cmpl{
+    width: 12%;
+}
+@media(min-width: 900px) and (max-width: 1100px){
+    #mid-main-task{
+        width: 36%;
+    }
+    #mid-main-amnt{
+        width: 15%;
+    }
+    #mid-main-edit,#mid-main-delt,#mid-main-cmpl{
+        width: 15%;
+    }
+}
+@media(min-width: 500px) and (max-width: 899px){
+    #mid-main-task,#mid-main-amnt,#mid-main-edit,#mid-main-delt,#mid-main-cmpl{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 17px;
+        font-weight: bolder;
+    }
+    #mid-main-task{
+        width: 35%;
+    }
+    #mid-main-amnt{
+        width: 15%;
+    }
+    #mid-main-edit,#mid-main-delt,#mid-main-cmpl{
+        width: 15%;
+    }
+}
+@media(min-width: 100px) and (max-width: 749px){
+    #mid-main-task,#mid-main-amnt,#mid-main-edit,#mid-main-delt,#mid-main-cmpl{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 10px;
+        font-weight: bolder;
+        border-radius: 2px;
+    }
+    #mid-main-task{
+        width: 33%;
+    }
+    #mid-main-amnt{
+        width: 18%;
+    }
+    #mid-main-edit,#mid-main-delt,#mid-main-cmpl{
+        width: 15%;
+    }
+}
+
+/* main container css */
+#main-data-container{
+    height: 400px;
+    /* background-color: #d5fcd5; */
+}
+
+#main-data-container{
+    overflow-y: scroll;
+}
+
+.main-task-div{
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+}
+.main-task-ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    list-style: none;
+}
+.main-task-ul div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+}
+.main-name-div{
+    width: 34%;
+}
+.main-amout-div{
+    width: 20%;
+}
+.main-edit-div,.main-delete-div,.main-btn-div{
+    width: 12%;
+}
+.main-task-ul input{
+    width: 98%;
+    height: 40px;
+    border: none;
+    font-size: 17px;
+    border-radius:2px;
+    background-color: #98FB98;
+    padding-left: 10px;
+
+}
+
+.main-task-edit{
+    width: 30px;
+}
+.main-task-delete{
+    width: 30px;
+}
+.main-task-completed{
+    padding: 7px 13px;
+    border: none;
+    background-color: red;
+    color: white;
+}
+@media(min-width: 900px) and (max-width: 1100px){
+    .main-task-ul input{
+        height: 30px;
+        font-size: 15px;
+    }
+    .main-name-div{
+        width: 36%;
+    }
+    .main-amout-div{
+        width: 15%;
+    }
+    .main-edit-div,.main-delete-div,.main-btn-div{
+        width: 15%;
+    }
+    .main-task-edit{
+        width: 25px;
+    }
+    .main-task-delete{
+        width: 25px;
+    }
+    .main-task-completed{
+        padding: 6px 11px;
+    }
+}
+
+@media(min-width: 500px) and (max-width: 899px){
+    .main-task-ul input{
+        height: 25px;
+        font-size: 15px;
+        padding-left: 3px;
+    }
+    .main-name-div{
+        width: 35%;
+    }
+    .main-amout-div{
+        width: 15%;
+    }
+    .main-edit-div,.main-delete-div,.main-btn-div{
+        width: 15%;
+    }
+    .main-task-edit{
+        width: 20px;
+    }
+    .main-task-delete{
+        width: 20px;
+    }
+    .main-task-completed{
+        padding: 6px 11px;
+    }
+}
+
+@media(min-width: 100px) and (max-width: 749px){
+    .main-task-ul input{
+        height: 20px;
+        font-size: 13px;
+        padding-left: 3px;
+    }
+    .main-name-div{
+        width: 33%;
+    }
+    .main-amout-div{
+        width: 18%;
+    }
+    .main-edit-div,.main-delete-div,.main-btn-div{
+        width: 15%;
+    }
+    .main-task-edit{
+        width: 20px;
+    }
+    .main-task-delete{
+        width: 20px;
+    }
+    .main-task-completed{
+        padding: 4px 6px;
+    }
+}
+
+
+/* budget submit form css  */
+
+#mid-bottom-form{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    background-color: #D0F0C0;
+    border-radius: 8px;
+    padding:10px;
+}
+
+
+#budget-fill-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+#budget-fill-form div label{
+    font-size: 20px;
+}
+#task-name-div,#task-amt-div,#ttl-amt-div{
+    width: 29%;
+    margin: auto;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+#sub-btn-div{
+    width: 10%;
+}
+#sub-btn-div button{
+    padding: 8px 18px;
+    font-size: 17px;
+    background-color: #1DB954;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-weight: bolder;
+}
+#sub-btn-div button:hover{
+    background-color:#50C878;
+}
+#task-name-div input,#task-amt-div input,#ttl-amt-div input{
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+}
+#task-name-div input{
+    width: 60%;
+}
+#task-amt-div input{
+    width: 55%;
+}
+#ttl-amt-div input{
+    width: 45%;
+}
+@media(min-width: 700px) and (max-width: 1250px){
+    #sub-btn-div button{
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    }
+    #task-name-div,#task-amt-div,#ttl-amt-div{
+       display: flex;
+       align-items: center;
+       flex-flow: column;
+    }
+    #budget-fill-form div label{
+        font-size: 17px;
+    }
+
+    #task-name-div input{
+        width: 80%;
+    }
+    #task-amt-div input{
+        width: 80%;
+    }
+    #ttl-amt-div input{
+        width: 80%;
+    }
+}
+@media(min-width: 100px) and (max-width: 699px){
+    #sub-btn-div{
+        width: 80%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    #sub-btn-div button{
+        padding: 10px 50px;
+    }
+    #budget-fill-form div label{
+        font-size: 15px;
+    }
+    #budget-fill-form{
+       flex-direction: column;
+    }
+    #task-name-div,#task-amt-div,#ttl-amt-div{
+        width: 80%;
+        padding: 10px;
+        background-color: #74C365;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    #task-name-div input{
+        width: 80%;
+    }
+    #task-amt-div input{
+        width: 80%;
+    }
+    #ttl-amt-div input{
+        width: 80%;
+    }
+}

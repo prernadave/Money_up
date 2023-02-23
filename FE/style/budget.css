@@ -158,7 +158,6 @@
 .main-task-completed{
     padding: 7px 13px;
     border: none;
-    background-color: red;
     color: white;
 }
 @media(min-width: 900px) and (max-width: 1100px){

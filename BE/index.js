@@ -3,13 +3,15 @@ require('dotenv').config();
 const { UserRouter } = require("./routes/Login_Sign_Up_Routes");
 const { connection } = require("./config/db");
 const {passport} = require("./config/google-outh");
+const {budgetRouter}=require("./routes/budget.route")
 // console.log(passport)
 const app = express();
 
 app.use(express.json());
 
 app.use("/user", UserRouter);
-
+app.use("/budget",budgetRouter)
+app.use()
 
 
 app.get("/", (req, res) => {

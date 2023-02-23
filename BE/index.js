@@ -1,12 +1,15 @@
 const express = require("express");
 require('dotenv').config();
+const cors = require("cors");
 const { UserRouter } = require("./routes/Login_Sign_Up_Routes");
 const { connection } = require("./config/db");
 const {passport} = require("./config/google-outh");
-// console.log(passport)
+
 const app = express();
 
 app.use(express.json());
+app.use(cors());
+
 
 app.use("/user", UserRouter);
 

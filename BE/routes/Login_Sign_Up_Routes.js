@@ -2,6 +2,7 @@ const express = require("express");
 require("dotenv").config();
 const { userModel } = require("../model/user-SignUP-Model");
 // const { authenticator } = require("../middleware/authentication");
+
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const UserRouter = express.Router();
@@ -33,7 +34,7 @@ UserRouter.post("/register", async (req, res) => {
           dob,
         });
         await User.save();
-        res.send(`Register Sucessfull`);
+        res.send({"message":`Register Sucessfull`});
       }
     });
     // console.log(hash)

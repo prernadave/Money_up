@@ -17,11 +17,12 @@
             <li id="brand_name">Money Up</li>
         </ul>
         <ul id="navsub2">
-            <li><a href="">Envelopes</a></li>
-            <li><a href="">Accounts</a></li>
+            <li><a href="home.html">Envelopes</a></li>
+            <li><a href="account.html">Accounts</a></li>
+            <li><a href="budget.html">My Budget</a></li>
             <li><a href="" onmouseover="toogle1on()">Help <i class="fa-sharp fa-solid fa-caret-down"></i></a>
                 <div id="toggle1" onmouseleave="toogle1off()">
-                    <a href=""> User Guide <i class="fa-sharp fa-solid fa-circle-info"></i></a>
+                    <a href="Userguide.html"> User Guide <i class="fa-sharp fa-solid fa-circle-info"></i></a>
                     <a href="">Get Live Support <i class="fa-solid fa-comments"></i></a>
                 </div>
             </li>
@@ -41,22 +42,38 @@
         </ul>
     </div>
 
+    <div id="Envelopes">
+        <div>
+            <div>
+                <img src="">
+                <div>
+                    <h1 id="user_name" class="head">Hi, chetannbhagat2!</h1>
+                    <p class="subhead">Welcome to Goodbudget! We're glad you're here.</p>
+                </div>
+            </div>
+            <div>
+                <div id="allaccounts">
+                    <h3 class="head">Total Funds: <span class="totalbalance">0</span></h3>
+                  <a href="account.html">Add/Edits</a>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div class="align_item_center">
+                <h2 class="head">Facing issue to make your budget!! </h2>
+                <p class="subhead">🔖 Don't worries, Add the expenses in the envelopes</p>
+            </div>
+            <img id="envelopes_img"
+                src="https://img.freepik.com/premium-vector/hand-giving-open-paper-envelope-with-money-man-person-receiving-criminal-bribe-flat-vector-illustration-shadow-business-bribery-corruption-concept-banner-website-design-landing-web-page_179970-7059.jpg?w=2000">
+
+        </div>
+
+    </div>
+
 </body>
 
 </html>
-<script>
-    let toggle1 = document.querySelector("#toggle1");
-    let toggle2 = document.querySelector("#toggle2");
-    function toogle1on() {
-        toggle1.style.display = "block";
-    }
-    function toogle1off() {
-        toggle1.style.display = "none";
-    }
-    function toggle2on() {
-        toggle2.style.display = "block";
-    }
-    function toggle2off() {
-        toggle2.style.display = "none";
-    }
+<script src='index.js'>
+
 </script>

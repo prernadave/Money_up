@@ -2,16 +2,21 @@ const express = require("express");
 require("dotenv").config();
 const { userModel } = require("../model/user-SignUP-Model");
 // const { authenticator } = require("../middleware/authentication");
+
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const UserRouter = express.Router();
+
 const{client}=require("../config/redis");
+
 
 UserRouter.get("/", (req, res) => {
   res.send(`User Route`);
 });
 
-UserRouter.post("/register",async (req, res) => {
+
+UserRouter.post("/register", async (req, res) => {
+
   const { email, name, password, mob_no, dob } = req.body;
 
   try {
@@ -30,7 +35,7 @@ UserRouter.post("/register",async (req, res) => {
           dob,
         });
         await User.save();
-        res.send(`Register Sucessfull`);
+        res.send({"message":`Register Sucessfull`});
       }
     });
     // console.log(hash)

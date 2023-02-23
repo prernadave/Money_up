@@ -62,10 +62,11 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #c02fdd;
+    background-color: #ffffff;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+
 }
 
 .sidebar a {
@@ -164,10 +165,10 @@ body {
     margin-top: 1%;
 }
 
- #button-tag {
+#button-tag {
     min-width: 200px;
-    
- } 
+
+}
 
 .button {
     font-family: "freight-sans-pro", Sans-serif;
@@ -267,22 +268,25 @@ ul.icon-list-items.inline-items {
 .icon-span i {
     color: #23a455;
 }
+
 /* ----------------------------icons part ends----------------------------------------------------- */
-.spacer-inner  { 
+.spacer-inner {
     height: 100px;
-} 
-
-
-.sec3{
-background-color: #23a455;
-padding: 120px;
 }
 
-.flex{
+
+.sec3 {
+    background-color: #23a455;
+    padding: 120px;
+}
+
+.flex {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+
 }
-.flex-div-text{
+
+.flex-div-text {
     color: #ffffff;
     font-size: 30px;
     line-height: 36px;
@@ -292,22 +296,23 @@ padding: 120px;
     font-weight: 600;
     text-transform: none;
     text-indent: 0px;
-    
+
 }
 
-.flex-para{
+.flex-para {
     color: #ffffff;
     font-size: 18px;
     line-height: 26px;
     text-align: left;
-    vertical-align: baseline;
+    /* vertical-align: baseline; */
     letter-spacing: normal;
     font-weight: 400;
     text-transform: none;
     text-indent: 0px;
     margin-bottom: 1%;
 }
-.flex-button{
+
+.flex-button {
     font-family: "freight-sans-pro", Sans-serif;
     font-size: 13px;
     font-weight: 600;
@@ -319,7 +324,268 @@ padding: 120px;
 }
 
 
-.sec5{
+.sec5 {
     display: flex;
- justify-content: space-around;
+    justify-content: space-around;
+
 }
+
+.images-div {
+    display: flex;
+    gap: 50px;
+
+}
+
+.sec5>div>h3 {
+    font-size: 30px;
+    color: #23a455;
+    line-height: 30px;
+}
+
+.images-div>div>h4 {
+    font-size: 20px;
+    color: #23a455;
+    line-height: 20px;
+    margin-bottom: 25%;
+}
+
+.sec6 {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.sec6 .sec6-btn a {
+    color: #23a455;
+    text-decoration: none;
+
+}
+
+.sec6 .sec6-btn {
+    border: solid #23a455;
+    padding: 14px 30px;
+    border-radius: 30px;
+}
+
+.sec7 {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #D5FFDF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 2%;
+
+}
+
+
+.sec-left>h2 {
+    color: #23a455;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: start;
+    vertical-align: baseline;
+
+}
+
+.sec-left>p {
+    color: #23a455;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: start;
+    vertical-align: baseline;
+
+    margin-top: 1.5%;
+}
+
+.sec-left>img {
+    width: 30%;
+
+    margin-top: 10%;
+}
+
+.googleplay {
+    width: 20%;
+}
+
+.sec8 {
+    display: inline;
+    width: 100%;
+    background-color: #B0EFFF;
+
+}
+
+.sec8>div>h2 {
+    font-size: 30px;
+    line-height: 30px;
+    color: rgb(0, 124, 329);
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.sec8>div>p {
+    font-size: 18px;
+    line-height: 30px;
+    color: rgb(0, 124, 329);
+    margin-top: 0.5%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+
+
+.grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid>div {
+    gap: 50px;
+    background-color: azure;
+    transition: 0.3s;
+    padding: 20px;
+    margin-bottom: 3%;
+}
+
+.grid>div>span {
+    color: grey;
+    text-align: left;
+    font-size: 12px;
+   
+
+}
+
+.grid>div>h3>a {
+    color: rgb(0, 124, 329);
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 3%;
+}
+
+.grid>div>p {
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+    color: #23a455;
+    margin-top: 5%;
+}
+
+.grid>div>a{
+    color: rgb(0, 124, 329);
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 3%;
+}
+
+.colorfull {
+    background-color: #B0EFFF;
+}
+
+.sec9{
+   background-color: rgb(213, 255, 223);
+   width: 100%;
+   padding-bottom: 4%;
+
+}
+
+.sec9-img{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.sec9-img img{
+    width: 5%;
+    height: auto;
+}
+
+.sec9>p{
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-top: 4%;
+    color: lightslategray;
+}
+.sec9>h5{
+    font-size: 12px;
+    text-align: center;
+  
+}
+
+.sec10{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.sec10>h2{
+    font-size: 42px;
+    color: #23a455;
+}
+.sec10>button{
+    padding: 14px 40px;
+    background-color: blueviolet;
+    border-radius: 20px;
+    border: none;
+
+}
+
+.sec10>button>a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+footer{
+    background-color: #23a455;
+    padding-top: 40px;
+   padding-bottom: 30px;
+    
+}
+
+footer>div{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+footer>.footer-div>div>img{
+    width: 40%;
+}
+footer>.footer-div>.list>ul{
+    list-style: none;
+    line-height: 2;
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer-para{
+    font-size: 14px;
+    text-align: start;
+}
+
+.footer-div>div>p{
+    margin-bottom: 8%;
+}
+
+
+.list>h6{
+    font-size: 17px;
+   font-weight: 700;
+}
+
+footer>p{
+    font-size: 12px;
+    text-align: left;
+    margin-left: 8%;
+
+}
+
+

@@ -1,4 +1,4 @@
-/* NavBar Media Query */
+/* ----------------------------------------------NavBar Media Query--------------------------------------------- */
 @media only screen and (max-width: 670px) {
     .sidebar {
         padding-top: 15px;
@@ -84,14 +84,196 @@
     }
 }
 
+/*---------------------------------------------For Tablet View------------------------------------------------------------ */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    .main_heading {
+        margin-top: 10%;
+
+    }
+
+    .small_para {
+        font-size: 20px;
+    }
+
+    .icon-list-items .icon-list-item .icon-list-text {
+        font-size: 15px;
+    }
+
+    .inline-items .inline-item .icon-span {
+        -ms-flex-item-align: center;
+        align-self: center;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .sec3 .flex {
+        display: inline;
+
+    }
+
+    .flex-div-text {
+        margin-bottom: 2%;
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .flex-para {
+        text-align: center;
+        /* text-indent: 50px; */
+        margin-bottom: 3%;
+        line-height: 1;
+        word-spacing: 1px;
+
+    }
+
+    .flex-button {
+        text-align: center;
+        margin-left: 40%;
+    }
+}
+
+/* ----------------------------------------------------------FOR MOBILE VIEW--------------------------------------------------------------------------------- */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .main_heading {
+        margin-top: 20%;
+        font-size: 25px;
+    }
+
+    .small_para {
+        font-size: 15px;
+        margin-top: -2%;
+    }
+
+    .sec3 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .flex-div-text {
+        margin-bottom: 3%;
+        text-align: center;
+        font-size: 30px;
+        line-height: 36px;
+        vertical-align: baseline;
+        letter-spacing: 0px;
+        word-spacing: 0px;
+        word-break: normal;
+        font-weight: 600;
+        text-indent: 0px;
+        width: 100%;
+
+    }
+
+    .flex-para {
+        text-align: center;
+        margin-bottom: 3%;
+        line-height: 1;
+        word-spacing: -1px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .flex-button {
+        text-align: center;
+        margin-top: 5%;
+
+    }
+
+    .sec5 {
+        display: inline;
+    }
+
+    .images-div {
+        display: grid;
+        justify-content: center;
+    }
+
+    .sec5>div>h3 {
+        text-align: center;
+        margin-bottom: 7%;
+    }
+
+    .images-div>div>h4 {
+        text-align: center;
+    }
+
+    .sec6{
+        margin-bottom: 5%;
+    }
+
+    .sec7{
+        display: inline;
+       
+        
+    }
+
+    .sec7.sec-left{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sec7>.sec-left>h2{
+        text-align: center;
+        font-size: 30px;
+        
+       
+    }
+
+    .sec7>.sec-left>p{
+        text-align: center;
+        font-size: 18px;
+        margin-top: 4%;
+    }
+
+    .sec7>.sec-left>img{
+     text-align: center;
+     margin-left: 30%;
+    
+    }
+
+    
+
+    .sec-right{
+        text-align: center;
+    }
+
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+
+    .colorfull{
+        background-color: #fff;
+    }
+
+    .sec8 > div{
+        text-align: center;
+    }
+
+    .grid > div {
+        text-align: center;
+    }
+
+    .grid > div > p{
+        text-align: center;
+    }
+}
+
+
+/* -----------------------------------------------------FOR PURPLE  BUTTON-------------------------------------------------------------- */
 @media all {
     .button {
         width: auto;
     }
-
-    /* .button:visited {
-        color: #aa2020;
-    } */
 
     .button.size {
         font-size: 16px;
@@ -121,7 +303,7 @@
 
 /* ----------------------------ICON PARTS MEDIA QUERY--------------------------- */
 
-@media all {
+/* @media all {
     li {
         border: 0;
         margin: 0;
@@ -154,11 +336,11 @@
         margin-right: calc(10px/2);
         margin-left: calc(10px/2);
     }
-}
+} */
 
 
 
-@media all {
+/* @media all {
     .icon-list-item:after {
         position: absolute;
         bottom: 0;
@@ -185,9 +367,9 @@
         border-style: solid;
         right: -8px;
     }
-}
+} */
 
-@media all {
+/* @media all {
 
 
     .icon-span {
@@ -239,4 +421,4 @@
     .fa-android:before {
         content: "\f17b";
     }
-}
+} */

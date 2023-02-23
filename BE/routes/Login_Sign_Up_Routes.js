@@ -5,16 +5,13 @@ const { userModel } = require("../model/user-SignUP-Model");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const UserRouter = express.Router();
-
-
+const{client}=require("../config/redis");
 
 UserRouter.get("/", (req, res) => {
   res.send(`User Route`);
 });
 
-
-
-UserRouter.post("/register", async (req, res) => {
+UserRouter.post("/register",async (req, res) => {
   const { email, name, password, mob_no, dob } = req.body;
 
   try {
@@ -52,39 +49,29 @@ UserRouter.post("/login", async (req, res) => {
     let User = await userModel.findOne({ email });
     console.log(User);
     if (User) {
-      bcrypt.compare(password, User.password, (err, result) => {
+      bcrypt.compare(password, User.password,async(err, result) => {
         if (result) {
           console.log(User._id);
-          let token = jwt.sign(
-            {
-              userID: User._id,
-            },
-            process.env.key
-            // { expiresIn: 60  }
-          );
-
-          
-        //   res.cookie("token", token);
-          
-          res.send({ message: "Login Sucessfull", token: token });
+          const token = jwt.sign({ userID:User._id,userName:User.name},process.env.key); //{expiresIn:60}
+          await client.SET(User._id,token);
+          console.log("tokens are done");
+          res.send({ message: "Login Sucessfull"});
         } else {
-         
-        //   console.log({ message: "Login Again" });
           res.send({ message: "Login Again" });
         }
       });
     } else {
-      
-    
       res.send({ message: "Login Again" });
     }
   } catch (error) {
-    
     // logger.log(`error`, `error :-${error.message}`);
-    
     res.send({ message: error.message });
   }
 });
+
+
+
+
 
 
 // UserRouter.get("/logout", async (req, res) => {

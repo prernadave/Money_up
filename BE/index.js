@@ -4,12 +4,15 @@ const { UserRouter } = require("./routes/Login_Sign_Up_Routes");
 const { connection } = require("./config/db");
 const {passport} = require("./config/google-outh");
 // console.log(passport)
+
+const{accountRouter}=require("./routes/account.router");
 const app = express();
 
 app.use(express.json());
 
 app.use("/user", UserRouter);
 
+app.use("/accounts",accountRouter);
 
 
 app.get("/", (req, res) => {

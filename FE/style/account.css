@@ -102,15 +102,12 @@ body{
 }
 .bnkname{
     width: 28%;
-    /* background-color: aliceblue; */
 }
 .accno{
     width:28%;
-    /* background-color: aliceblue; */
 }
 .bal{
     width:18%;
-     /* background-color: aliceblue;  */
 }
 .accbtn{
     width:80px;
@@ -144,58 +141,71 @@ body{
         flex-direction: column;
         align-items: center;
     }
-
-
-
     #render_container{
         width: 80%;
         margin: auto;
         background-color: white;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:auto;
+        gap:20px;
         padding: 20px;
         min-height: 300px;
         max-height: auto;
     }
     .acc_box{
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: auto;
+        display: flex;
+        flex-direction: column;
         justify-content: space-evenly;
         background-color: rgba(194, 194, 194, 0.548); 
         /* background-color: #D0F0C0;  */
-        margin: 8px 0px;
+        margin: 0px 0px;
         font-size: 20px;
         padding-top: 8px;
         padding-bottom: 8px;
+        text-align: center;
     }
-    .bnkname{
-        width: 28%;
-        /* background-color: aliceblue; */
+    .acc_box div{
+     width: 100%;
     }
-    .accno{
-        width:28%;
-        /* background-color: aliceblue; */
+}
+
+
+
+@media screen and (min-width: 200px) and (max-width:459px) {
+    #add_form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .bal{
-        width:18%;
-         /* background-color: aliceblue;  */
-    }
-    .accbtn{
-        width:80px;
-        height:27px;
-        font-size: 16px;
-        background-color: rgb(62,163,100);
-        color: white;
-        border: 1.5px solid rgb(62,163,100);
-        border-radius: 5px;
-    }
-    .accbtn:hover{
+    #render_container{
+        width: 80%;
+        margin: auto;
         background-color: white;
-        color: rgb(62,163,100);
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows:auto;
+        gap:20px;
+        padding: 20px;
+        min-height: 300px;
+        max-height: auto;
     }
-
-
-
-
+    .acc_box{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(194, 194, 194, 0.548); 
+        /* background-color: #D0F0C0;  */
+        margin: 0px 0px;
+        font-size: 20px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: center;
+    }
+    .acc_box div{
+     width: 100%;
+    }
 
 }

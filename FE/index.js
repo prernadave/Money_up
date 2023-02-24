@@ -1,12 +1,12 @@
 // *****RENDER NAVBAR*********
 let Navadd = document.querySelectorAll("#render_navbar");
 for (let i = 0; i < Navadd.length; i++) {
-    Navadd[i].innerHTML = `<div id="navbar">
+    Navadd[i].innerHTML = `<div id="navbar"onmouseleave="toogle1off()" onmouseout="toggle2off()" >
     <ul><img id="gif" src="https://thumbs.gfycat.com/PleasingSelfreliantAustraliankelpie.webp">
         <li id="brand_name">Money Up</li>
     </ul>
     <ul id="navsub2">
-        <li><a href="index.html">Envelopes</a></li>
+        <li><a href="home.html">Envelopes</a></li>
         <li><a href="account.html">Accounts</a></li>
         <li><a href="budget.html">My Budget</a></li>
         <li><a href="" onmouseover="toogle1on()">Help <i class="fa-sharp fa-solid fa-caret-down"></i></a>

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div id="navbar">
+    <div id="navbar" onmouseleave="toogle1off()" onmouseout="toggle2off()">
         <ul><img id="gif" src="https://thumbs.gfycat.com/PleasingSelfreliantAustraliankelpie.webp">
             <li id="brand_name">Money Up</li>
         </ul>
@@ -51,29 +51,54 @@
                     <p class="subhead">Welcome to Goodbudget! We're glad you're here.</p>
                 </div>
             </div>
-            <div>
+            <div id="allrenders">
                 <div id="allaccounts">
-                    <h3 class="head">Total Funds: <span class="totalbalance">0</span></h3>
-                  <a href="account.html">Add/Edits</a>
+                    <h3 class="head"><i style="color: rgb(86, 156, 231);" class="fa-solid fa-piggy-bank"></i> Total
+                        Funds: <span class="totalbalance">0</span></h3>
+                    <a href="account.html">Add/Edits</a>
+                </div>
+                <hr>
+                <div id="render_account">
+
                 </div>
             </div>
 
         </div>
         <div>
-            <div class="align_item_center">
+            <div class="align_item_center pie">
                 <h2 class="head">Facing issue to make your budget!! </h2>
-                <p class="subhead">🔖 Don't worries, Add the expenses in the envelopes</p>
-            </div>
-            <img id="envelopes_img"
+                <p class="subhead tag">🔖 Don't worries, Add the expenses in the envelopes</p>
+                <img id="envelopes_img"
                 src="https://img.freepik.com/premium-vector/hand-giving-open-paper-envelope-with-money-man-person-receiving-criminal-bribe-flat-vector-illustration-shadow-business-bribery-corruption-concept-banner-website-design-landing-web-page_179970-7059.jpg?w=2000">
-
+            </div>
+            <div class="container">
+                <p>Your Balance Status: </p>
+                <div>
+                    <canvas id="pie-chart"></canvas>
+                </div>
+            </div>
         </div>
 
     </div>
+    <h1 class="green">Manage your expenses:</h1>
+    <!-- <h2 class="green">Budgeting Goals</h2>
+    <div id="budgetgoal">
+        <i class="fa-solid fa-less-than green"></i><img
+            src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_171,h_176/https://goodbudget.com/wp-content/uploads/2021/06/14131516/Save_for_a_Car.png">
+        <img
+            src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_171,h_177/https://goodbudget.com/wp-content/uploads/2020/03/13135430/Get_Out_of_Debt.png">
+        <img
+            src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_171,h_177/https://goodbudget.com/wp-content/uploads/2020/03/13135425/Buy_a_House.png">
+        <img
+            src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_171,h_177/https://goodbudget.com/wp-content/uploads/2020/03/13135453/Save_for_College.png">
+        <img
+            src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_171,h_196/https://goodbudget.com/wp-content/uploads/2020/12/08080638/Plan-for-Emergenciesnotop.png"><i
+            class="fa-solid fa-greater-than green"></i>
+    </div> -->
 
 </body>
 
 </html>
-<script src='index.js'>
-
-</script>
+<script src='index.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src='./script/home.js'></script>

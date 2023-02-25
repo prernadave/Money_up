@@ -1,4 +1,5 @@
-render()
+render();
+console.log("jdhj")
 let totalbalance = 0
 async function render() {
     await fetch("http://localhost:9168/home")

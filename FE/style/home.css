@@ -104,7 +104,7 @@ li{
 
 /* ***********HOME CSS**************** */
 *{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 a{
     text-decoration: none;
@@ -121,6 +121,9 @@ a{
     display: flex;
     padding: 10px;
     justify-content: space-evenly;
+    /* box-shadow: 10px 10px 98px 0px rgba(169,245,180,0.75);
+    -webkit-box-shadow: 10px 10px 98px 0px rgba(169,245,180,0.75);
+    -moz-box-shadow: 10px 10px 98px 0px rgba(169,245,180,0.75); */
     
 }
 .head{
@@ -148,11 +151,12 @@ a{
     height: 30px;
 }
 #allrenders{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 5px;
     border-radius: 8px;
     border: 0.5px solid green;
     background-color: snow;
+    
 }
 #allrenders:hover{
     border: 1.5px solid green;
@@ -183,7 +187,7 @@ a{
 }
 .green{
     color:  rgb(35, 164, 85);;
-margin-left: 10px;}
+}
 
 .banks{
     display: flex;
@@ -209,6 +213,33 @@ margin-top: -10px;
     font-size: 20px;
     margin-top:-5px;
 }
+#expenses{
+    width: 98%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+#expenses>p{
+    font-size: 17px;
+}
+.envelopes_details{
+    width: 50%;
+    display: flex;
+    justify-content: space-between
+}
+.envelopes_details>input{
+    padding: 5px;
+    border: 1.5px solid rgb(35, 164, 85);
+}
+input[type=text]:focus  {
+    border: 2px solid rgb(35, 164, 85);
+  }
+.foot{
+    background-color:  rgb(35, 164, 85);
+    text-align: center;
+    padding: 5px
+}
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 * {
@@ -220,6 +251,7 @@ margin-top: -10px;
   border-radius: 10px;
   box-shadow: rgba(218, 11, 11, 0.16) 0px 1px 4px;
   width:40%;
+  
 }
 .container p {
   text-align: center;

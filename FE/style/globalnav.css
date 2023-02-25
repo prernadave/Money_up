@@ -1,0 +1,97 @@
+/* navbar */
+
+#navbar {
+    display: flex;
+    background-color: rgb(23, 159, 23);
+    /* border: 1px solid red; */
+    align-content: center;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#brand_name {
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#gif{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+    align-items: center;
+}
+
+ul a:hover {
+    transition: all ease-in-out 0.3s;
+    color: white;
+}
+li{
+    list-style-type: none;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+}
+
+#navsub2 {
+    width: 35%;
+}
+
+#navsub1 {
+    margin-right: 40px;
+    width: 20%;
+}
+
+#navsub1 button {
+    padding: 5px;
+    font-size: 16px;
+    border: 0ch;
+    border-radius: 2px;
+}
+#toggle1 {
+    display: none;
+    position: fixed;
+    padding: 4px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#toggle1>a {
+    display:block;
+    font-size: 15px;
+    padding: 4px;
+}
+
+#toggle1>a:hover {
+    
+    color: rgb(249, 240, 240);
+    background-color: rgb(23, 159, 23);
+}
+#toggle2 {
+    display: none;
+    position: fixed;
+    background-color: white;
+    padding: 4px;
+}
+
+#toggle2>div {
+    font-size: 14px;
+    padding: 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#toggle2>div:hover {
+    background-color: rgb(23, 159, 23);
+    color: white;
+
+}
+
+/* **********NAVBAR CSS END************ */

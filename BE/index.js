@@ -6,9 +6,9 @@ const { connection } = require("./config/db");
 
 const {passport} = require("./config/google-outh");
 
-const {budgetRouter}=require("./routes/budget.route")
-const {Oauth}= require("./routes/Aouth")
-// console.log(passport)
+const {budgetRouter}=require("./routes/budget.route");
+const {Oauth}= require("./routes/Aouth");
+
 
 
 const{accountRouter}=require("./routes/account.router");
@@ -17,8 +17,8 @@ const app = express();
 app.use(express.json());
 
 app.use("/user", UserRouter);
-app.use("/budget",budgetRouter)
-app.use()
+app.use("/budget",budgetRouter);
+
 app.use("/accounts",accountRouter);
 app.use(cors());
 

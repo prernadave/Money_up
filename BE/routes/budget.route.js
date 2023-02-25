@@ -1,9 +1,9 @@
 const express=require('express')
 const {taskModel}=require("../model/budget.model")
-
+const{authenticator}=require("../middleware/authentication");
 const budgetRouter=express.Router()
 
-budgetRouter.get('/alltask',async(req,res)=>{
+budgetRouter.get('/alltask',authenticator,async(req,res)=>{
     try {
         let userID=req.body.userID
         let allTasks=await taskModel.find({userID:userID})
@@ -22,9 +22,9 @@ budgetRouter.get('/alltask',async(req,res)=>{
     }
 })
 
-budgetRouter.post('/create/:id',async(req,res)=>{
+budgetRouter.post('/create',authenticator,async(req,res)=>{
     try {
-        let userID=req.params.id
+        let userID=req.body.id
         let task=req.body
         let newTask=new taskModel(task)
         await newTask.save()
@@ -41,7 +41,7 @@ budgetRouter.post('/create/:id',async(req,res)=>{
     }
 })
 
-budgetRouter.patch("/update/:id",async(req,res)=>{
+budgetRouter.patch("/update/:id",authenticator,async(req,res)=>{
     try {
         let taskId=req.params.id
         let taskData=req.body
@@ -59,7 +59,7 @@ budgetRouter.patch("/update/:id",async(req,res)=>{
     }
 })
 
-budgetRouter.delete("/delete/:id",async(req,res)=>{
+budgetRouter.delete("/delete/:id",authenticator,async(req,res)=>{
     try {
         let taskId=req.params.id
         let findtask=await taskModel.findOne({_id:taskId})

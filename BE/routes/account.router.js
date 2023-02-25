@@ -11,13 +11,18 @@ accountRouter.post("/create",authenticator,async(req,res)=>{
         if(accountData){
             const account=new Accountmodel(accountData);
             await account.save();
-            res.send("created new account successfully.");
+            let allData=await Accountmodel.find({"userID":req.body.userID});
+            let sum=0;
+            for(let i=0;i<allData.length;i++){
+                sum=sum+Number(allData[i].balance);
+            }
+            res.send({"message":"created new account successfully.","total":sum});
         }else{
             res.status(404).send({"error":error.message,"msg":"unable to create new account"});
         }
     } catch (error) {
         console.log(error.message);
-        res.status(404).send({"error":error.message,"msg":"unable to create new account"});
+        res.status(404).send({"error":error.message,"msg":"unablebbb to create new account"});
     }
 })
 
@@ -26,7 +31,12 @@ accountRouter.get("/",authenticator,async(req,res)=>{
     try {
         const accountData=await Accountmodel.find({userID:userID_in_body});
         if(accountData){
-            res.send(accountData);
+            let allData=await Accountmodel.find({"userID":req.body.userID});
+            let sum=0;
+            for(let i=0;i<allData.length;i++){
+                sum=sum+Number(allData[i].balance);
+            }
+            res.send({"accountData":accountData,"total":sum});
         }else{
             res.status(404).send("unable to find the data");
         }
@@ -52,7 +62,12 @@ accountRouter.patch("/update/:id",authenticator,async(req,res)=>{
                 res.send({"msg":"You are not authorized"});
             }else{
                 await Accountmodel.findByIdAndUpdate({"_id":id},newData);
-                res.send(`account is updated`);
+                let allData=await Accountmodel.find({"userID":req.body.userID});
+                let sum=0;
+                for(let i=0;i<allData.length;i++){
+                    sum=sum+Number(allData[i].balance);
+                }
+                res.send({"message":"account is updated","total":sum});
             }
         }else{
             res.status(404).send("Unable to update the account");
@@ -76,7 +91,12 @@ accountRouter.delete("/delete/:id",authenticator,async(req,res)=>{
                 res.send({"msg":"You are not authorized"});
             }else{
                 await Accountmodel.findByIdAndDelete({"_id":id});
-                res.send(`account is deleted`);
+                let allData=await Accountmodel.find({"userID":req.body.userID});
+                let sum=0;
+                for(let i=0;i<allData.length;i++){
+                    sum=sum+Number(allData[i].balance);
+                }
+                res.send({"message":"account is deleted","total":sum});
             }
         }else{
             res.status(404).send("Unable to delete  the account");

@@ -7,7 +7,7 @@ let formSection = document.querySelector(".form-section");
 let regBtn = document.querySelector(".reg-btn");
 let logBtn = document.querySelector(".log-btn");
 
-const baseURL = "http://localhost:9090";
+const baseURL = "http://localhost:9168";
 
 let register_url = `${baseURL}/user/register`;
 let loginurl = `${baseURL}/user/login`;
@@ -89,6 +89,7 @@ logBtn.addEventListener("click", () => {
         body: JSON.stringify(obj),
       });
       let data = await res.json();
+      console.log(data);
     //   let login_token = data.token;
 
     //   let loggedinUser = data.logged_in_username;
@@ -106,8 +107,9 @@ logBtn.addEventListener("click", () => {
       // alert(data.message);
 
       if (data.message === "Login Sucessfull") {
+        sessionStorage.setItem("email",data.email);
         alert(data.message);
-        // window.location.href = "../index.html";
+        window.location.href = "../home.html";
       } else {
         alert(data.message);
       }
@@ -119,4 +121,4 @@ logBtn.addEventListener("click", () => {
     
 
 });
- add
+ 

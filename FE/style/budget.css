@@ -7,7 +7,7 @@
 #mid-container{
     width: 90%;
     margin: auto;
-    position: relative;
+    /* position: relative; */
     margin-top: 2%;
     height: 600px;
     background-color: rgb(247, 245, 245);

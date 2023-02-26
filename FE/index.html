@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
-    <link rel="stylesheet" href="style/media.css">
+    <link rel="stylesheet" href="style/medianew.css">
 
     <!-- use the font -->
 </head>
@@ -24,19 +24,20 @@
             <a href="#home">How It Works</a>
             <a href="#about">What You Get</a>
             <a href="#skills">The Money Up Way</a>
-            <a href="#projects">LOG IN</a>
-            <a href="#contact">SIGN UP</a>
+            <a href="#projects" onclick="window.location.href='./html/login.html'">LOG IN</a>
+            <a href="#contact" onclick="window.location.href='./html/login.html'">SIGN UP</a>
         </div>
     </div>
 
-    <div id="main" style="  background-color: #ffffff;">
+    <div id="main">
         <button style="color: white;" class="openbtn" onclick="openNav()">☰</button>
 
     </div>
 
     <header>
-        <div id="nav-menu">
-            <p class="hidden"> Money UP </p>
+        <div id="nav-menu" style="margin-top: -3%;">
+            <!-- <p class="hidden"> Money UP </p> -->
+            <img style="width: 25%; height: 90px;" class="hidden" src="icon.png" alt="">
 
             <div>
                 <a href="#home" class="nav-link home">How It Works</a>
@@ -128,7 +129,7 @@
             </div>
 
         </div>
-       
+
         </div>
     </section>
     <!-- ---------------------------------------SECTION 3 ENDS👆👆--------------------------------------------------------------------------- -->
@@ -185,11 +186,9 @@
                 <h2>Budget software<br>
                     built for daily life</h2>
                 <p>Get Money Up iPhone and Android Apps</p>
-
-
-                <img src="https://www.seekpng.com/png/small/34-349265_app-store-google-play-svg.png" alt="">
-
             </div>
+
+
             <div class="sec-right">
                 <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_365/https://goodbudget.com/wp-content/uploads/2019/05/14224232/laptop3.png"
                     alt="">
@@ -242,7 +241,7 @@
     </div>
 
 
-
+    <!-- ------------------------------------------------------------------SECTION 9 START👇👇--------------------------------------------------------------------------- -->
 
     <section class="sec9">
         <div class="sec9-img">
@@ -267,69 +266,83 @@
 
     </section>
 
+
+    <!-- ------------------------------------------------------------------SECTION 10 START👇👇--------------------------------------------------------------------------- -->
+
+
     <section class="sec10">
         <h2>Get Started Now</h2>
-        <button><a href="">Sign Up</a></button>
-
-
+        <button><a href="#" onclick="window.location.href='./html/login.html'">Sign Up</a></button>
     </section>
+
+
+    <!-- ------------------------------------------------------------------Footer START👇👇--------------------------------------------------------------------------- -->
 
     <footer>
         <div class="footer-div">
             <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_191,h_191/https://goodbudget.com/wp-content/uploads/2019/03/12114655/budget-that-syncs-couple-e1560365252699.png"
                 alt="">
-            <div>
+
+            <div class="txt-div">
                 <h2>Money Up</h2>
                 <p>Budget well. Live life. Do good.</p>
-                <p class="footer-para">A home budget app based on the envelope<br>budget system. Available on the Web,
-                    Android,<br>and
-                    iPhone. Replace your family budget planner,<br>worksheet or spreadsheet with software that<br>syncs.
+                <p class="footer-para">A home budget app based on the envelope budget system. Available on the Web,
+                    Android and
+                    iPhone. <br> Replace your family budget planner,worksheet or spreadsheet with software that syncs.
                 </p>
-                <span><i class="fab fa-facebook"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i>
+                <span><i style="color: blue;" class="fab fa-facebook"></i> <i style="color: skyblue;"
+                        class="fab fa-twitter"></i> <i style="color: darkmagenta;" class="fab fa-instagram"></i>
                 </span>
             </div>
-            <div class="list">
-                <h6>EXPLORE</h6>
-                <ul>
-                    <li>Home</li>
-                    <li>How it works</li>
-                    <li>What you get</li>
-                    <li>The Money Up way</li>
-                    <li>Reviews</li>
-                    <li>Roadmap</li>
-                    <li>Budget Podcast</li>
-                    <li>Blog</li>
-                    <li>About Us</li>
-                </ul>
-            </div>
-            <div class="list">
-                <h6>GET STARTED</h6>
-                <ul>
-                    <li>Sign Up</li>
-                    <li>Log In</li>
-                    <li>Pricing</li>
-                    <li>Envelope Budgeting</li>
-                    <li>How To Make a Budget</li>
-                    <li>Online Budget Courses</li>
-                    <li>Budgeting Goals</li>
-                    <li>What Is Debt Snowball</li>
-                    <li>Kakeibo Budget</li>
-                    <li>Cash Stuff</li>
-                </ul>
-            </div>
-            <div class="list">
 
-                <h6>Get HELP</h6>
-                <ul>
-                    <li>User Guide</li>
-                    <li>Forums</li>
-                    <li>Refunds</li>
-                    <li>How To Videos</li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
 
-            <div><img src="https://www.seekpng.com/png/small/34-349265_app-store-google-play-svg.png" alt=""></div>
+            <div class="flexlist">
+                <div class="list">
+                    <h6>EXPLORE</h6>
+                    <ul>
+                        <li>Home</li>
+                        <li>How it works</li>
+                        <li>What you get</li>
+                        <li>The Money Up way</li>
+                        <li>Reviews</li>
+                        <li>Roadmap</li>
+                        <li>Budget Podcast</li>
+                        <li>Blog</li>
+                        <li>About Us</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h6>GET STARTED</h6>
+                    <ul>
+                        <li>Sign Up</li>
+                        <li>Log In</li>
+                        <li>Pricing</li>
+                        <li>Envelope Budgeting</li>
+                        <li>How To Make a Budget</li>
+                        <li>Online Budget Courses</li>
+                        <li>Budgeting Goals</li>
+                        <li>What Is Debt Snowball</li>
+                        <li>Kakeibo Budget</li>
+                        <li>Cash Stuff</li>
+                    </ul>
+                </div>
+                <div class="list">
+
+                    <h6>GET HELP</h6>
+                    <ul>
+                        <li>User Guide</li>
+                        <li>Forums</li>
+                        <li>Refunds</li>
+                        <li>How To Videos</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+        </div>
         </div>
 
 
@@ -341,6 +354,8 @@
             “You can keep a budget, EEBA can help,” Money Up, the Money Up mascot, the Money Up envelope,<br>and
             “Budget well. Live life. Do good.” are trademarks of Dayspring Technologies, Inc. SPC, a San Francisco
             custom web app development company.</p>
+
+
     </footer>
 
 </body>

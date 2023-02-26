@@ -22,10 +22,11 @@ body {
     max-width: 100%;
     z-index: 3;
     font-family: "Poppins", sans-serif;
+
 }
 
 .nav-colored {
-    background-color: #960018;
+
     width: 100%;
     z-index: 2;
 }
@@ -53,6 +54,7 @@ body {
 .hidden {
     color: rgb(43, 212, 24);
     font-size: larger;
+
 }
 
 .sidebar {
@@ -110,14 +112,17 @@ body {
 }
 
 #main {
-    padding: 10px;
+    padding: 20px;
     position: sticky;
     top: 0px;
     transition: all 0.5s ease-out;
     z-index: 3;
+
 }
 
 /* ---------------------------NAVBAR ENDED--------------------------------------------- */
+/* <!-- ------------------------------------------------------------------SECTION 1 START👇👇--------------------------------------------------------------------------- --> */
+
 
 
 .main_heading {
@@ -270,9 +275,15 @@ ul.icon-list-items.inline-items {
 }
 
 /* ----------------------------icons part ends----------------------------------------------------- */
+
+
+
 .spacer-inner {
     height: 100px;
 }
+
+
+/* <!-- ------------------------------------------------------------------SECTION 3 START👇👇--------------------------------------------------------------------------- --> */
 
 
 .sec3 {
@@ -323,6 +334,8 @@ ul.icon-list-items.inline-items {
     border: none;
 }
 
+/* <!-- ------------------------------------------------------------------SECTION 5 START👇👇--------------------------------------------------------------------------- --> */
+
 
 .sec5 {
     display: flex;
@@ -349,6 +362,9 @@ ul.icon-list-items.inline-items {
     margin-bottom: 25%;
 }
 
+/* <!-- ------------------------------------------------------------------SECTION 6 START👇👇--------------------------------------------------------------------------- --> */
+
+
 .sec6 {
     justify-content: center;
     text-align: center;
@@ -367,6 +383,11 @@ ul.icon-list-items.inline-items {
     padding: 14px 30px;
     border-radius: 30px;
 }
+
+
+/* <!-- ------------------------------------------------------------------SECTION 7 START👇👇--------------------------------------------------------------------------- --> */
+
+
 
 .sec7 {
     display: flex;
@@ -405,9 +426,11 @@ ul.icon-list-items.inline-items {
     margin-top: 10%;
 }
 
-.googleplay {
-    width: 20%;
-}
+
+
+/* <!-- ------------------------------------------------------------------SECTION 8 START👇👇--------------------------------------------------------------------------- --> */
+
+
 
 .sec8 {
     display: inline;
@@ -451,7 +474,7 @@ ul.icon-list-items.inline-items {
     color: grey;
     text-align: left;
     font-size: 12px;
-   
+
 
 }
 
@@ -470,7 +493,7 @@ ul.icon-list-items.inline-items {
     margin-top: 5%;
 }
 
-.grid>div>a{
+.grid>div>a {
     color: rgb(0, 124, 329);
     text-decoration: none;
     font-size: 18px;
@@ -481,25 +504,28 @@ ul.icon-list-items.inline-items {
     background-color: #B0EFFF;
 }
 
-.sec9{
-   background-color: rgb(213, 255, 223);
-   width: 100%;
-   padding-bottom: 4%;
+
+/* <!-- ------------------------------------------------------------------SECTION 9 START👇👇--------------------------------------------------------------------------- --> */
+
+.sec9 {
+    background-color: rgb(213, 255, 223);
+    width: 100%;
+    padding-bottom: 4%;
 
 }
 
-.sec9-img{
+.sec9-img {
     display: flex;
     justify-content: space-around;
-    
+
 }
 
-.sec9-img img{
+.sec9-img img {
     width: 5%;
     height: auto;
 }
 
-.sec9>p{
+.sec9>p {
     text-align: center;
     font-size: 24px;
     line-height: 28px;
@@ -507,13 +533,17 @@ ul.icon-list-items.inline-items {
     margin-top: 4%;
     color: lightslategray;
 }
-.sec9>h5{
+
+.sec9>h5 {
     font-size: 12px;
     text-align: center;
-  
+
 }
 
-.sec10{
+/* <!-- ------------------------------------------------------------------SECTION 10 START👇👇--------------------------------------------------------------------------- --> */
+
+
+.sec10 {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -521,11 +551,12 @@ ul.icon-list-items.inline-items {
     padding-bottom: 50px;
 }
 
-.sec10>h2{
+.sec10>h2 {
     font-size: 42px;
     color: #23a455;
 }
-.sec10>button{
+
+.sec10>button {
     padding: 14px 40px;
     background-color: blueviolet;
     border-radius: 20px;
@@ -533,7 +564,7 @@ ul.icon-list-items.inline-items {
 
 }
 
-.sec10>button>a{
+.sec10>button>a {
     color: #ffffff;
     text-decoration: none;
     font-size: 20px;
@@ -543,49 +574,94 @@ ul.icon-list-items.inline-items {
 
 }
 
-footer{
+/* ------------------------------------------------------------------FOORTER START👇👇---------------------------------------------------------------------------  */
+
+
+footer {
     background-color: #23a455;
     padding-top: 40px;
-   padding-bottom: 30px;
-    
+    padding-bottom: 30px;
+    width: 100%;
+
 }
 
-footer>div{
+.footer-div>img {
+    width: 10%;
+    margin-left: 45%;
+}
+
+.footer-div>div {
+    display: inline;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-div>div>h2 {
+    font-size: 30px;
+    margin-bottom: 1%;
+}
+
+.footer-div>div>p {
+    color: white;
+    text-align: center;
+    margin-bottom: 1%;
+    font-size: 20px;
+}
+
+.footer-div>div>span {
+    color: white;
+    margin-left: 50%;
+
+}
+
+
+.footer-div>.flexlist {
     display: flex;
     justify-content: space-around;
-    color: white;
+    margin-top: 2%;
+    text-align: left;
 }
 
-footer>.footer-div>div>img{
+
+
+
+footer>.footer-div>div>img {
     width: 40%;
 }
-footer>.footer-div>.list>ul{
+
+footer>.footer-div>.list>ul {
     list-style: none;
     line-height: 2;
     font-size: 14px;
     text-align: left;
 }
 
-.footer-para{
+.footer-para {
     font-size: 14px;
     text-align: start;
 }
 
-.footer-div>div>p{
-    margin-bottom: 8%;
+.list>ul>li {
+    list-style: none;
+    line-height: 1.5;
 }
 
 
-.list>h6{
+.list>h6 {
     font-size: 17px;
-   font-weight: 700;
+    font-weight: 700;
 }
 
-footer>p{
+footer>p {
     font-size: 12px;
     text-align: left;
     margin-left: 8%;
-
+    color: #ffffff;
 }
 
-
+.googleplay {
+    width: 6%;
+    margin-left: 90%;
+}

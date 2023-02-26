@@ -51,16 +51,16 @@ UserRouter.post("/register", async (req, res) => {
 UserRouter.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
-    let User = await userModel.findOne({ email });
+    let User = await userModel.findOne({ email:email });
     console.log(User);
     if (User) {
       bcrypt.compare(password, User.password,async(err, result) => {
         if (result) {
           console.log(User._id);
           const token = jwt.sign({ userID:User._id,userName:User.name},process.env.key); //{expiresIn:60}
-          await client.SET(User._id,token);
+          await client.SET(User.email,token);
           console.log("tokens are done");
-          res.send({ message: "Login Sucessfull"});
+          res.send({ message: "Login Sucessfull",email:User.email});
         } else {
           res.send({ message: "Login Again" });
         }

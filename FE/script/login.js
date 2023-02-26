@@ -108,6 +108,7 @@ logBtn.addEventListener("click", () => {
 
       if (data.message === "Login Sucessfull") {
         sessionStorage.setItem("email",data.email);
+        sessionStorage.setItem("username",data.username);
         alert(data.message);
         window.location.href = "../home.html";
       } else {

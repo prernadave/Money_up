@@ -17,7 +17,7 @@ for (let i = 0; i < Navadd.length; i++) {
         </li>
     </ul>
     <ul id="navsub1">
-        <li id="user_name">Hi,Chetan!</li>
+        <li id="user_name">Hi,${sessionStorage.getItem("username")}!</li>
         <li>
             <div><button onmouseover="toggle2on()"> Logout </button>
                 <div id="toggle2" onmouseover="toggle2on()" onmouseout="toggle2off()">

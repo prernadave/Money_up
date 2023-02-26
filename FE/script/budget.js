@@ -15,81 +15,50 @@ submitbtn.addEventListener("click",(event)=>{
             data_id:count,
         }
         count++
-        renderData(obj)
+        SaveData(obj)
     }
     
 })
 
 let midMainCont=document.getElementById("main-data-container")
 
-function renderData(obj){
+function renderData(arr){
+let allContent=arr.map((obj)=>{
+ return `
+<div class="main-task-div">
+<ul class="main-task-ul">
+    <div class="main-name-div">
+        <input type="text" class="main-task-name" 
+        data-id=${obj._id} 
+        value=${obj.taskname} 
+        readonly required>
+    </div>
+    <div class="main-amout-div">
+        <input type="text" class="main-task-amount" 
+        data-id=${obj._id} 
+        value=${obj.taskamt} 
+        readonly required>
+    </div>
+    <div class="main-edit-div" data-id=${obj._id} >
+        <img class="main-task-edit" src="./budgetImages/edit_img.png" alt="edt" 
+        data-id=${obj._id}
+        >
+    </div>
+    <div class="main-delete-div">
+        <img class="main-task-delete" src="./budgetImages/delete_img.png" alt="dlt" 
+        data-id=${obj._id}
+        >
+    </div>
+    <div class="main-btn-div">
+        ${btnfunction(obj)}
+    </div>
+</ul>
+</div>
+ `
+})
 
-  let div=document.createElement("div")
-  div.setAttribute("class","main-task-div")
-
-  let ul=document.createElement("ul")
-  ul.setAttribute("class","main-task-ul")
-
-
-  let namediv=document.createElement("div")
-  namediv.setAttribute("class","main-name-div")
-  let name=document.createElement("input")
-  name.setAttribute("class","main-task-name")
-  name.setAttribute("data-id",`${obj.data_id}`)
-  name.value=obj.taskname
-  name.readOnly=true
-  name.required=true
-  namediv.append(name)
-
-  let amountdiv=document.createElement("div")
-  amountdiv.setAttribute("class","main-amout-div")
-  let amount=document.createElement("input")
-  amount.setAttribute('class',"main-task-amount")
-  amount.setAttribute("data-id",`${obj.data_id}`)
-  amount.value=obj.taskamt
-  amount.readOnly=true
-  amount.required=true
-  amountdiv.append(amount)
-
-  let editdiv=document.createElement("div")
-  editdiv.setAttribute("class","main-edit-div")
-  editdiv.setAttribute("data-id",`${obj.data_id}`)
-  let editimg=document.createElement("img")
-  editimg.setAttribute('class',"main-task-edit")
-  editimg.setAttribute("data-id",`${obj.data_id}`)
-  editimg.src="./budgetImages/edit_img.png"
-  editdiv.append(editimg)
-
-  let deletediv=document.createElement("div")
-  deletediv.setAttribute("class","main-delete-div")
-  let deleteimg=document.createElement("img")
-  deleteimg.setAttribute('class',"main-task-delete")
-  deleteimg.setAttribute("data-id",`${obj.data_id}`)
-  deleteimg.src="./budgetImages/delete_img.png"
-  deletediv.append(deleteimg)
-
-  let completeddiv=document.createElement("div")
-  completeddiv.setAttribute("class","main-btn-div")
-  let completed=document.createElement("button")
-  completed.setAttribute("class","main-task-completed")
-  completed.setAttribute("data-id",`${obj.data_id}`)
-  if(obj.completed==false){
-    completed.innerText="No"
-    completed.style.backgroundColor="red"
-  }else{
-    completed.innerText="Yes"
-    completed.style.backgroundColor="green"
-  }
-  
-  completeddiv.append(completed)
-
-  ul.append(namediv,amountdiv,editdiv,deletediv,completeddiv)
-
-  div.append(ul)
-
-  midMainCont.append(div)
-
-
+midMainCont.innerHTML=allContent.join(" ")
+// allContent.join()
 //   Editing section 
 
   let alleditbtn=document.querySelectorAll(".main-edit-div")
@@ -113,16 +82,21 @@ function renderData(obj){
                 let newamoutvalue=amountip[i].value
                 let newcompletedip=completedip[i].innerText
                 if(newcompletedip=="No"){
-                    newcompletedip=false
-                }else{
                     newcompletedip=true
+                }else{
+                    newcompletedip=false
                 }
                 nameip[i].readOnly=true
                 amountip[i].readOnly=true 
                 btn.innerHTML=`
                 <img src="./budgetImages/edit_img.png" alt=""  class="main-task-edit" data-id=${data_id}>
                `
-            //    window.location.reload();
+               let newobj={
+                taskname:newnamevalue,
+                taskamt:newamoutvalue
+               }
+                updateData(newobj,data_id)
+                window.location.reload();
             })
         }
     }
@@ -142,8 +116,18 @@ for(let btn of allcompletedbtn){
         if(checkval){
              btn.innerText="Yes"
              btn.style.backgroundColor="green"
-            //  updatecompleted()
+             let obj={
+                completed:true
+             }
+             updateData(obj,data_id)
         }
+        }else{
+            btn.innerText="No"
+            btn.style.backgroundColor="red"
+            let obj={
+                completed:false
+            }
+            updateData(obj,data_id)
         }
     })
 }
@@ -154,10 +138,131 @@ let alldeletedbtn=document.querySelectorAll
 for(let btn of alldeletedbtn){
     btn.addEventListener("click",(event)=>{ 
         let data_id = event.target.dataset.id;
-        //  console.log(data_id)
-        //deletefunction()
+        confirm("Task is going to delete permantaly")
+        deletefunction(data_id)
+        // window.location.reload();
     })
 }
 
 }
 
+
+function btnfunction(obj){
+  if(obj.completed==false){
+    return `
+    <button class="main-task-completed"  
+    data-id=${obj._id} style="background-color:red">
+     No
+    </button>
+    `
+  }else{
+    return `
+    <button class="main-task-completed"  
+    data-id=${obj._id} style="background-color:green">
+     Yes
+    </button>`
+  }
+  
+}
+
+function  rendertotal(totalamount){
+    let allamt=document.getElementById("ip-amt-spent")
+    allamt.value=totalamount
+}
+
+
+getAllData()
+async function  getAllData(){
+    try {
+        let data=await fetch(`http://localhost:9168/budget/alltask`,{
+            headers:{
+                authorization:sessionStorage.getItem("email")
+            }
+        })
+       if(data.ok){
+        let temp=data.json()
+        .then(res=>{
+            let allTasks=res.allTasks
+            let totalamount=res.totalamount
+            // console.log(res)
+           renderData(allTasks)
+           rendertotal(totalamount)
+        })
+       }else{
+        alert("not register")
+       }
+       } catch (error) {
+        console.log(error)
+       }
+}
+
+async function SaveData(obj){
+    try {
+        let data=await fetch("http://localhost:9168/budget/create",{
+        method:"POST",
+        headers:{
+            "Content-type":"application/json",
+            "authorization":sessionStorage.getItem("email")
+        },
+        body:JSON.stringify(obj)
+    })
+    if(data.ok){
+        alert("task created")
+        getAllData()
+    }else{
+        console.log(data,data.error)
+        alert("login first")
+    }
+
+    } catch (error) {
+        console.log(error)
+    }
+} 
+
+async function updateData(newobj,id){
+    try {
+        let data=await fetch(`http://localhost:9168/budget/update/${id}`,{
+            method:"PATCH",
+            headers:{
+                "Content-type":"application/json",
+                "Authorization":sessionStorage.getItem("email")
+            },
+            body:JSON.stringify(newobj)
+        })
+        if(data.ok){
+            let msg=await data.json().then(
+                res=>{
+                    getAllData()
+                }
+            )
+        }else{
+            alert("you are note authorised")
+        }
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+async function deletefunction(id){
+    try {
+        let data=await fetch(`http://localhost:9168/budget/delete/${id}`,{
+            method:"DELETE",
+            headers:{
+                "Authorization":sessionStorage.getItem("email")
+            }
+        })
+        if(data.ok){
+            let msg=await data.json().then(
+                res=>{
+                    getAllData()
+                })
+        }else{
+            console.log(data)
+            alert("you are note authorised")
+        }
+
+    } catch (error) {
+        console.log(error)
+    }
+}

@@ -6,7 +6,7 @@ async function render() {
       return res.json()
     }).then((data) => {
       let options = `<option value="">Select Your Bank</option>`
-      // let bankoption = document.querySelector("#bankoption");
+      let bankoption = document.querySelector("#bankoption");
       for (let i = 0; i < data.length; i++) {
         totalbalance += data[i].balance;
         options += `<option value="${data[i].name}">${data[i].name}</option>`

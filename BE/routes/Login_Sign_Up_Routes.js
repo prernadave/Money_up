@@ -60,7 +60,7 @@ UserRouter.post("/login", async (req, res) => {
           const token = jwt.sign({ userID:User._id,userName:User.name},process.env.key); //{expiresIn:60}
           await client.SET(User.email,token);
           console.log("tokens are done");
-          res.send({ message: "Login Sucessfull",email:User.email});
+          res.send({ message: "Login Sucessfull",email:User.email,username:User.name});
         } else {
           res.send({ message: "Login Again" });
         }

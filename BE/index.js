@@ -18,7 +18,6 @@ app.use(express.json());
 
 app.use("/user", UserRouter);
 app.use("/budget",budgetRouter)
-app.use()
 app.use("/accounts",accountRouter);
 app.use(cors());
 

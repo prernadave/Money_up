@@ -1,4 +1,8 @@
 render();
+
+let username=sessionStorage.getItem("username");
+getNameFunction(username);
+
 console.log("jdhj")
 let totalbalance = 0
 async function render() {
@@ -55,4 +59,11 @@ async function render() {
         }).catch((err) => {
             console.log(err)
         })
+}
+
+
+
+function getNameFunction(username){
+  console.log(username);
+  document.querySelector(".myname").innerHTML=`Hi, ${username}`;
 }

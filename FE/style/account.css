@@ -123,6 +123,9 @@ body{
     color: rgb(62,163,100);
 }
 
+.outer-box{
+    align-items: center;
+}
 
 
 

@@ -97,11 +97,11 @@ let renderAccountFunction=async(accountData,total)=>{
             for(let edit_data of accountData){
                 if(edit_data._id==edit_id){
                     displayContainer.innerHTML=
-                    `<div class="outer-box">
+                    `<div class="outer-box acc_box">
                     <div id="edit_name" contentEditable="true">${edit_data.name}</div>
                     <div id="edit_acc_no" contentEditable="true">${edit_data.acc_no}</div>
                     <div id="edit_balance" contentEditable="true">${edit_data.balance}</div>
-                    <button class="save">SAVE</button>
+                    <button class="save accbtn">SAVE</button>
                     </div>`;
                 }
             }

@@ -2,19 +2,27 @@ render();
 console.log("jdhj")
 let totalbalance = 0
 async function render() {
-    await fetch("http://localhost:9168/home")
+    await fetch("http://localhost:9168/accounts",{
+      method:"GET",
+      headers : {
+        "Content-Type" : "application/json",
+        Authorization:sessionStorage.getItem("email")
+    }
+    })
         .then( (res) => {
             return  res.json()
-        }).then((data) => {
-            console.log(data);
-            for(let i=0;i<data.length;i++){
-                totalbalance+= data[i].balance
-             }
+        }).then((fulldata) => {
+            let data=fulldata.accountData;
+            totalbalance=fulldata.total;
+            // for(let i=0;i<data.accountData.length;i++){
+            //     totalbalance+= data[i].balance
+            //  }
             //  console.log(totalbalance);
              let Accounts=[];
              let balances=[];
              document.querySelector(".totalbalance").innerHTML=totalbalance+" .Rs"
             let x=data.map((item,index)=>{
+              console.log(item);
                 Accounts.push(item.name);
                 balances.push(item.balance)
                 return `<div class="banks">

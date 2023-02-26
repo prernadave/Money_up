@@ -128,6 +128,110 @@ body{
 }
 
 
+/* footerstart ================================================================*/
+
+
+footer {
+    background-color: #23a455;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    width: 100%;
+
+}
+
+.footer-div>img {
+    width: 10%;
+    margin-left: 45%;
+}
+
+.footer-div>div {
+    display: inline;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-div>div>h2 {
+    font-size: 30px;
+    margin-bottom: 1%;
+}
+
+.footer-div>div>p {
+    color: white;
+    text-align: center;
+    margin-bottom: 1%;
+    font-size: 20px;
+}
+
+.footer-div>div>span {
+    color: white;
+    margin-left: 50%;
+
+}
+
+
+.footer-div>.flexlist {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    text-align: left;
+}
+
+
+
+
+footer>.footer-div>div>img {
+    width: 40%;
+}
+
+footer>.footer-div>.list>ul {
+    list-style: none;
+    line-height: 2;
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer-para {
+    font-size: 14px;
+    text-align: start;
+}
+
+.list>ul>li {
+    list-style: none;
+    line-height: 1.5;
+}
+
+
+.list>h6 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-left: -40px;
+}
+
+footer>p {
+    font-size: 12px;
+    text-align: left;
+    margin-left: 8%;
+    color: #ffffff;
+}
+
+.googleplay {
+    width: 6%;
+    margin-left: 90%;
+}
+
+.list>ul {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: start;
+    margin-top: -20px;
+    margin-left: -40px;
+}
+
+/* footerEnd ===================================================================*/
 
 
 

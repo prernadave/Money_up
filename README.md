@@ -19,12 +19,41 @@
 <a  href="https://ibb.co/vwdDz7g"><img src="https://i.ibb.co/PmWtC73/Money-up-second.png" alt="Money-up-second" border="0"></a>
 </p>
 
-## Developing
+## Tech Stack
 
-### Built With HTML, CSS, JAVASCRIPT, NODEJS, EXPRESS, MONGODB
+### Client: HTML|CSS|JavaScript
+### Server: NodeJS|Express|MongoDB|
 
-## Prerequisites
-### express, dotenv, nodemon, mongoose, redis-cli, bcrypt, jsonwebtoken
+## Frontend Part
+ - WELCOMING PAGE
+ - HOME PAGE
+ - LOGIN/SIGNUP PAGE
+ - ACCOUNT PAGE
+ - BUDGET PAGE
+
+## Backend Part
+ - Authentication using JWT
+ - Mongoose - database
+ - Server side - NodeJS and Express
+
+## Database 
+```shell
+MongoDB
+Redis
+```
+
+## Functionality
+- Login/Signup
+- create budget
+- edit and delete budget
+- add bank 
+
+## How it works?
+- Click on link
+- Create Account or Login
+- Add your Bank 
+- Add, Edit, and Delete budget
+
 
 ### Setting up Dev
 

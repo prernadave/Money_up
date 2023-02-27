@@ -68,7 +68,7 @@ npm i express, dotenv, nodemon, mongoose, redis-cli, bcrypt, jsonwebtoken
 ```
 
 
-###Collaborators
+### Collaborators
 - Prerna Dave - Team Lead
 - Hassan - Team Member
 - Jishnu Raj - Team Member

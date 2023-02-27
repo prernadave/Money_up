@@ -66,3 +66,11 @@ cd noxious-insurance-3324/
 packagemanager install
 npm i express, dotenv, nodemon, mongoose, redis-cli, bcrypt, jsonwebtoken
 ```
+
+
+###Collaborators
+- Prerna Dave - Team Lead
+- Hassan - Team Member
+- Jishnu Raj - Team Member
+- Rajvardhan - Team Member
+- Chetan Bhagat - Team Member

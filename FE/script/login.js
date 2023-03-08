@@ -4,8 +4,10 @@ let login = document.querySelector(".login");
 let slider = document.querySelector(".slider");
 let formSection = document.querySelector(".form-section");
 
-let regBtn = document.querySelector(".reg-btn");
-let logBtn = document.querySelector(".log-btn");
+let regBtn = document.querySelector(".signup-box");
+let logBtn = document.querySelector(".login-box");
+
+
 
 const baseURL = "http://localhost:9168";
 
@@ -23,7 +25,8 @@ login.addEventListener("click", () => {
   formSection.classList.remove("form-section-move");
 });
 
-regBtn.addEventListener("click", () => {
+regBtn.addEventListener("submit", (event) => {
+  event.preventDefault();
   register();
 
   function register() {
@@ -66,7 +69,8 @@ regBtn.addEventListener("click", () => {
 
 
 
-logBtn.addEventListener("click", () => {
+logBtn.addEventListener("submit", (event) => {
+  event.preventDefault();
   login();
 
   function login() {
@@ -90,21 +94,6 @@ logBtn.addEventListener("click", () => {
       });
       let data = await res.json();
       console.log(data);
-    //   let login_token = data.token;
-
-    //   let loggedinUser = data.logged_in_username;
-    //   let loggedinemail = data.logged_in_email;
-    //   let loggedinage = data.logged_in_age;
-    //   let loggedinid = data.logged_in_id;
-
-    //   localStorage.setItem("lid", loggedinid);
-    //   localStorage.setItem("lname", loggedinUser);
-    //   localStorage.setItem("lemail", loggedinemail);
-    //   localStorage.setItem("lage", loggedinage);
-
-    //   localStorage.setItem("token", login_token);
-    //   console.log(data.token);
-      // alert(data.message);
 
       if (data.message === "Login Sucessfull") {
         sessionStorage.setItem("email",data.email);

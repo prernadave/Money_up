@@ -6,7 +6,7 @@ getNameFunction(username);
 console.log("jdhj")
 let totalbalance = 0
 async function render() {
-    await fetch("http://localhost:9168/accounts",{
+    await fetch("https://busy-sock-fawn.cyclic.app/accounts",{
       method:"GET",
       headers : {
         "Content-Type" : "application/json",

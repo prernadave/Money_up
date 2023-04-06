@@ -9,7 +9,7 @@ let logBtn = document.querySelector(".login-box");
 
 
 
-const baseURL = "http://localhost:9168";
+const baseURL = "https://busy-sock-fawn.cyclic.app";
 
 let register_url = `${baseURL}/user/register`;
 let loginurl = `${baseURL}/user/login`;

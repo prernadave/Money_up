@@ -174,7 +174,7 @@ function  rendertotal(totalamount){
 getAllData()
 async function  getAllData(){
     try {
-        let data=await fetch(`http://localhost:9168/budget/alltask`,{
+        let data=await fetch(`https://busy-sock-fawn.cyclic.app/budget/alltask`,{
             headers:{
                 authorization:sessionStorage.getItem("email")
             }
@@ -198,7 +198,7 @@ async function  getAllData(){
 
 async function SaveData(obj){
     try {
-        let data=await fetch("http://localhost:9168/budget/create",{
+        let data=await fetch("https://busy-sock-fawn.cyclic.app/budget/create",{
         method:"POST",
         headers:{
             "Content-type":"application/json",
@@ -221,7 +221,7 @@ async function SaveData(obj){
 
 async function updateData(newobj,id){
     try {
-        let data=await fetch(`http://localhost:9168/budget/update/${id}`,{
+        let data=await fetch(`https://busy-sock-fawn.cyclic.app/budget/update/${id}`,{
             method:"PATCH",
             headers:{
                 "Content-type":"application/json",
@@ -246,7 +246,7 @@ async function updateData(newobj,id){
 
 async function deletefunction(id){
     try {
-        let data=await fetch(`http://localhost:9168/budget/delete/${id}`,{
+        let data=await fetch(`https://busy-sock-fawn.cyclic.app/budget/delete/${id}`,{
             method:"DELETE",
             headers:{
                 "Authorization":sessionStorage.getItem("email")

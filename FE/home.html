@@ -8,40 +8,12 @@
     <title>Money Up</title>
     <link rel="icon" href="icon.png" type="image/gif">
     <link rel="stylesheet" href="./style/home.css">
+    <link rel="stylesheet" href="./style/globalnav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 </head>
 
 <body>
-    <div id="navbar" onmouseleave="toogle1off()" onmouseout="toggle2off()">
-        <ul><img id="gif" src="https://thumbs.gfycat.com/PleasingSelfreliantAustraliankelpie.webp">
-            <li id="brand_name">Money Up</li>
-        </ul>
-        <ul id="navsub2">
-            <li><a href="home.html">Envelopes</a></li>
-            <li><a href="account.html">Accounts</a></li>
-            <li><a href="budget.html">My Budget</a></li>
-            <li><a href="" onmouseover="toogle1on()">Help <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-                <div id="toggle1" onmouseleave="toogle1off()">
-                    <a href="Userguide.html"> User Guide <i class="fa-sharp fa-solid fa-circle-info"></i></a>
-                    <a href="">Get Live Support <i class="fa-solid fa-comments"></i></a>
-                </div>
-            </li>
-        </ul>
-        <ul id="navsub1">
-            <li id="user_name"></li>
-            <li>
-                <div><button onmouseover="toggle2on()"> Logout </button>
-                    <div id="toggle2" onmouseover="toggle2on()" onmouseout="toggle2off()">
-                        <div>My Profile</div>
-                        <div>My Accounts</div>
-                        <div>My Budget</div>
-                        <div>Customer Service </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-
+  <div id="render_navbar"></div>
     <div id="Envelopes">
         <div>
             <div>

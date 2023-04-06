@@ -1,125 +1,93 @@
-// const  baseURL  = require("./baseURL");
-let signup = document.querySelector(".signup");
-let login = document.querySelector(".login");
-let slider = document.querySelector(".slider");
-let formSection = document.querySelector(".form-section");
-
-let regBtn = document.querySelector(".reg-btn");
-let logBtn = document.querySelector(".log-btn");
-
-const baseURL = "http://localhost:9168";
-
-let register_url = `${baseURL}/user/register`;
-let loginurl = `${baseURL}/user/login`;
 
 
-signup.addEventListener("click", () => {
-  slider.classList.add("moveslider");
-  formSection.classList.add("form-section-move");
-});
 
-login.addEventListener("click", () => {
-  slider.classList.remove("moveslider");
-  formSection.classList.remove("form-section-move");
-});
-
-regBtn.addEventListener("click", () => {
-  register();
-
-  function register() {
-    let obj = {
-      name: document.querySelector(".name").value,
-      email: document.querySelector("#emailID").value,
-      dob: document.querySelector(".dob").value,
-      number: document.querySelector(".number").value,
-      password: document.querySelector("#passwordID").value,
-    };
-    console.log(obj);
-
-    register_connect(obj);
-  }
-
-  async function register_connect(obj) {
-    try {
-      let res = await fetch(register_url, {
-        method: "POST",
-        headers: {
+const baseURL = "https://long-blue-pronghorn-hat.cyclic.app";
+let signupForm = document.querySelector(".signup-form form");
+signupForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  let name = document.querySelector(".signup-name").value;
+  let mob_no = document.querySelector(".signup-number").value;
+  let email = document.querySelector(".signup-email").value;
+  let password = document.querySelector(".signup-password").value;
+  let dob=document.querySelector(".dob").value
+  let obj = {
+    email: email,
+    name: name,
+    mob_no: mob_no,
+    dob: dob,
+    password: password,
+  };
+  try {
+    let res = await fetch(`${baseURL}/user/register`, {
+      method: "POST",
+      headers: {
           "Content-Type": "application/json",
-        },
-        body: JSON.stringify(obj),
-      });
-
-      let data = await res.json();
-      if (data.message === "Register Sucessfull") {
-        alert(data.message);
-        //   window.location.href = "../index.html";
-      }
-    } catch (error) {
-      console.log(error.message);
-    }
-  }
-});
-
-
-
-
-
-
-
-logBtn.addEventListener("click", () => {
-  login();
-
-  function login() {
-    let obj = {
-      email: document.querySelector("#email").value,
-
-      password: document.querySelector("#password").value,
-    };
-    console.log(obj);
-      login_connect(obj);
-  }
-
-  async function login_connect(obj) {
-    try {
-      let res = await fetch(loginurl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(obj),
+      },
+      body: JSON.stringify(obj),
       });
       let data = await res.json();
-      console.log(data);
-    //   let login_token = data.token;
-
-    //   let loggedinUser = data.logged_in_username;
-    //   let loggedinemail = data.logged_in_email;
-    //   let loggedinage = data.logged_in_age;
-    //   let loggedinid = data.logged_in_id;
-
-    //   localStorage.setItem("lid", loggedinid);
-    //   localStorage.setItem("lname", loggedinUser);
-    //   localStorage.setItem("lemail", loggedinemail);
-    //   localStorage.setItem("lage", loggedinage);
-
-    //   localStorage.setItem("token", login_token);
-    //   console.log(data.token);
-      // alert(data.message);
-
-      if (data.message === "Login Sucessfull") {
-        sessionStorage.setItem("email",data.email);
-        sessionStorage.setItem("username",data.username);
-        alert(data.message);
-        window.location.href = "../home.html";
-      } else {
-        alert(data.message);
+      if (data.message === "User Register Sucessfull") {
+          await swal("Signup Successful!", "You are now Registered!", "success");
+          window.location.href="login.html"
+          return;
+      }else if(data.message === "User Register Sucessfull"){
+        await swal("Signup failed!", "Email Registered Already!", "Error");
+      }else{
+          return await swal("Something Went Wrong.", "", "error");
       }
-    } catch (error) {
-      console.log(error.message);
-      alert(error.message);
-    }
-    }
-    
+        
 
+  } catch (error) {
+    console.log(error);
+    // alert("An error occurred. Please try again later.");
+    return await swal("An error occurred. Please try again later.", "", "error");
+  }
 });
+
+
+let login=document.querySelector(".login-form form")
+login.addEventListener("submit", loginFun)
+
+async function loginFun(event){
+    event.preventDefault();
+
+    let name= document.querySelector('.login-email').value;
+    let password= document.querySelector('.login-password').value;
+    let obj={
+        email:name,
+        password
+    }
+    // console.log(obj)
+    let res= await fetch(`${baseURL}/user/login`,{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(obj)
+    })
+    let datares=await res.json()
+    if(datares.message==="Login Sucessfull"){
+        // console.log(datares.token)
+        localStorage.setItem("token",datares.token)
+            await  swal(
+              "Welcome to MoneyUp",
+              "success"
+            );
+
+            window.location.href = "../home.html";
+
+        return;
+    }
+    if(datares.message==="Wrong Password"){
+        // return alert("Wrong Credentials")
+        return await swal("Wrong Credentials", "", "error");
+    }
+    if(datares.message==="Sign Up First"){
+    //    return alert("Create Your Account First")
+       return await swal("Create Your Account First");
+    }
+    if(datares.message!=="Login Sucessfull"||datares.message!=="Sign Up First"||datares.message!=="Wrong Password"){
+        return await swal("Something Went Wrong.", "", "error");
+    }
+}
  

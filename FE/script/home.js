@@ -3,10 +3,10 @@ render();
 let username=sessionStorage.getItem("username");
 getNameFunction(username);
 
-console.log("jdhj")
+// console.log("jdhj")
 let totalbalance = 0
 async function render() {
-    await fetch("http://localhost:9168/accounts",{
+    await fetch("https://long-blue-pronghorn-hat.cyclic.app",{
       method:"GET",
       headers : {
         "Content-Type" : "application/json",
@@ -18,15 +18,11 @@ async function render() {
         }).then((fulldata) => {
             let data=fulldata.accountData;
             totalbalance=fulldata.total;
-            // for(let i=0;i<data.accountData.length;i++){
-            //     totalbalance+= data[i].balance
-            //  }
-            //  console.log(totalbalance);
              let Accounts=[];
              let balances=[];
              document.querySelector(".totalbalance").innerHTML=totalbalance+" .Rs"
             let x=data.map((item,index)=>{
-              console.log(item);
+              // console.log(item);
                 Accounts.push(item.name);
                 balances.push(item.balance)
                 return `<div class="banks">
@@ -64,6 +60,6 @@ async function render() {
 
 
 function getNameFunction(username){
-  console.log(username);
+  // console.log(username);
   document.querySelector(".myname").innerHTML=`Hi, ${username}`;
 }

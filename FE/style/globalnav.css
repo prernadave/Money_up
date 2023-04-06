@@ -2,9 +2,11 @@
 
 #navbar {
     display: flex;
-    background-color: rgb(23, 159, 23);
+    background-color:  rgb(35, 164, 85);
     /* border: 1px solid red; */
     align-content: center;
+    align-items: center;
+    height: 80px;
     justify-content: space-around;
 }
 a{
@@ -73,7 +75,7 @@ li{
 #toggle1>a:hover {
     
     color: rgb(249, 240, 240);
-    background-color: rgb(23, 159, 23);
+    background-color:  rgb(35, 164, 85);
 }
 #toggle2 {
     display: none;
@@ -89,9 +91,27 @@ li{
 }
 
 #toggle2>div:hover {
-    background-color: rgb(23, 159, 23);
+    background-color:  rgb(35, 164, 85);
     color: white;
 
 }
+#hide{
+    display: none;
+}
 
 /* **********NAVBAR CSS END************ */
+
+
+
+@media screen and (min-width: 300px) and (max-width:749px) {
+ 
+}
+
+
+
+@media screen and (min-width: 200px) and (max-width:459px) {
+    
+
+
+
+}

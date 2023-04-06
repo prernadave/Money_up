@@ -1,4 +1,3 @@
-
 let add_account_btn=document.getElementById("add_form");
 
 add_account_btn.addEventListener("submit",(event)=>{
@@ -14,7 +13,7 @@ add_account_btn.addEventListener("submit",(event)=>{
 
 let addAccountFunction=async(obj)=>{
     try {
-        let add_req=await fetch(`http://localhost:9168/accounts/create`,{
+        let add_req=await fetch(`https://busy-sock-fawn.cyclic.app/accounts/create`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded",(event)=>{
 
 let getAccountFunction=async()=>{
     try {
-        let allData_req=await fetch(`http://localhost:9168/accounts`,{
+        let allData_req=await fetch(`https://busy-sock-fawn.cyclic.app/accounts`,{
             method:"GET",
             headers:{
                 "Content-Type":"application/json",
@@ -110,7 +109,7 @@ let renderAccountFunction=async(accountData,total)=>{
                 let edit_name=document.getElementById("edit_name").innerText;
                 let edit_acc_no=document.getElementById("edit_acc_no").innerText;
                 let edit_balance=document.getElementById("edit_balance").innerText;
-                let edit_url=`http://localhost:9168/accounts/update/${edit_id}`;
+                let edit_url=`https://busy-sock-fawn.cyclic.app/accounts/update/${edit_id}`;
                 editReqNameFunction(edit_url,edit_name,edit_acc_no,edit_balance);
             })
 
@@ -121,7 +120,7 @@ let renderAccountFunction=async(accountData,total)=>{
 
 let deleteAccountFunction=async(id)=>{
     try {
-        let delete_req=await fetch(`http://localhost:9168/accounts/delete/${id}`,{
+        let delete_req=await fetch(`https://busy-sock-fawn.cyclic.app/accounts/delete/${id}`,{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json",

@@ -28,6 +28,7 @@ signupForm.addEventListener("submit", async (event) => {
       let data = await res.json();
       if (data.message === "User Register Sucessfull") {
           await swal("Signup Successful!", "You are now Registered!", "success");
+         
           window.location.href="login.html"
           return;
       }else if(data.message === "User Register Sucessfull"){
@@ -51,13 +52,12 @@ login.addEventListener("submit", loginFun)
 async function loginFun(event){
     event.preventDefault();
 
-    let name= document.querySelector('.login-email').value;
+    let email= document.querySelector('.login-email').value;
     let password= document.querySelector('.login-password').value;
     let obj={
-        email:name,
+        email,
         password
     }
-    // console.log(obj)
     let res= await fetch(`${baseURL}/user/login`,{
         method:"POST",
         headers:{
@@ -70,10 +70,11 @@ async function loginFun(event){
         // console.log(datares.token)
         localStorage.setItem("token",datares.token)
             await  swal(
-              "Welcome to MoneyUp",
+              "Welcome to MoneyUp","",
               "success"
             );
-
+            sessionStorage.setItem("username",datares.name)
+            sessionStorage.setItem("email",obj.email)
             window.location.href = "../home.html";
 
         return;

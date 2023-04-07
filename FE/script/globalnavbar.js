@@ -19,7 +19,7 @@ for (let i = 0; i < Navadd.length; i++) {
     <ul id="navsub1">
         <li id="user_name">Hi,${sessionStorage.getItem("username")}!</li>
         <li>
-            <div><button onmouseover="toggle2on()"> Logout </button>
+            <div><button id="logoutnow" onClick="logout_now()" onmouseover="toggle2on()"> Logout </button>
                 <div id="toggle2" onmouseover="toggle2on()" onmouseout="toggle2off()">
                     <div>My Profile</div>
                     <div>My Accounts</div>
@@ -44,6 +44,11 @@ function toggle2on() {
 }
 function toggle2off() {
     toggle2.style.display = "none";
+}
+async function  logout_now(){
+    sessionStorage.setItem("username",null)
+    alert("Want to logout?")
+    window.location.href = "./index.html";
 }
 
 // ************NAVBAR END***********

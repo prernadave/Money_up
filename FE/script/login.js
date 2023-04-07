@@ -1,7 +1,6 @@
 
+const baseURL = "https://busy-sock-fawn.cyclic.app/";
 
-
-const baseURL = "https://busy-sock-fawn.cyclic.app";
 let signupForm = document.querySelector(".signup-form form");
 signupForm.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -26,7 +25,7 @@ signupForm.addEventListener("submit", async (event) => {
       body: JSON.stringify(obj),
       });
       let data = await res.json();
-      console.log(data)
+      // console.log(data)
       if (res.ok) {
           await swal("Signup Successful!", "You are now Registered!", "success");
          
@@ -67,6 +66,7 @@ async function loginFun(event){
         body:JSON.stringify(obj)
     })
     let datares=await res.json()
+    // console.log(datares)
     if(datares.message==="Login Sucessfull"){
         // console.log(datares.token)
         localStorage.setItem("token",datares.token)
@@ -74,7 +74,7 @@ async function loginFun(event){
               "Welcome to MoneyUp","",
               "success"
             );
-            sessionStorage.setItem("username",datares.name)
+            sessionStorage.setItem("username",datares.username)
             sessionStorage.setItem("email",obj.email)
             window.location.href = "../home.html";
 

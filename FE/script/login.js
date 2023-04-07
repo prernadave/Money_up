@@ -1,7 +1,5 @@
 
-
-
-const baseURL = "https://long-blue-pronghorn-hat.cyclic.app";
+const baseURL = "https://busy-sock-fawn.cyclic.app/";
 let signupForm = document.querySelector(".signup-form form");
 signupForm.addEventListener("submit", async (event) => {
   event.preventDefault();

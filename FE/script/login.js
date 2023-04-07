@@ -26,7 +26,8 @@ signupForm.addEventListener("submit", async (event) => {
       body: JSON.stringify(obj),
       });
       let data = await res.json();
-      if (data.message === "User Register Sucessfull") {
+      console.log(data)
+      if (res.ok) {
           await swal("Signup Successful!", "You are now Registered!", "success");
          
           window.location.href="login.html"

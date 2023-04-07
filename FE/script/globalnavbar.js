@@ -2,7 +2,7 @@
 let Navadd = document.querySelectorAll("#render_navbar");
 for (let i = 0; i < Navadd.length; i++) {
     Navadd[i].innerHTML = `<div id="navbar"onmouseleave="toogle1off()" onmouseout="toggle2off()" >
-    <ul><img id="gif" src="https://thumbs.gfycat.com/PleasingSelfreliantAustraliankelpie.webp">
+    <ul onClick="home()" ><img id="gif" src="https://thumbs.gfycat.com/PleasingSelfreliantAustraliankelpie.webp">
         <li id="brand_name">Money Up</li>
     </ul>
     <ul id="navsub2">
@@ -29,6 +29,18 @@ for (let i = 0; i < Navadd.length; i++) {
             </div>
         </li>
     </ul>
+   <div id="threebar" onClick="toogle()"> <i class="fa-solid fa-bars"></i> </div>
+</div>
+<div id="responsive">
+<p>Hi, ${sessionStorage.getItem("username")}!</p>
+<div >
+    <div><a href="">My Profile </a></div>
+    <div><a href="account.html">My Accounts </a></div>
+    <div><a href="budget.html">My Budget </a></div>
+    <div><a>Customer Service </a> </div>
+</div>
+<button id="logoutnow" onClick="logout_now()" onmouseover="toggle2on()"> Logout </button>
+</div>
 </div>`
 }
 let toggle1 = document.querySelector("#toggle1");
@@ -45,10 +57,29 @@ function toggle2on() {
 function toggle2off() {
     toggle2.style.display = "none";
 }
-async function  logout_now(){
-    sessionStorage.setItem("username",null)
+async function logout_now() {
+    sessionStorage.setItem("username", null)
     alert("Want to logout?")
     window.location.href = "./index.html";
 }
+function home(){
+    window.location.href = "./home.html";
+}
+let flag="3bar"
+function toogle(){
+    let responsive=document.querySelector("#responsive");
+    let body=document.querySelector("body")
+    if(flag=="3bar"){
+        threebar.innerHTML=`<i class="fa-solid fa-x"></i>`;
+        flag="x";
+        responsive.style.display="block"
+        body.style.position="fixed"
 
+    }else{
+        threebar.innerHTML=`<i class="fa-solid fa-bars"></i>`
+        responsive.style.display="none"
+        flag="3bar";
+        body.style.position="relative";
+    }
+}
 // ************NAVBAR END***********

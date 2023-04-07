@@ -22,14 +22,14 @@ let addAccountFunction=async(obj)=>{
             body:JSON.stringify(obj)
         })
         if(add_req.ok){
-            alert("New account is added");
+            swal("New account is added","","success");
             getAccountFunction();
         }else{
-            alert("unable to add new account!");
+            swal("unable to add new account!");
         }
     } catch (error) {
         console.log(error.message);
-        alert("unable to add new account!");
+        swal("unable to add new account!");
     }
 };
 
@@ -54,11 +54,11 @@ let getAccountFunction=async()=>{
             let total=backendData.total;
             renderAccountFunction(accountData,total);
         }else{
-            alert("unable to load!!");
+            swal("unable to load!!");
         }
     } catch (error) {
         console.log(error.message);
-        alert("unable to load!!");
+        swal("unable to load!!");
     }
 }
 
@@ -128,14 +128,14 @@ let deleteAccountFunction=async(id)=>{
             }
         })
         if(delete_req.ok){
-            alert("account deleted");
+            swal("account deleted","","success");
             getAccountFunction();
         }else{
-            alert("Unable to delete the account!");
+            swal("Unable to delete the account!");
         }
     } catch (error) {
         console.log(error.message);
-        alert("Unable to delete the account!");
+        swal("Unable to delete the account!");
     }
 }
 
@@ -151,12 +151,12 @@ let editReqNameFunction=async(url,name,acc_no,balance)=>{
             body : JSON.stringify({"name":name,"acc_no":acc_no,"balance":balance})
         })
         if(req.ok){
-            alert("account details successfuly updated");
+            swal("account details successfuly updated");
             getAccountFunction();
         }
     } catch (error) {
         console.log(error.message);
-        alert("unable to update account details");
+        swal("unable to update account details");
     }
 }
 

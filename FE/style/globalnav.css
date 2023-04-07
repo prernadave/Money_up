@@ -13,9 +13,11 @@ a{
     color: black;
 }
 
+
 #brand_name {
     font-size: 30px;
     font-weight: 800;
+    margin-left: 20px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -105,16 +107,101 @@ li{
     cursor: pointer;
 }
 /* **********NAVBAR CSS END************ */
-
-
-
-@media screen and (min-width: 300px) and (max-width:749px) {
- 
+#threebar,#responsive{
+    display: none;
 }
-
-
-
-@media screen and (min-width: 200px) and (max-width:459px) {
+@media screen and (min-width: 200px) and (max-width:449px) {
+    #navsub2,#navsub1,#gif{
+        display: none;
+    }
+    #navbar{
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+    }
+    #threebar{
+        display: block;
+        margin-right: 30px;
+        font-size: 25px;
+        color: white;
+    }
+    #responsive{
+        display: none;
+        width: 200px;
+        margin-top: -18px;
+        background-color:  rgb(35, 164, 85);
+       position: fixed;
+       right: 0px;
+       top: 80px;
+       height: 100em;
+       padding: 20px;
+       box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;}
+    #responsive div{
+        color: rgb(12, 12, 12);
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    #responsive div>a,#responsive p{
+        color: rgb(12, 12, 12);
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     
+    }
+    #responsive button{
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
 
 }
+
+@media screen and (min-width: 450px) and (max-width:749px) {
+#navsub2,#navsub1{
+    display: none;
+}
+#navbar{
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+#threebar{
+    display: block;
+    margin-right: 30px;
+    font-size: 25px;
+    color: white;
+}
+#responsive{
+    display: none;
+    width: 300px;
+    margin-top: -18px;
+    background-color: rgb(35, 164, 85);
+   position: fixed;
+   right: 0px;
+   top: 80px;
+   height: 100em;
+   padding: 20px;
+   box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;}
+#responsive div{
+    color: rgb(12, 12, 12);
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+#responsive div>a,#responsive p{
+    color: rgb(12, 12, 12);
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+
+}
+#responsive button{
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+}
+
+
+
+
+

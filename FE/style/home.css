@@ -59,7 +59,9 @@ a{
 }
 #allrenders{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 5px;
+    padding: 8px;
+    overflow: scroll;
+    height: 300px;
     border-radius: 8px;
     border: 0.5px solid green;
     background-color: snow;
@@ -167,7 +169,7 @@ input[type=text]:focus  {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: rgba(218, 11, 11, 0.16) 0px 1px 4px;
-  width:40%;
+  width:45%;
   
 }
 .container p {
@@ -293,10 +295,79 @@ footer>p {
   .container {
     width: auto;
   }
+  #Envelopes{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between
+  }
+
+#Envelopes>div:nth-child(1){
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#Envelopes>div:nth-child(2){
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+   justify-content: space-evenly;
+
+}
+#envelopes_img{
+    width: 80%;
+    height:auto;
+}
+#allrenders{
+    border-radius: 3px;
+    height: 300px;
+    width: 330px;
+    overflow: scroll;
+    scrollbar-width: auto;
+    
 }
 
-@media all and (max-width: 400px) {
+}
+
+@media all and (max-width: 449px) {
   .container {
     padding: 0px 20px;
   }
+  #Envelopes{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between
+  }
+
+#Envelopes>div:nth-child(1){
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 98%;
+}
+#Envelopes>div:nth-child(2){
+    margin: auto;
+    margin-top: 30px;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-evenly;
+
+}
+#envelopes_img{
+    width: 80%;
+    height:auto;
+}
+#allrenders{
+    margin: auto;
+    border-radius: 3px;
+    height: 300px;
+    width: 330px;
+    overflow: scroll;
+    scrollbar-width: auto;
+    
+}
+
 }

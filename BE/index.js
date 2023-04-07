@@ -32,9 +32,9 @@ app.get("/", (req, res) => {
 app.listen(process.env.port, async () => {
     try {
         await connection;
-        console.log(`Connected To DB`)
+        console.log(`Connected To DB 🎉`)
     } catch (error) {
         console.log(error.message)
     }
-  console.log(`Server is running at ${process.env.port}`);
+  console.log(`Server is running at ${process.env.port}✅`);
 });

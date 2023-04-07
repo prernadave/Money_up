@@ -29,7 +29,8 @@ body{
     width:100%;
     background-color: none;
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(62,163,100);
     font-weight: 600;
     padding: 8px 0px;
@@ -37,6 +38,7 @@ body{
 
 #account_header p{
     font-size: 20px;
+    margin-top: 12px;
     color: black;
     font-weight: normal;
 }
@@ -74,8 +76,8 @@ body{
     text-align: center;
     /* background-color: aliceblue;  */
     padding: 5px 0px;
-    font-size: 30px;
-    color: rgb(62,163,100);
+    font-size: 20px;
+    color: rgb(21, 22, 21);
 }
 
 

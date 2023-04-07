@@ -10,10 +10,10 @@ add_account_btn.addEventListener("submit",(event)=>{
     addAccountFunction(obj);
 })
 
-
+const baseURL="https://busy-sock-fawn.cyclic.app"
 let addAccountFunction=async(obj)=>{
     try {
-        let add_req=await fetch(`https://busy-sock-fawn.cyclic.app/accounts/create`,{
+        let add_req=await fetch(`${baseURL}/accounts/create`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded",(event)=>{
 
 let getAccountFunction=async()=>{
     try {
-        let allData_req=await fetch(`https://busy-sock-fawn.cyclic.app/accounts`,{
+        let allData_req=await fetch(`${baseURL}/accounts`,{
             method:"GET",
             headers:{
                 "Content-Type":"application/json",
@@ -64,7 +64,7 @@ let getAccountFunction=async()=>{
 
 
 let renderAccountFunction=async(accountData,total)=>{
-    document.getElementById("net_total").innerHTML=`<label>Net Total : </label>${total}`;
+    document.getElementById("net_total").innerHTML=`<label>Total Balance : </label><spam style="color:red; font-size:16px " >${total} Rs</spam>`;
     let displayContainer=document.getElementById("render_container");
     displayContainer.innerHTML=null;
     let accountArr=accountData.map((item)=>{
@@ -109,7 +109,7 @@ let renderAccountFunction=async(accountData,total)=>{
                 let edit_name=document.getElementById("edit_name").innerText;
                 let edit_acc_no=document.getElementById("edit_acc_no").innerText;
                 let edit_balance=document.getElementById("edit_balance").innerText;
-                let edit_url=`https://busy-sock-fawn.cyclic.app/accounts/update/${edit_id}`;
+                let edit_url=`${baseURL}/accounts/update/${edit_id}`;
                 editReqNameFunction(edit_url,edit_name,edit_acc_no,edit_balance);
             })
 
@@ -120,7 +120,7 @@ let renderAccountFunction=async(accountData,total)=>{
 
 let deleteAccountFunction=async(id)=>{
     try {
-        let delete_req=await fetch(`https://busy-sock-fawn.cyclic.app/accounts/delete/${id}`,{
+        let delete_req=await fetch(`${baseURL}/accounts/delete/${id}`,{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json",

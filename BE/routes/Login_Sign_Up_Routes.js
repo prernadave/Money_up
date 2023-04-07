@@ -1,7 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const { userModel } = require("../model/user-SignUP-Model");
-// const { authenticator } = require("../middleware/authentication");
+
 
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");

@@ -15,7 +15,7 @@ let allUnTasksG=[]
 async function getAllData(){
     try {
         let fetchingData=await fetch
-        (`http://localhost:9168/newbudget/alltask`,{
+        (`https://busy-sock-fawn.cyclic.app/newbudget/alltask`,{
             method:"GET",
             headers:{  
                 "Content-Type":"application/json", 
@@ -133,7 +133,7 @@ compButton.forEach(elem=>{
 
 async function updateData(id,obj){
 try {
-    let updata=await fetch(`http://localhost:9168/newbudget/update/${id}`,{
+    let updata=await fetch(`https://busy-sock-fawn.cyclic.app/newbudget/update/${id}`,{
     method:"PATCH",
     headers:{  
         "Content-Type":"application/json", 
@@ -180,7 +180,7 @@ function renderFormData(data,banks){
 async function createTask(obj){
     try {
         let fetchingData=await fetch
-        (`http://localhost:9168/newbudget/create`,{
+        (`https://busy-sock-fawn.cyclic.app/newbudget/create`,{
             method:"POST",
             headers:{  
                 "Content-Type":"application/json", 

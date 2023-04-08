@@ -1,4 +1,4 @@
-const redis=require("redis");
+const redis = require("redis");
 const { error } = require("winston");
 
 
@@ -12,13 +12,13 @@ const client = redis.createClient({
 
 client.connect();
 
-client.on("error",(error)=>{
-    console.log(error.message);
+client.on("error", (error) => {
+
 })
-client.on("connect",()=>{
-    console.log("connected to the redis cloud");
+client.on("connect", () => {
+
 })
 
-module.exports={
+module.exports = {
     client
 }

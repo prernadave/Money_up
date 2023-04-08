@@ -3,7 +3,7 @@ render();
 let username=sessionStorage.getItem("username");
 getNameFunction(username);
 
-// console.log("jdhj")
+
 let totalbalance = 0
 async function render() {
     await fetch("https://busy-sock-fawn.cyclic.app/accounts",{
@@ -22,8 +22,7 @@ async function render() {
              let balances=[];
              document.querySelector(".totalbalance").innerHTML=totalbalance+" .Rs"
             let x=data.map((item,index)=>{
-              // console.log(item);
-                Accounts.push(item.name);
+               Accounts.push(item.name);
                 balances.push(item.balance)
                 return `<div class="banks">
                 <p><i class="fa-solid fa-building-columns"></i> ${item.name}</p>
@@ -60,6 +59,6 @@ async function render() {
 
 
 function getNameFunction(username){
-  // console.log(username);
+  
   document.querySelector(".myname").innerHTML=`Hi, ${username}`;
 }

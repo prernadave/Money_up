@@ -140,7 +140,7 @@ for(let btn of alldeletedbtn){
         let data_id = event.target.dataset.id;
         confirm("Task is going to delete permantaly")
         deletefunction(data_id)
-        // window.location.reload();
+        
     })
 }
 
@@ -184,7 +184,7 @@ async function  getAllData(){
         .then(res=>{
             let allTasks=res.allTasks
             let totalamount=res.totalamount
-            // console.log(res)
+            
            renderData(allTasks)
            rendertotal(totalamount)
         })
@@ -210,7 +210,7 @@ async function SaveData(obj){
         alert("task created")
         getAllData()
     }else{
-        console.log(data,data.error)
+       
         alert("login first")
     }
 
@@ -258,7 +258,7 @@ async function deletefunction(id){
                     getAllData()
                 })
         }else{
-            console.log(data)
+            
             alert("you are note authorised")
         }
 

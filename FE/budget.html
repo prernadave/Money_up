@@ -18,61 +18,71 @@
     <div id="render_navbar"></div>
 
     <!-- budget data mid-container -->
-    <div id="mid-container">
-      <h1 id="mid-cont-title">Budget For The Month</h1>
-      <div id="mid-cont-head">
-        <ul id="mid-main-head">
-            <div id="mid-main-task">Task Name</div>
-            <div id="mid-main-amnt">Amount</div>
-            <div id="mid-main-edit">Edit</div>
-            <div id="mid-main-delt">Delete</div>
-            <div id="mid-main-cmpl">Completed</div>
-        </ul>
-     </div>
-     <div id="main-data-container">
-        <!-- <div class="main-task-div">
-            <ul class="main-task-ul">
-                <div class="main-name-div">
-                    <input class="main-task-name" type="text" value="Coffe" readonly required>
+    <div id="main-mid-container">
+        <div id="render-data">
+            <div id="search-select-data">
+                <div id="select-data">
+                    <p id="slct-bank-name">Select Bank Account</p>
+                    <select name="account" id="bank-accounts-slct">
+                        <!-- <option value="all">Show All Accounts</option>
+                        <option value="sbi">SBI</option>
+                        <option value="AXIS">Axis</option>
+                        <option value="Union">Union Bank</option>
+                        <option value="HDFC">HDFC</option> -->
+                    </select>
                 </div>
-                <div class="main-amout-div">
-                    <input class="main-task-amount" type="Number" value="5000" readonly required>
+                <div id="mainsearchdiv">
+                    <p>Tell us what you're looking for</p>
+                    <input type="text" placeholder="Search for tasks here..." id="searchBox">
+                    <button id="mainsearchbutton">Search</button>
                 </div>
-                <div class="main-edit-div">
-                    <img src="./budgetImages/edit_img.png" alt=""  class="main-task-edit">
-                </div>
-               <div  class="main-delete-div">
-                <img src="./budgetImages/delete_img.png" alt="" class="main-task-delete">
-               </div>
-                <div class="main-btn-div">
-                    <button class="main-task-completed">No</button>
-                </div>
-            </ul>
-        </div> -->
-     </div>
-    </div>
-    
+            </div>
+            <div id="render-all-tasks-div">
+                <h2 id="task-title">Your Tasks</h2>
+                <div id="main-render-div">
+                    <div id="tasks-title">
+                    <p id="bank-name-title">Bank Name</p>
+                    <p id="task-name-title">Task Name</p>
+                    <p id="taks-prize-title">Task Prize</p>
+                    <p id="bank-details-update">Update</p>
+                    <p id="task-completed">Mark As Completed</p>
+                    </div>
+                    <div id="all-task-render-main">
+                        
+                    </div>
 
-    <!-- form for create budget  -->
-    <div id="mid-bottom-form">
-        <form id="budget-fill-form">
-            <div id="task-name-div">
-                <label for="taskname">Task Name:</label>
-                <input id="ip-task-name" type="text" name="taskname" placeholder="Enter your task here...">
+                </div>
             </div>
-            <div id="task-amt-div">
-                <label for="taskamt">Enter Amount:</label>
-                <input id="ip-task-amt" type="number" name="taskamt" placeholder="Enter your amout here...">
-            </div>
-           <div id="sub-btn-div">
-            <button id="submit-btn-butdget">Add Task</button>
-           </div>
-            <div id="ttl-amt-div">
-                <label for="amtspent">Amount Spended:</label>
-                <input id="ip-amt-spent" type="number" name="amtspent" placeholder="₹00,000/-" readonly>
-            </div>
-        </form>
+            
+        </div>
+        
+        <div id="budget-form">
+            <!-- <h1 id=create-taskt-title>Create a Task</h1>
+            <form id="task-creat-form">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR7P5zOBSZxTrT-yxeyi8okKf6K3wu3ZijIw" alt="crate-task" id="create-task-img">
+                    <p id="crt-task-bank">Select Bank Account</p>
+                    <select name="accounts" id="crt-task-bank-acct">
+                        <option value="all">Show All Accounts</option>
+                        <option value="sbi">SBI</option>
+                        <option value="AXIS">Axis</option>
+                        <option value="Union">Union Bank</option>
+                        <option value="HDFC">HDFC</option>
+                    </select>
+                    <p id="crt-task-name">Enter Task Name</p>
+                    <input type="text" id="crt-task-nameip" placeholder="Enter task title here..."  required>
+                    <p id="crt-task-prize">Enter Task Prize</p>
+                    <input type="text" id="crt-task-prizeip" placeholder="Enter task prize here..." required>
+                    <button type="submit" id="crt-task-sbbtn">Submit</button>
+                    <button type="submit" id="crt-task-cabtn">Cancel</button>
+                    
+            </form> -->
+        </div>
     </div>
+    <div id="changecomptask">
+        <button id="comptaskatag">For Checkcing Completed Task Click Here...</button>
+    </div>
+
+  
     <footer>
         <div class="footer-div">
             <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_191,h_191/https://goodbudget.com/wp-content/uploads/2019/03/12114655/budget-that-syncs-couple-e1560365252699.png"

@@ -1,5 +1,7 @@
 const mongoose=require("mongoose");
 
+
+// ------------------------------------Account Schema---------------------------------------------------
 const accountSchema=mongoose.Schema({
     name:String,
     acc_no:Number,

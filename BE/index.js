@@ -21,6 +21,8 @@ const{accountRouter}=require("./routes/account.router");
 // HOME ROUTER
 const{HomeRouter}=require("./routes/Home.router");
 
+// NEW BUDGET ROUTER
+const{newBudgetRouter}=require("./routes/newBudet.route");
 
 const app = express();
 
@@ -31,6 +33,7 @@ app.use("/user", UserRouter);                    //USER ROUTER
 app.use("/budget",budgetRouter)                  //BUDGET ROUTER
 app.use("/accounts",accountRouter);              //ACCOUNT ROUTER
 app.use("/home",HomeRouter);                     //HOME ROUTER
+app.use("/newbudget",newBudgetRouter)            //NEW BUDGET ROUTER
 app.use("/user", UserRouter);                    //USER ROUTER
 app.use("/auth",Oauth);                          //OAUTH
 

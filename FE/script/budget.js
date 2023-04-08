@@ -1,268 +1,315 @@
-let submitbtn=document.getElementById("submit-btn-butdget")
-var count=1
-submitbtn.addEventListener("click",(event)=>{
-    event.preventDefault()
-    let taskname=document.getElementById("ip-task-name")
-    let amout=document.getElementById("ip-task-amt")
-    if(taskname.value.length==0 || amout.value.length==0){
-        alert("Fill the all section")
-    }else{
-        let completed=false
-        let obj={
-            taskname:taskname.value,
-            taskamt:amout.value,
-            completed:completed,
-            data_id:count,
-        }
-        count++
-        SaveData(obj)
-    }
-    
-})
+// let baseURL="https://busy-sock-fawn.cyclic.app/"
+// let baseURL="http://localhost:9168"
 
-let midMainCont=document.getElementById("main-data-container")
-
-function renderData(arr){
-let allContent=arr.map((obj)=>{
- return `
-<div class="main-task-div">
-<ul class="main-task-ul">
-    <div class="main-name-div">
-        <input type="text" class="main-task-name" 
-        data-id=${obj._id} 
-        value=${obj.taskname} 
-        readonly required>
-    </div>
-    <div class="main-amout-div">
-        <input type="text" class="main-task-amount" 
-        data-id=${obj._id} 
-        value=${obj.taskamt} 
-        readonly required>
-    </div>
-    <div class="main-edit-div" data-id=${obj._id} >
-        <img class="main-task-edit" src="./budgetImages/edit_img.png" alt="edt" 
-        data-id=${obj._id}
-        >
-    </div>
-    <div class="main-delete-div">
-        <img class="main-task-delete" src="./budgetImages/delete_img.png" alt="dlt" 
-        data-id=${obj._id}
-        >
-    </div>
-    <div class="main-btn-div">
-        ${btnfunction(obj)}
-    </div>
-</ul>
-</div>
- `
-})
-
-midMainCont.innerHTML=allContent.join(" ")
-// allContent.join()
-//   Editing section 
-
-  let alleditbtn=document.querySelectorAll(".main-edit-div")
-
-  for(let btn of alleditbtn){
-    btn.addEventListener("click",(event)=>{ 
-    let data_id = event.target.dataset.id;
-    btn.innerHTML=``
-    btn.innerHTML=`
-    <img src="./budgetImages/save_img.png" alt=""  class="main-task-edit" data-id=${data_id}>
-    `
-    let nameip=document.querySelectorAll(".main-task-name")
-    let amountip=document.querySelectorAll(".main-task-amount")
-    let completedip=document.querySelectorAll(".main-task-completed")
-    for(let i=0;i<nameip.length;i++){
-        if(nameip[i].dataset.id==data_id){
-            nameip[i].readOnly=false
-            amountip[i].readOnly=false
-            btn.addEventListener("click",()=>{
-                let newnamevalue=nameip[i].value
-                let newamoutvalue=amountip[i].value
-                let newcompletedip=completedip[i].innerText
-                if(newcompletedip=="No"){
-                    newcompletedip=true
-                }else{
-                    newcompletedip=false
-                }
-                nameip[i].readOnly=true
-                amountip[i].readOnly=true 
-                btn.innerHTML=`
-                <img src="./budgetImages/edit_img.png" alt=""  class="main-task-edit" data-id=${data_id}>
-               `
-               let newobj={
-                taskname:newnamevalue,
-                taskamt:newamoutvalue
-               }
-                updateData(newobj,data_id)
-                window.location.reload();
-            })
-        }
-    }
-
-  });
+let loggedInUser = (sessionStorage.getItem("email"))
+if(!loggedInUser){    
+    window.location.assign("index.html");
 }
-
-//completed or not section
-let allcompletedbtn=document.querySelectorAll
-(".main-task-completed")
-for(let btn of allcompletedbtn){
-    btn.addEventListener("click",(event)=>{ 
-        let data_id = event.target.dataset.id;
-        let check=btn.innerText
-        if(check=="No"){
-        let checkval=confirm("Confirm your task is completed.")
-        if(checkval){
-             btn.innerText="Yes"
-             btn.style.backgroundColor="green"
-             let obj={
-                completed:true
-             }
-             updateData(obj,data_id)
-        }
-        }else{
-            btn.innerText="No"
-            btn.style.backgroundColor="red"
-            let obj={
-                completed:false
-            }
-            updateData(obj,data_id)
-        }
-    })
-}
-
-//delete the particular task
-let alldeletedbtn=document.querySelectorAll
-(".main-task-delete")
-for(let btn of alldeletedbtn){
-    btn.addEventListener("click",(event)=>{ 
-        let data_id = event.target.dataset.id;
-        confirm("Task is going to delete permantaly")
-        deletefunction(data_id)
-        
-    })
-}
-
-}
-
-
-function btnfunction(obj){
-  if(obj.completed==false){
-    return `
-    <button class="main-task-completed"  
-    data-id=${obj._id} style="background-color:red">
-     No
-    </button>
-    `
-  }else{
-    return `
-    <button class="main-task-completed"  
-    data-id=${obj._id} style="background-color:green">
-     Yes
-    </button>`
-  }
-  
-}
-
-function  rendertotal(totalamount){
-    let allamt=document.getElementById("ip-amt-spent")
-    allamt.value=totalamount
-}
-
-
 getAllData()
-async function  getAllData(){
+
+
+let totalTasks=[]
+let allAccounts=[]
+let allCompTask=[]
+let allUnTasksG=[]
+async function getAllData(){
     try {
-        let data=await fetch(`https://busy-sock-fawn.cyclic.app/budget/alltask`,{
-            headers:{
-                authorization:sessionStorage.getItem("email")
+        let fetchingData=await fetch
+        (`http://localhost:9168/newbudget/alltask`,{
+            method:"GET",
+            headers:{  
+                "Content-Type":"application/json", 
+                Authorization:sessionStorage.getItem("email")
             }
         })
-       if(data.ok){
-        let temp=data.json()
-        .then(res=>{
-            let allTasks=res.allTasks
-            let totalamount=res.totalamount
-            
-           renderData(allTasks)
-           rendertotal(totalamount)
-        })
+        if(fetchingData.ok){
+           let tempCheck=await fetchingData.json()
+           totalTasks=tempCheck.allTasks
+           allAccounts=tempCheck.allBanks
+           let allUnTask=getAllTasksUn(tempCheck.allTasks)
+           allCompTask=getAllTaskComp(tempCheck.allTasks)
+           allUnTasksG=getAllTasksUn(tempCheck.allTasks)
+           if(tempCheck.allBanks.length>0){
+            renderAllTask(allUnTask,tempCheck.allBanks)
+            renderBankAccountForFilter(tempCheck.allBanks)
+           }else{
+            renderBlank()
+           }
+          
+        }else{
+          console.log(temp)
+        }
+    } catch (error) {
+        // alert('Server Error')
+        console.log(error.message)
+    }
+}
+
+function getAllTaskComp(data){
+    let temp=[]
+    for(let i=0;i<data.length;i++){
+        if(data[i].completed==true){
+            temp.push(data[i])
+        }
+    }
+    return temp
+}
+function getAllTasksUn(data){
+    let temp=[]
+    for(let i=0;i<data.length;i++){
+        if(data[i].completed==false){
+            temp.push(data[i])
+        }
+    }
+    return temp
+}
+
+
+function renderBlank(){
+    let midCont=document.getElementById("main-mid-container")
+    midCont.innerHTML=""
+    let showComp=document.getElementById("comptaskatag")
+    showComp.innerHTML=""
+    showComp.innerHTML=`
+    <p>You Didn't created any Created...</p>
+    <p>For Creating Account <a href="./account.html"" id="clickhere">Click here...</a></p>
+
+    `
+}
+
+let allTaskRenderMain=document.getElementById("all-task-render-main")
+
+function renderAllTask(data,banks){
+if(banks.length>0 && totalTasks.length<=0){
+    let showCompdown=document.getElementById("changecomptask")
+    showCompdown.innerHTML=""
+    let showComp=document.getElementById("render-data")
+    showComp.innerHTML=""
+    showComp.innerHTML=`
+    <p>You Didn't created any Task...</p>
+    `
+    renderFormData(data,banks)
+}else{
+allTaskRenderMain.innerHTML=""
+let allTask=data.map((elem)=>{
+    return `
+        <div class="main-tasks">
+            <p class="bank-name-task">${findBankAccount(elem.bankID,banks)}</p>
+            <p class="task-name-task">${elem.taskname}</p>
+            <p class="task-prize-task">${elem.taskprize}₹</p>
+            <div class="up-btn-div">
+            <button class="task-update-task">Update</button>
+            </div>
+            <div class="up-btn-div">
+            <button class="task-comp-task" data-id=${elem._id}>${taskCompleted(elem.completed)}</button>
+            </div>
+        </div>
+    `
+
+})
+renderFormData(data,banks)
+allTaskRenderMain.innerHTML=allTask.join("")
+let compButton=document.querySelectorAll(".task-comp-task")
+compButton.forEach(elem=>{
+    elem.addEventListener("click",(event)=>{
+        let taskID=event.target.dataset.id
+       let flag=event.target.childNodes[0].data
+       if(flag=="No"){
+        let temp=confirm("Confirm!Your Task is Completed or Not.")
+        if(temp==1){
+            flag=true
+        }
        }else{
-        alert("not register")
+       alert("Task is already completed")
        }
-       } catch (error) {
-        console.log(error)
-       }
-}
-
-async function SaveData(obj){
-    try {
-        let data=await fetch("https://busy-sock-fawn.cyclic.app/budget/create",{
-        method:"POST",
-        headers:{
-            "Content-type":"application/json",
-            "authorization":sessionStorage.getItem("email")
-        },
-        body:JSON.stringify(obj)
+        let obj={
+            completed:flag
+        }
+        updateData(taskID,obj)
     })
-    if(data.ok){
-        alert("task created")
-        getAllData()
+})
+}
+}
+
+async function updateData(id,obj){
+try {
+    let updata=await fetch(`http://localhost:9168/newbudget/update/${id}`,{
+    method:"PATCH",
+    headers:{  
+        "Content-Type":"application/json", 
+        Authorization:sessionStorage.getItem("email")
+    },
+    body:JSON.stringify(obj)
+})
+    if(updata.ok){
+        alert("Task Update Successfully!")
+        window.location.reload();
     }else{
+        console.log(updata)
+    }
+} catch (error) {
+    alert('Server Error')
+    console.log(error.message)
+}
+
+}
+
+function renderFormData(data,banks){
+    let formrender=document.getElementById("budget-form")
+    formrender.innerHTML=renderForm(banks)
+    let submitbutton=document.getElementById("crt-task-sbbtn")
+    let formtask=document.querySelector("form")
+    formtask.addEventListener('submit',(event)=>{
+        event.preventDefault()
+        let bank=document.getElementById("crt-task-bank-acct").value
+       if(bank=="all"){
+        alert("Select Bank Account")
+       }else{
+        let taskname=document.getElementById("crt-task-nameip").value
+        let taskprize=document.getElementById("crt-task-prizeip").value
+        let obj={
+            bankID:bank,
+            taskname:taskname,
+            taskprize:taskprize,
+        }
+        createTask(obj)
+       }
        
-        alert("login first")
-    }
-
-    } catch (error) {
-        console.log(error)
-    }
-} 
-
-async function updateData(newobj,id){
+    })
+}
+async function createTask(obj){
     try {
-        let data=await fetch(`https://busy-sock-fawn.cyclic.app/budget/update/${id}`,{
-            method:"PATCH",
-            headers:{
-                "Content-type":"application/json",
-                "Authorization":sessionStorage.getItem("email")
+        let fetchingData=await fetch
+        (`http://localhost:9168/newbudget/create`,{
+            method:"POST",
+            headers:{  
+                "Content-Type":"application/json", 
+                Authorization:sessionStorage.getItem("email")
             },
-            body:JSON.stringify(newobj)
+            body:JSON.stringify(obj)
         })
-        if(data.ok){
-            let msg=await data.json().then(
-                res=>{
-                    getAllData()
+        if(fetchingData.ok){
+            window.location.reload();
+        }else{
+          console.log("Server Error")
+        }
+    } catch (error) {
+        alert('Server Error')
+        console.log(error.message)
+    }
+}
+
+function renderForm(banks){
+    return `
+    <h1 id=create-taskt-title>Create a Task</h1>
+            <form id="task-creat-form">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR7P5zOBSZxTrT-yxeyi8okKf6K3wu3ZijIw" alt="crate-task" id="create-task-img">
+                    <p id="crt-task-bank">Select Bank Account</p>
+                    <select name="accounts" id="crt-task-bank-acct" for="account">
+                    <option value="all">Show All Accounts</option>    
+                        ${renderOptions(banks)}
+                    </select>
+                    <p id="crt-task-name">Enter Task Name</p>
+                    <input type="text" id="crt-task-nameip" placeholder="Enter task title here..."  for="taskname" required>
+                    <p id="crt-task-prize">Enter Task Prize</p>
+                    <input type="number" id="crt-task-prizeip" placeholder="Enter task prize here..."  for="prize" required>
+                    <button type="submit" id="crt-task-sbbtn">Submit</button>
+                    <button type="submit" id="crt-task-cabtn">Cancel</button>
+                    
+            </form>
+    `
+
+    
+}
+
+function renderOptions(data){
+   let temp=data.map(elem=>{
+    return `
+    <option value="${elem._id}">${elem.name}</option>
+    `
+   })
+   return temp.join("")
+}
+
+function findBankAccount(bankID,banks){
+  for(let i=0;i<banks.length;i++){
+    if(bankID==banks[i]._id){
+        return banks[i].name
+    }
+  }
+}
+
+function taskCompleted(flag){
+    if(flag==true){   
+        return 'Yes'
+    }else{
+        return 'No'
+    }
+}
+
+let showComp=document.getElementById("comptaskatag")
+showComp.addEventListener('click',(event)=>{
+    let text=event.target.innerText
+    if(text=="For Checkcing Completed Task Click Here..."){
+        renderAllTask(allCompTask,allAccounts)
+        showComp.innerText="For Checkcing Uncompleted Task Click Here..."
+    }else{
+        showComp.innerText="For Checkcing Completed Task Click Here..."
+        renderAllTask(allUnTasksG,allAccounts)
+    }
+})
+
+
+function renderBankAccountForFilter(data){
+    console.log(data)
+    let getFilterAcc=document.getElementById("bank-accounts-slct")
+    getFilterAcc.innerHTML=`
+    <option value="all">Show All Accounts</option>
+    ${renderBankAccnt(data)}
+    `
+    getFilterAcc.addEventListener('change',(event)=>{
+        let bankName=event.target.value
+        console.log(bankName)
+        if(bankName==="all"){
+            renderAllTask(totalTasks,allAccounts)
+        }else{
+            let temp=totalTasks.filter(elem=>{
+                if(elem.bankID==bankName){
+                    return elem
                 }
-            )
-        }else{
-            alert("you are note authorised")
+            })
+            // console.log(temp)
+            renderAllTask(temp,allAccounts)
         }
-
-    } catch (error) {
-        console.log(error)
-    }
+    })
 }
 
-async function deletefunction(id){
-    try {
-        let data=await fetch(`https://busy-sock-fawn.cyclic.app/budget/delete/${id}`,{
-            method:"DELETE",
-            headers:{
-                "Authorization":sessionStorage.getItem("email")
-            }
+function renderBankAccnt(data){
+   let allAccts=data.map(elem=>{
+    return `
+    <option value="${elem._id}">${elem.name}</option>
+    `
+   })
+   return allAccts.join("")
+}
+
+
+let searchCheck=document.getElementById("searchBox")
+searchCheck.addEventListener('input',(event)=>{
+    let searchWord=searchTask(event.target.value)
+    renderAllTask(searchWord,allAccounts)
+    
+ })
+
+ function searchTask(task){
+    if(task=="all"){
+        renderAllTask(totalTasks,allAccounts)
+       }else{
+        let temp=totalTasks.filter(function(elem){
+            let ans=elem.taskname.toLowerCase().includes(task.toLowerCase())||
+            elem.taskname.toLowerCase().includes(task.toLowerCase())
+            return ans
         })
-        if(data.ok){
-            let msg=await data.json().then(
-                res=>{
-                    getAllData()
-                })
-        }else{
-            
-            alert("you are note authorised")
-        }
-
-    } catch (error) {
-        console.log(error)
-    }
-}
+        return temp;
+       }
+ }

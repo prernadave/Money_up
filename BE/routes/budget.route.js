@@ -17,7 +17,7 @@ budgetRouter.get('/alltask',authenticator,async(req,res)=>{
         }
         res.status(200).send({"allTasks":allTasks,"totalamount":total})
     } catch (error) {
-        console.log(error)
+       
         res.status(400).send({"msg":"Server Error"})
     }
 })
@@ -36,7 +36,7 @@ budgetRouter.post('/create',authenticator,async(req,res)=>{
 
         res.status(200).send({"msg":"Task created successfully","total":total})
     } catch (error) {
-        console.log(error)
+        
         res.status(400).send({"msg":"Server Error"})
     }
 })
@@ -54,7 +54,7 @@ budgetRouter.patch("/update/:id",authenticator,async(req,res)=>{
             }
         res.status(200).send({"msg":"Task updated successfully","total":total})
     } catch (error) {
-        console.log(error)
+        
         res.status(400).send({"msg":"Server Error"})
     }
 })
@@ -72,7 +72,7 @@ budgetRouter.delete("/delete/:id",authenticator,async(req,res)=>{
             }
         res.status(200).send({"msg":"Task Deleted successfully","total":total})
     } catch (error) {
-        console.log(error)
+       
         res.status(400).send({"msg":"Server Error"})
     }
 })

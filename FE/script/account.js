@@ -28,7 +28,7 @@ let addAccountFunction=async(obj)=>{
             swal("unable to add new account!");
         }
     } catch (error) {
-        console.log(error.message);
+       
         swal("unable to add new account!");
     }
 };
@@ -57,7 +57,7 @@ let getAccountFunction=async()=>{
             swal("unable to load!!");
         }
     } catch (error) {
-        console.log(error.message);
+      
         swal("unable to load!!");
     }
 }
@@ -134,7 +134,7 @@ let deleteAccountFunction=async(id)=>{
             swal("Unable to delete the account!");
         }
     } catch (error) {
-        console.log(error.message);
+        
         swal("Unable to delete the account!");
     }
 }
@@ -155,7 +155,7 @@ let editReqNameFunction=async(url,name,acc_no,balance)=>{
             getAccountFunction();
         }
     } catch (error) {
-        console.log(error.message);
+       
         swal("unable to update account details");
     }
 }

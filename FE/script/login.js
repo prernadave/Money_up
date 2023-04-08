@@ -25,7 +25,7 @@ signupForm.addEventListener("submit", async (event) => {
       body: JSON.stringify(obj),
       });
       let data = await res.json();
-      // console.log(data)
+      
       if (res.ok) {
           await swal("Signup Successful!", "You are now Registered!", "success");
          
@@ -40,7 +40,7 @@ signupForm.addEventListener("submit", async (event) => {
 
   } catch (error) {
     console.log(error);
-    // alert("An error occurred. Please try again later.");
+   
     return await swal("An error occurred. Please try again later.", "", "error");
   }
 });
@@ -66,9 +66,9 @@ async function loginFun(event){
         body:JSON.stringify(obj)
     })
     let datares=await res.json()
-    // console.log(datares)
+   
     if(datares.message==="Login Sucessfull"){
-        // console.log(datares.token)
+       
         localStorage.setItem("token",datares.token)
             await  swal(
               "Welcome to MoneyUp","",
@@ -81,11 +81,11 @@ async function loginFun(event){
         return;
     }
     if(datares.message==="Wrong Password"){
-        // return alert("Wrong Credentials")
+        
         return await swal("Wrong Credentials", "", "error");
     }
     if(datares.message==="Sign Up First"){
-    //    return alert("Create Your Account First")
+
        return await swal("Create Your Account First");
     }
     if(datares.message!=="Login Sucessfull"||datares.message!=="Sign Up First"||datares.message!=="Wrong Password"){

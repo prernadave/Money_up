@@ -1,34 +1,46 @@
-const express = require("express");
-require('dotenv').config();
-const cors = require("cors");
-const { UserRouter } = require("./routes/Login_Sign_Up_Routes");
-const { connection } = require("./config/db");
+const express = require("express");       //express
+require('dotenv').config();               //dotenv
+const cors = require("cors");             //cors
+const { connection } = require("./config/db");                        //MONGODB CONNECTION
 
+// Routers
+
+ //USER ROUTER
+const { UserRouter } = require("./routes/Login_Sign_Up_Routes");    
 const {passport} = require("./config/google-outh");
 
+//BUDGET ROUTER
 const {budgetRouter}=require("./routes/budget.route");
+
+// OAUTH ROUTER
 const {Oauth}= require("./routes/Aouth");
+
+// ACCOUNT ROUTER
 const{accountRouter}=require("./routes/account.router");
+
+// HOME ROUTER
 const{HomeRouter}=require("./routes/Home.router");
+
+
 const app = express();
 
+// MIDDLEWARE
 app.use(express.json());
 app.use(cors());
-app.use("/user", UserRouter);
+app.use("/user", UserRouter);                    //USER ROUTER
+app.use("/budget",budgetRouter)                  //BUDGET ROUTER
+app.use("/accounts",accountRouter);              //ACCOUNT ROUTER
+app.use("/home",HomeRouter);                     //HOME ROUTER
+app.use("/user", UserRouter);                    //USER ROUTER
+app.use("/auth",Oauth);                          //OAUTH
 
-app.use("/budget",budgetRouter)
-
-app.use("/accounts",accountRouter);
-app.use("/home",HomeRouter);
-
-
-app.use("/user", UserRouter);  
-app.use("/auth",Oauth);
+//HOME 
 app.get("/", (req, res) => {
     res.send(`Route working Fine`);
 });
 
 
+//CONNECTING TO THE SERVER
 app.listen(process.env.port, async () => {
     try {
         await connection;

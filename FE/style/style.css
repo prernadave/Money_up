@@ -8,22 +8,56 @@
 
 body {
     background-color: rgb(255, 255, 255);
+
+}
+
+.dark-mode {
+    background-color: black;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #10ddbe;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #b3f8f2;
 }
 
 /* ---------------------------NAVBAR STARTS--------------------------------------------- */
 
 #nav-menu {
     display: flex;
-    justify-content: space-between;
-    position: sticky;
-    top: 0px;
+    justify-content: space-around;
+    position: fixed;
     transition: all 0.5s ease-out;
-    padding: 3px;
-    max-width: 100%;
+    width: 100%;
     z-index: 3;
     font-family: "Poppins", sans-serif;
-
+    background-color: rgb(36, 224, 164);
+    margin-top: -3%;
+    height: 60p
 }
+
+#nav-img {
+    width: 10%;
+    height: 60px;
+}
+
+#bg-video {
+
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
 
 .nav-colored {
 
@@ -33,7 +67,7 @@ body {
 
 #nav-menu>div {
     display: flex;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     align-items: center;
 }
 
@@ -41,8 +75,9 @@ body {
     padding: 6px 11px;
     font-size: 21px;
     margin: 4px 10px;
-    color: rgb(35, 164, 85);
+    color: #ffffff;
     text-decoration: none;
+    display: inline;
 }
 
 .nav-link:hover {
@@ -52,7 +87,7 @@ body {
 }
 
 .hidden {
-    color: rgb(43, 212, 24);
+    color: white;
     font-size: larger;
 
 }
@@ -64,7 +99,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: #f4efb1;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -76,7 +111,7 @@ body {
     text-decoration: none;
     font-size: x-large;
     font-weight: bold;
-    color: rgb(43, 212, 24);
+    color: #beb42f;
     display: block;
     transition: 0.3s;
 }
@@ -100,7 +135,7 @@ body {
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: rgb(53, 222, 44);
+    background-color: #beb42f;
     color: rgb(13, 20, 90);
     padding: 10px 15px;
     border: none;
@@ -124,6 +159,30 @@ body {
 /* <!-- ------------------------------------------------------------------SECTION 1 START👇👇--------------------------------------------------------------------------- --> */
 
 
+.sec-1 {
+    background-image: url(https://img.freepik.com/free-vector/hand-drawn-money-pattern-with-coins_23-2149420168.jpg?w=2000);
+}
+
+.video-div {
+    display: flex;
+}
+
+.video-div img {
+    width: 40%;
+}
+
+.heading-btn .main_heading {
+    color: #009797;
+    margin-top: 40%;
+
+}
+
+.heading-btn .small_para {
+    color: #009797
+}
+
+
+
 
 .main_heading {
     color: rgb(35, 164, 85);
@@ -138,7 +197,7 @@ body {
     text-decoration: none solid rgb(35, 164, 85);
     text-align: center;
     text-indent: 0px;
-    margin-top: 2%;
+
 
 }
 
@@ -287,7 +346,7 @@ ul.icon-list-items.inline-items {
 
 
 .sec3 {
-    background-color: #23a455;
+    background-color: rgb(36, 224, 164);
     padding: 120px;
 }
 
@@ -351,7 +410,6 @@ ul.icon-list-items.inline-items {
 
 .sec5>div>h3 {
     font-size: 30px;
-    color: #23a455;
     line-height: 30px;
 }
 
@@ -373,13 +431,13 @@ ul.icon-list-items.inline-items {
 }
 
 .sec6 .sec6-btn a {
-    color: #23a455;
+
     text-decoration: none;
 
 }
 
 .sec6 .sec6-btn {
-    border: solid #23a455;
+
     padding: 14px 30px;
     border-radius: 30px;
 }
@@ -435,7 +493,7 @@ ul.icon-list-items.inline-items {
 .sec8 {
     display: inline;
     width: 100%;
-    background-color: #B0EFFF;
+    background-color: rgb(66, 63, 63);
 
 }
 
@@ -501,14 +559,14 @@ ul.icon-list-items.inline-items {
 }
 
 .colorfull {
-    background-color: #B0EFFF;
+    background-color: rgb(66, 63, 63);
 }
 
 
 /* <!-- ------------------------------------------------------------------SECTION 9 START👇👇--------------------------------------------------------------------------- --> */
 
 .sec9 {
-    background-color: rgb(213, 255, 223);
+    background-color: #f4efb1;
     width: 100%;
     padding-bottom: 4%;
 

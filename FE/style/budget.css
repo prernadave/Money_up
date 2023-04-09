@@ -197,10 +197,9 @@
 .task-update-task:hover{
     background-color: rgb(254, 139, 72);
 }
-.task-comp-task{
-    background-color: #ff5640;
-}
-
+/* .task-comp-task{
+    background-color: #23a455;
+} */
 #budget-form{
     width: 27%;
     background-color: rgb(237, 236, 236);

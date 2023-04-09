@@ -1,5 +1,5 @@
-// let baseURL="https://busy-sock-fawn.cyclic.app/"
-// let baseURL="http://localhost:9168"
+// let baseURL="https://busy-sock-fawn.cyclic.app"
+let baseURL="http://localhost:9168"
 
 let loggedInUser = (sessionStorage.getItem("email"))
 if(!loggedInUser){    
@@ -15,7 +15,7 @@ let allUnTasksG=[]
 async function getAllData(){
     try {
         let fetchingData=await fetch
-        (`https://busy-sock-fawn.cyclic.app/newbudget/alltask`,{
+        (`${baseURL}/newbudget/alltask`,{
             method:"GET",
             headers:{  
                 "Content-Type":"application/json", 
@@ -101,7 +101,8 @@ let allTask=data.map((elem)=>{
             <button class="task-update-task">Update</button>
             </div>
             <div class="up-btn-div">
-            <button class="task-comp-task" data-id=${elem._id}>${taskCompleted(elem.completed)}</button>
+            <button class="task-comp-task" 
+            style="background-color:${selectColor(elem.completed)};" data-id=${elem._id}>${taskCompleted(elem.completed)}</button>
             </div>
         </div>
     `
@@ -131,9 +132,18 @@ compButton.forEach(elem=>{
 }
 }
 
+function selectColor(flag){
+// console.log('#ff5640')
+if(flag==false){
+    return '#ff5640'
+}else{
+    return '#23a455'
+}
+}
+
 async function updateData(id,obj){
 try {
-    let updata=await fetch(`https://busy-sock-fawn.cyclic.app/newbudget/update/${id}`,{
+    let updata=await fetch(`${baseURL}/newbudget/update/${id}`,{
     method:"PATCH",
     headers:{  
         "Content-Type":"application/json", 
@@ -180,7 +190,7 @@ function renderFormData(data,banks){
 async function createTask(obj){
     try {
         let fetchingData=await fetch
-        (`https://busy-sock-fawn.cyclic.app/newbudget/create`,{
+        (`${baseURL}/newbudget/create`,{
             method:"POST",
             headers:{  
                 "Content-Type":"application/json", 

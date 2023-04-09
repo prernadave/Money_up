@@ -168,6 +168,12 @@ function renderFormData(data,banks){
     let formrender=document.getElementById("budget-form")
     formrender.innerHTML=renderForm(banks)
     let submitbutton=document.getElementById("crt-task-sbbtn")
+    let cancelButton=document.getElementById("crt-task-cabtn")
+    cancelButton.addEventListener('click',(event)=>{
+        event.preventDefault()
+        document.getElementById("crt-task-nameip").value=""
+        document.getElementById("crt-task-prizeip").value=""
+    })
     let formtask=document.querySelector("form")
     formtask.addEventListener('submit',(event)=>{
         event.preventDefault()
@@ -224,7 +230,7 @@ function renderForm(banks){
                     <p id="crt-task-prize">Enter Task Prize</p>
                     <input type="number" id="crt-task-prizeip" placeholder="Enter task prize here..."  for="prize" required>
                     <button type="submit" id="crt-task-sbbtn">Submit</button>
-                    <button type="submit" id="crt-task-cabtn">Cancel</button>
+                    <button id="crt-task-cabtn">Cancel</button>
                     
             </form>
     `

@@ -23,11 +23,12 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 
         <div>
-            <a href="#home">How It Works</a>
+            <a href="#how">How It Works</a>
             <a href="#about">What You Get</a>
             <a href="#skills">The Money Up Way</a>
             <a href="#projects" onclick="window.location.href='./html/login.html'">LOG IN</a>
             <a href="#contact" onclick="window.location.href='./html/login.html'">SIGN UP</a>
+
         </div>
     </div>
 
@@ -37,19 +38,24 @@
     </div>
 
     <header>
-        <div id="nav-menu" style="margin-top: -3%;">
+        <div id="nav-menu">
             <!-- <p class="hidden"> Money UP </p> -->
-            <img style="width: 25%; height: 90px;" class="hidden" src="icon.png" alt="">
+            <img id="nav-img" class="hidden" src="./budgetImages/moneyupbg1.png" alt="logo">
 
             <div>
-                <a href="#home" class="nav-link home">How It Works</a>
-                <a href="#about" class="nav-link about">What You Get</a>
-                <a href="#skills" class="nav-link skills">The Money Up Way</a>
+                <a href="#how" class="nav-link home">HOW IT WORKS</a>
+                <a href="#about" class="nav-link about">WHAT YOU GET</a>
+                <a href="#skills" class="nav-link skills">THE MONEY UP WAY</a>
                 <a href="#projects" class="nav-link projects" onclick="window.location.href='./html/login.html'">LOG
                     IN</a>
                 <a href="#contact" class="nav-link contact" onclick="window.location.href='./html/login.html'">SIGN
                     UP</a>
+                <button style="background-color: transparent;  border: none; color: #ffffff;" onclick="myFunction()"> <i
+                        class="fa-solid fa-moon"></i></button>
+
+
             </div>
+        </div>
 
     </header>
 
@@ -60,46 +66,62 @@
     <section class="sec-1">
 
         <div class="top-part">
-            <h1 class="main_heading">Budget with a why</h1>
-            <div class="small_para">
-                Spend, save, and give toward what's important in life
+            <div>
+
+                <div class="video-div">
+
+                    <img src="https://www-assets.youneedabudget.com/wp-content/uploads/2022/12/08185651/Frame-8-1-1536x1392.png"
+                        alt="">
+
+                    <!-- <video width="640" height="360" autoplay i>
+                            <source src="./budgetImages/Money-Up-video (online-video-cutter.com).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video> -->
+
+
+
+                    <div class="heading-btn">
+                        <h1 class="main_heading">Budget with a why</h1>
+                        <div class="small_para">
+                            Spend, save, and give toward what's important in life
+                        </div>
+
+
+                        <!-- button part -->
+                        <div class="button_part">
+                            <a id="button-tag" href="./html/login.html" class=" button size animation-grow "
+                                role="button" style="background-color: #009797; margin-bottom: 2%;">
+                                <span class="button-content-wrapper">
+                                    <span class="button-text" style="color: #ffffff;">
+                                        create your Money Up
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
 
-            <!-- button part -->
-            <div class="button_part">
-                <a id="button-tag" href="" class=" button size animation-grow " role="button">
-                    <span class="button-content-wrapper">
-                        <span class="button-text">
-                            create your Money Up
-                        </span>
-                    </span>
-                </a>
-            </div>
+            <!-- <div style="display: flex; justify-content: space-evenly; margin-top: 2%; "> -->
 
-            <!-- icons  list  -->
-            <ul class="icon-list-items  inline-items ">
 
-                <li class="icon-list-item inline-item">
-                    <span class="icon-list-text">
-                        Budget tracking app available on
-                    </span>
-                </li>
 
-                <li class="icon-list-item   inline-item">
-                    <span class="icon-span">
-                        <i aria-hidden="true" class="fab fa-apple">
-                        </i>
-                    </span>
-                </li>
 
-                <li class="icon-list-item inline-item">
-                    <span class="icon-span">
-                        <i aria-hidden="true" class="fab fa-android">
-                        </i>
-                    </span>
-                </li>
+            <!-- <img style="width: 30%;"
+                    src="https://www-assets.youneedabudget.com/wp-content/uploads/2022/12/07195152/method_ruletwo-01.svg"
+                    alt="">
 
-            </ul>
+                <img style="width: 30%;"
+                    src="https://www-assets.youneedabudget.com/wp-content/uploads/2022/12/07195146/method_ruleone-01.svg"
+                    alt="">
+ -->
+
+
+
+
+            <!-- </div> -->
 
 
         </div>
@@ -108,17 +130,14 @@
     <!-- -----------------------------------SECTION 1 ENDS----------------------------------------------------------------------------------------------------------------- -->
 
     <!-- /* ----------------------------EMPTY SECTION----------------------------------------------------- */ -->
-    <section>
-        <div class="spacer-inner"></div>
-    </section>
+
 
 
     <!-- ---------------------------------------SECTION 3 STARTS 👇👇--------------------------------------------------------------------------- -->
     <section class="sec3">
-
         <div class="flex">
 
-            <div class="flex-div">
+            <div class="flex-div" id="how">
                 <H3 class="flex-div-text">How it works </H3>
             </div>
             <div class="button-div">
@@ -136,36 +155,60 @@
     </section>
     <!-- ---------------------------------------SECTION 3 ENDS👆👆--------------------------------------------------------------------------- -->
 
-    <section>
-        <div class="spacer-inner"></div>
-    </section>
+   
+
+
+   
+
+    <video width="100%" autoplay muted loop id="bg-video">
+        <source src="./budgetImages/Money-Up-video (online-video-cutter.com).mp4" type="video/mp4">
+        
+        Your browser does not support HTML5 video.
+      </video>
+      
+
+    <!-- <section>
+    <div>
+        <img src="https://www-assets.youneedabudget.com/wp-content/uploads/2021/12/13184301/illo_painpoints_debt_socialshare.jpg" alt="">
+        <h4>I want to pay off debt.</h4>
+
+        <p>Perhaps Past You had a few financial emergencies, pursued higher education, or paid a steep price to get an education from the School of Hard Knocks, but Future You would love for all of that to become a distant memory. Get inspired to demolish debt and find financial freedom.</p>
+    </div>
+</section> -->
+
+<section>
+    <div class="spacer-inner"></div>
+</section>
+
 
     <!-- ---------------------------------------SECTION 5 STARTS 👇👇--------------------------------------------------------------------------- -->
     <section class="sec5">
 
         <div>
-            <h3>Great budget <br> software</h3>
+            <h3 style="color: #009797;">Great budget <br> software</h3>
         </div>
 
         <div class="images-div">
             <div>
-                <h4>Budgeting <br>
+                <h4 style="color: #009797;">Budgeting <br>
                     that works</h4>
-                <img src="https://goodbudget.com/wp-content/uploads/2019/04/01215544/ic-budgeting-that-works.svg"
-                    alt="">
+                <img style="border-radius: 51%;"
+                    src="https://goodbudget.com/wp-content/uploads/2019/04/01215544/ic-budgeting-that-works.svg" alt="">
             </div>
 
             <div>
-                <h4>Save for <br>
+                <h4 style="color: #009797;">Save for <br>
                     big expenses</h4>
-                <img src="https://goodbudget.com/wp-content/uploads/2019/04/01215543/ic-save-for-big-expenses.svg"
+                <img style="border-radius: 51%;"
+                    src="https://goodbudget.com/wp-content/uploads/2019/04/01215543/ic-save-for-big-expenses.svg"
                     alt="">
             </div>
 
             <div>
-                <h4>Pay off <br>
+                <h4 style="color: #009797;">Pay off <br>
                     debt</h4>
-                <img src="https://goodbudget.com/wp-content/uploads/2019/04/01215543/ic-pay-off-debt.svg" alt="">
+                <img style="border-radius: 51%;"
+                    src="https://goodbudget.com/wp-content/uploads/2019/04/01215543/ic-pay-off-debt.svg" alt="">
             </div>
 
         </div>
@@ -177,26 +220,30 @@
     <!-- ---------------------------------------SECTION 6 STARTS 👇👇--------------------------------------------------------------------------- -->
 
     <section class="sec6">
-        <button class="sec6-btn"><a href="">PRODUCT FEATURES</a></button>
+        <button class="sec6-btn" style="border: solid #009797; "><a href=""
+                style="color: #08dada; background-color: transparent;">PRODUCT
+                FEATURES</a></button>
     </section>
 
 
     <!-- ---------------------------------------SECTION 7 STARTS 👇👇--------------------------------------------------------------------------- -->
-    <div class="colorfull">
-        <section class="sec7">
+    <div class="colorfull" style="background-color: rgb(36,224,164);">
+        <section class="sec7" style="background-color: rgb(184, 241, 223);">
             <div class="sec-left">
-                <h2>Budget software<br>
+                <h2 style="color: #009797;">Budget software<br>
                     built for daily life</h2>
-                <p>Get Money Up iPhone and Android Apps</p>
+                <p style="color: #009797;">Get Money Up iPhone and Android Apps</p>
             </div>
 
 
             <div class="sec-right">
-                <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_365/https://goodbudget.com/wp-content/uploads/2019/05/14224232/laptop3.png"
+                <img class="laptop" src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_365/https://goodbudget.com/wp-content/uploads/2019/05/14224232/laptop3.png"
                     alt="">
-                <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_159,h_277/https://goodbudget.com/wp-content/uploads/2019/04/01223539/iphone.png"
+                <!-- <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_159,h_277/https://goodbudget.com/wp-content/uploads/2019/04/01223539/iphone.png"
                     alt="">
                 <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_132,h_254/https://goodbudget.com/wp-content/uploads/2019/06/10155220/android-v2.png"
+                    alt=""> -->
+                <img class="phone" src="https://static.wixstatic.com/media/731094_7caf7fcfcc0d422da658317e01a1d7b8~mv2.png/v1/fill/w_549,h_405,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Website%20Hero%20Image.png"
                     alt="">
             </div>
         </section>
@@ -205,38 +252,40 @@
         <!-- ---------------------------------------SECTION 8 STARTS 👇👇--------------------------------------------------------------------------- -->
         <section class="sec8">
             <div>
-                <h2>Latest news</h2>
-                <p>Read the latest blog posts</p>
+                <h2 style="color: #ffffff;">Latest news</h2>
+                <p style="color: #ffffff;">Read the latest blog posts</p>
             </div>
 
             <div class="grid">
                 <div>
                     <span>December 19, 2022</span>
                     <br>
-                    <h3><a href="">Thank You</a></h3>
-                    <p>Dear Moneyupers, As we reflect back<br>on this year,..</p>
-                    <a style="font-size: 12px;" href="">Read More</a>
+                    <h3><a style="color: #beb42f;" href="">Thank You</a></h3>
+                    <p style="color: rgb(227, 165, 58);">Dear Moneyupers, As we reflect back<br>on this year,..</p>
+                    <a style=" color: black;font-size: 12px;" href="">Read More</a>
                 </div>
                 <div>
                     <span>December 14, 2022</span>
                     <br>
-                    <h3><a href="">2022 Money Up Feature <br> Recap</a></h3>
-                    <p>Money Up got some updates this year,<br>most of which</p>
-                    <a style="font-size: 12px;" href="">Read More</a>
+                    <h3><a style="color: #beb42f;" href="">2022 Money Up Feature <br> Recap</a></h3>
+                    <p style="color: rgb(227, 165, 58);">Money Up got some updates this year,<br>most of which</p>
+                    <a style=" color: black;font-size: 12px;" href="">Read More</a>
                 </div>
                 <div>
                     <span>December 13, 2022</span>
                     <br>
-                    <h3><a href="">Money Up vs. YNAB. <br> Which budget app is for<br>you?</a></h3>
-                    <p>Budgeting is essential these days, and<br>many folks turn</p>
-                    <a style="font-size: 12px;" href="">Read More</a>
+                    <h3><a style="color: #beb42f;" href="">Money Up vs. YNAB. <br> Which budget app is for<br>you?</a>
+                    </h3>
+                    <p style="color: rgb(227, 165, 58);">Budgeting is essential these days, and<br>many folks turn</p>
+                    <a style="color: black; font-size: 12px;" href="">Read More</a>
                 </div>
                 <div>
                     <span>December 13, 2022</span>
                     <br>
-                    <h3><a href="">Money Up vs.<br>EveryDollar. Which budget<br>app is for you?</a></h3>
-                    <p>Finding a budget app that meets all of<br>your</p>
-                    <a style="font-size: 12px;" href="">Read More</a>
+                    <h3><a style="color: #beb42f;" href="">Money Up vs.<br>EveryDollar. Which budget<br>app is for
+                            you?</a></h3>
+                    <p style="color: rgb(227, 165, 58);">Finding a budget app that meets all of<br>your</p>
+                    <a style="font-size: 12px; color: black;" href="">Read More</a>
                 </div>
             </div>
         </section>
@@ -245,7 +294,7 @@
 
     <!-- ------------------------------------------------------------------SECTION 9 START👇👇--------------------------------------------------------------------------- -->
 
-    <section class="sec9">
+    <section class="sec9" style="background-color: rgb(184, 241, 223);">
         <div class="sec9-img">
             <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_800/https://goodbudget.com/wp-content/uploads/2019/05/06221325/logo-guardian.png"
                 alt="">
@@ -272,15 +321,30 @@
     <!-- ------------------------------------------------------------------SECTION 10 START👇👇--------------------------------------------------------------------------- -->
 
 
-    <section class="sec10">
-        <h2>Get Started Now</h2>
-        <button><a href="#" onclick="window.location.href='./html/login.html'">Sign Up</a></button>
+    <section class="sec10" style="padding-top: 60px ;padding-bottom: 60px;">
+        <div style="display: flex; justify-content: space-evenly;">
+
+            <img width="20%"
+                src="https://www-assets.youneedabudget.com/wp-content/uploads/2022/12/07195152/method_ruletwo-01.svg"
+                alt="image">
+            <div>
+                <h2 style="color: #009797">Get Started Now</h2>
+                <button
+                    style="background-color: #009797; border: none; padding-left: 30px; padding-right: 30px;padding-top: 15px; padding-bottom: 15px; border-radius: 22px;"><a
+                        style="text-decoration: none; color: #ffffff;" href="#"
+                        onclick="window.location.href='./html/login.html'">Sign
+                        Up</a></button>
+            </div>
+            <img style="width: 20%;"
+                src="https://www-assets.youneedabudget.com/wp-content/uploads/2022/12/07195146/method_ruleone-01.svg"
+                alt="image">
+        </div>
     </section>
 
 
     <!-- ------------------------------------------------------------------Footer START👇👇--------------------------------------------------------------------------- -->
 
-    <footer>
+    <footer style="background-color: rgb(36,224,164);">
         <div class="footer-div">
             <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_191,h_191/https://goodbudget.com/wp-content/uploads/2019/03/12114655/budget-that-syncs-couple-e1560365252699.png"
                 alt="">

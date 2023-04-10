@@ -15,6 +15,7 @@ body {
     background-color: black;
 }
 
+/* scrollbar */
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -59,7 +60,6 @@ body {
 }
 
 
-
 .nav-colored {
 
     width: 100%;
@@ -99,7 +99,8 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(36,224,164);;
+    background-color: rgb(36, 224, 164);
+    ;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -135,7 +136,7 @@ body {
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: rgb(36,224,164);
+    background-color: rgb(36, 224, 164);
     color: rgb(13, 20, 90);
     padding: 10px 15px;
     border: none;
@@ -155,11 +156,10 @@ body {
 
 }
 
-/* ---------------------------NAVBAR ENDED--------------------------------------------- */
-/* <!-- ------------------------------------------------------------------SECTION 1 START👇👇--------------------------------------------------------------------------- --> */
 
+/* sec-1 starts here */
 
-.sec-1 {
+.cont {
     background-image: url(https://img.freepik.com/free-vector/hand-drawn-money-pattern-with-coins_23-2149420168.jpg?w=2000);
 }
 
@@ -182,10 +182,7 @@ body {
 }
 
 
-
-
 .main_heading {
-    color: rgb(35, 164, 85);
     background-color: rgba(0, 0, 0, 0);
     font-family: Roboto;
     font-size: 40px;
@@ -202,7 +199,7 @@ body {
 }
 
 .small_para {
-    color: rgb(85, 89, 92);
+    
     background-color: rgba(0, 0, 0, 0);
     font-family: Roboto;
     font-size: 18px;
@@ -223,117 +220,50 @@ body {
 
 /* --------------------------------BUTTON PART---------------------------------------------- */
 
-.button_part {
-    justify-content: center;
-    text-align: center;
-    margin-top: 1%;
+#button-tag {
+    min-width: 150px;
+    background-color: #009797;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-left: 24%;
+    border-radius: 22px;
 }
 
-#button-tag {
-    min-width: 200px;
+#anchor {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: large;
+    font-weight: bold;
+    
 
 }
 
 .button {
-    font-family: "freight-sans-pro", Sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 40px 40px 40px 40px;
+    background-color: #009797;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-left: 24%;
+    border-radius: 22px;
+}
 
+.button .btn {
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    color: #ffffff;
+    display: inline;
 }
 
 
-@media all {
 
-    .animation-grow:active,
-    .animation-grow:hover {
-        transform: scale(1.1);
-    }
-
-    span {
-        border: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    .button-content-wrapper {
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
-
-    span {
-        text-decoration: inherit;
-    }
-
-    .button-text {
-        -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-        -webkit-box-ordinal-group: 11;
-        -ms-flex-order: 10;
-        order: 10;
-        display: inline-block;
-        color: #ffffff;
-    }
-}
 
 /* ---------------------------BUTTON PART ENDS------------------------------------------------------------------ */
-
-/* ----------------------------icons part starts----------------------------------------------------- */
-
-.icon-list-items {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    margin-top: 1%;
-}
-
-ul.icon-list-items.inline-items {
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.icon-list-items.inline-items {
-    margin-right: -8px;
-    margin-left: -8px;
-    margin-right: calc(-10px/2);
-    margin-left: calc(-10px/2);
-}
-
-.inline-items {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.icon-list-item:not(:last-child):after {
-    content: "";
-    height: 100%;
-    border-color: #23a455;
-    border-left-width: 1px;
-    border-left-style: solid;
-}
-
-.icon-list-item:after {
-    right: calc(-10px/2);
-}
-
-.icon-list-item>.icon-list-text {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    color: #23a455;
-}
-
-.icon-span i {
-    color: #23a455;
-}
-
-/* ----------------------------icons part ends----------------------------------------------------- */
 
 
 
@@ -374,7 +304,6 @@ ul.icon-list-items.inline-items {
     font-size: 18px;
     line-height: 26px;
     text-align: left;
-    /* vertical-align: baseline; */
     letter-spacing: normal;
     font-weight: 400;
     text-transform: none;
@@ -719,7 +648,3 @@ footer>p {
     color: #ffffff;
 }
 
-.googleplay {
-    width: 6%;
-    margin-left: 90%;
-}

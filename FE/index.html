@@ -1,81 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money UP</title>
+    <!-- Style sheet -->
     <link rel="stylesheet" href="style/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://kit.fontawesome.com/f90c67bbfa.js" crossorigin="anonymous"></script>
+    <!-- Media Query -->
     <link rel="stylesheet" href="style/medianew.css">
-    <link rel="icon" href="icon.png" type="image/gif">
-
-    <!-- use the font -->
+    <!-- Google font -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- Font awesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Font awesome script -->
+    <script src="https://kit.fontawesome.com/f90c67bbfa.js" crossorigin="anonymous"></script>
+    <!-- ICON -->
+    <link rel="icon"
+        href="https://img.freepik.com/free-vector/stack-money-gold-coins-3d-cartoon-style-icon-coins-with-dollar-sign-wad-cash-currency-flat-vector-illustration-wealth-investment-success-savings-economy-profit-concept_74855-26108.jpg"
+        type="image/gif">
 </head>
 
 <body>
     <!-- ------------------------------------------------NAVBAR STARTS--------------------------------------------- -->
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-
-        <div>
-            <a href="#how">How It Works</a>
-            <a href="#about">What You Get</a>
-            <a href="#skills">The Money Up Way</a>
-            <a href="#projects" onclick="window.location.href='./html/login.html'">LOG IN</a>
-            <a href="#contact" onclick="window.location.href='./html/login.html'">SIGN UP</a>
-
-        </div>
-    </div>
-
-    <div id="main">
-        <button style="color: white;" class="openbtn" onclick="openNav()">☰</button>
-
-    </div>
-
-    <header>
-        <div id="nav-menu">
-            <!-- <p class="hidden"> Money UP </p> -->
-            <img id="nav-img" class="hidden" src="./budgetImages/moneyupbg1.png" alt="logo">
+    <div class="cont"> //conatiner for storing background image
+        <div id="mySidebar" class="sidebar"> //sidebar
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 
             <div>
-                <a href="#how" class="nav-link home">HOW IT WORKS</a>
-                <a href="#about" class="nav-link about">WHAT YOU GET</a>
-                <a href="#skills" class="nav-link skills">THE MONEY UP WAY</a>
-                <a href="#projects" class="nav-link projects" onclick="window.location.href='./html/login.html'">LOG
-                    IN</a>
-                <a href="#contact" class="nav-link contact" onclick="window.location.href='./html/login.html'">SIGN
-                    UP</a>
-                <button style="background-color: transparent;  border: none; color: #ffffff;" onclick="myFunction()"> <i
-                        class="fa-solid fa-moon"></i></button>
-
-
+                <a href="#how">How It Works</a>
+                <a href="#about">What You Get</a>
+                <a href="#skills">The Money Up Way</a>
+                <a href="#projects" onclick="window.location.href='./html/login.html'">LOG IN</a>
+                <a href="#contact" onclick="window.location.href='./html/login.html'">SIGN UP</a>
             </div>
+
         </div>
 
-    </header>
+        <div id="main">
+            <button style="color: white;" class="openbtn" onclick="openNav()">☰</button>
+        </div>
 
-    <!-- -----------------------------------NAVBAR Ends here----------------------------------------------------------------------------------------------------------------- -->
+        <header>
+            <div id="nav-menu">
 
-    <!-- -----------------------------------SECTION 1 STARTS----------------------------------------------------------------------------------------------------------------- -->
+                <!-- LOGO -->
+                <img id="nav-img" class="hidden" src="./budgetImages/moneyupbg1.png" alt="logo">
 
-    <section class="sec-1">
+                <!-- CONTENT -->
+                <div>
+                    <a href="#how" class="nav-link home">HOW IT WORKS</a>
+                    <a href="#about" class="nav-link about">WHAT YOU GET</a>
+                    <a href="#skills" class="nav-link skills">THE MONEY UP WAY</a>
+                    <a href="#projects" class="nav-link projects" onclick="window.location.href='./html/login.html'">LOG
+                        IN</a>
+                    <a href="#contact" class="nav-link contact" onclick="window.location.href='./html/login.html'">SIGN
+                        UP</a>
+                    <button style="background-color: transparent;  border: none; color: #ffffff;"
+                        onclick="myFunction()"> <i class="fa-solid fa-moon"></i></button>
+                </div>
+            </div>
 
-        <div class="top-part">
-            <div>
+        </header>
+
+        <!-- -----------------------------------NAVBAR ENDS HERE----------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- -----------------------------------SECTION 1 STARTS----------------------------------------------------------------------------------------------------------------- -->
+
+        <section class="sec-1">
+            <div class="top-part">
 
                 <div class="video-div">
-
                     <img src="https://www-assets.youneedabudget.com/wp-content/uploads/2022/12/08185651/Frame-8-1-1536x1392.png"
-                        alt="">
-
-
-
-
+                        alt="MOBILE">
 
                     <div class="heading-btn">
                         <h1 class="main_heading" id="id-head">Budget with a why</h1>
@@ -83,38 +81,35 @@
                             Spend, save, and give toward what's important in life
                         </div>
 
-
                         <!-- button part -->
-                        <button id="button-tag"
-                            style="background-color: #009797; border: none; padding-left: 30px; padding-right: 30px;padding-top: 18px; padding-bottom: 18px;  margin-left: 24%;"><a
-                                style="text-decoration: none; font-size: large ; font-weight: bold ; color: #ffffff; text-decoration: solid;"
-                                href="#" onclick="window.location.href='./html/login.html'">Create Your Money Up
-                            </a></button>
-
+                        <button id="button-tag"><a id="anchor" href="#"
+                                onclick="window.location.href='./html/login.html'">Sign
+                                Up</a></button>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- -----------------------------------SECTION 1 ENDS----------------------------------------------------------------------------------------------------------------- -->
-
-    <!-- /* ----------------------------EMPTY SECTION----------------------------------------------------- */ -->
 
 
 
     <!-- ---------------------------------------SECTION 3 STARTS 👇👇--------------------------------------------------------------------------- -->
     <section class="sec3">
+
         <div class="flex">
 
             <div class="flex-div" id="how">
                 <H3 class="flex-div-text">How it works </H3>
             </div>
+
             <div class="button-div">
                 <div class="flex-para">Money Up is a budget tracker for the modern age.Say no more to<br>carrying paper
                     envelopes. This virtual budget program keeps you on<br>
-                    track with family and friends with the time-tested envelope budgeting<br>method.</div>
+                    track with family and friends with the time-tested envelope budgeting<br>method.
+                </div>
+
                 <div>
                     <button class="flex-button">Learn More</button>
                 </div>
@@ -123,23 +118,24 @@
         </div>
 
         </div>
+
     </section>
     <!-- ---------------------------------------SECTION 3 ENDS👆👆--------------------------------------------------------------------------- -->
 
 
 
-
+    <!-- --------------------------------------------VIDEO DIV---------------------------------------------------------------------------------------------------------- -->
 
 
     <video width="100%" autoplay muted loop id="bg-video">
         <source src="./budgetImages/Money-Up-video (online-video-cutter.com).mp4" type="video/mp4">
 
-        Your browser does not support HTML5 video.
+        Your browser does not support video.
     </video>
 
+    <!-- ------------------------------------------------ENDED--------------------------------------------------------------------------------- -->
 
-
-
+    <!-- ---------------------------------------EMPTY----------------------------------- -->
     <section>
         <div class="spacer-inner"></div>
     </section>
@@ -181,6 +177,7 @@
 
     <!-- ---------------------------------------SECTION 5 ENDS👆👆--------------------------------------------------------------------------- -->
 
+
     <!-- ---------------------------------------SECTION 6 STARTS 👇👇--------------------------------------------------------------------------- -->
 
     <section class="sec6">
@@ -192,7 +189,9 @@
 
     <!-- ---------------------------------------SECTION 7 STARTS 👇👇--------------------------------------------------------------------------- -->
     <div class="colorfull" style="background-color: rgb(36,224,164);">
+
         <section class="sec7" style="background-color: rgb(184, 241, 223);">
+
             <div class="sec-left">
                 <h2 style="color: #009797;">Budget software<br>
                     built for daily life</h2>
@@ -209,6 +208,7 @@
                     src="https://static.wixstatic.com/media/731094_7caf7fcfcc0d422da658317e01a1d7b8~mv2.png/v1/fill/w_549,h_405,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Website%20Hero%20Image.png"
                     alt="">
             </div>
+
         </section>
 
 
@@ -290,14 +290,13 @@
             <img width="20%"
                 src="https://www-assets.youneedabudget.com/wp-content/uploads/2022/12/07195152/method_ruletwo-01.svg"
                 alt="image">
+
             <div>
                 <h2 style="color: #009797">Get Started Now</h2>
-                <button
-                    style="background-color: #009797; border: none; padding-left: 30px; padding-right: 30px;padding-top: 15px; padding-bottom: 15px; border-radius: 22px;"><a
-                        style="text-decoration: none; color: #ffffff;" href="#"
-                        onclick="window.location.href='./html/login.html'">Sign
+                <button class="button"><a class="btn" href="#" onclick="window.location.href='./html/login.html'">Sign
                         Up</a></button>
             </div>
+
             <img style="width: 20%;"
                 src="https://www-assets.youneedabudget.com/wp-content/uploads/2022/12/07195146/method_ruleone-01.svg"
                 alt="image">
@@ -386,10 +385,13 @@
 
 
     </footer>
+    <!-- FOOTER ENDED -->
 
 </body>
 
 
 </html>
+
+<!-- SCRIPT -->
 
 <script src="script/index.js"></script>

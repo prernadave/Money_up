@@ -90,6 +90,28 @@ newBudgetRouter.patch("/update/:id",authenticator,async(req,res)=>{
    }
 })
 
+newBudgetRouter.get('/account/balance/:id',authenticator,async(req,res)=>{
+    try {
+    let taskID=req.params.id
+    let userID=req.body.userID
+    let tempTaskData=await newTaskModel.findById({_id:taskID})
+    let tempBankID=tempTaskData.bankID
+    let tempTaskPrize=+tempTaskData.taskprize
+    let tempUpdateAccountTotal=await Accountmodel.findById({_id:tempBankID})
+    let newBalance=tempUpdateAccountTotal.balance-tempTaskPrize
+    if(newBalance<0){
+        res.send({flag:false})
+    }else{
+        res.send({flag:true})
+    }
+        
+    } catch (error) {
+        console.log(error.message)
+    res.status(401).send({msg:"server error"})
+    }
+    
+})
+
 newBudgetRouter.delete('/delete/:id',authenticator,async(req,res)=>{
     try {
         let taskID=req.params.id

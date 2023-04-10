@@ -191,7 +191,9 @@ function renderTaskForUpdate(taskData){
 
     let cancelForUp=document.getElementById("crt-task-cabtn")
     cancelForUp.addEventListener("click",(event)=>{
-        window.location.reload();
+    //    renderAllTask(totalTasks,allAccounts)
+        // window.location.reload()
+        renderFormData(totalTasks,allAccounts)
     })
     let formtask=document.querySelector("form")
     formtask.addEventListener('submit',(event)=>{
@@ -216,7 +218,7 @@ if(flag==false){
     return '#23a455'
 }
 }
-async function  updateCompTask(obj,id){
+async function updateCompTask(obj,id){
     try {
         let updata=await fetch(`${baseURL}/newbudget/update/${id}`,{
         method:"PATCH",
@@ -233,7 +235,6 @@ async function  updateCompTask(obj,id){
             console.log(updata)
         }
     } catch (error) {
-        alert('Server Error')
         console.log(error.message)
     }
     

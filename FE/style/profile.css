@@ -1,8 +1,14 @@
 body{
     margin: 0ch;
     padding: 0%;
-    /* background-image: url("https://images.unsplash.com/photo-1628882860274-0b9a99911691?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGdyZWVuJTIwZ3JhZGllbnR8ZW58MHx8MHx8&w=1000&q=80"); */
-    background-size: cover;
+}
+.foot{
+    background-color:  rgb(35, 164, 85);
+    text-align: center;
+    padding: 5px;
+    margin-top: 80px;
+    
+                                     
 }
 #profile_container{
     display: flex;
@@ -32,7 +38,7 @@ body{
     align-items: center;
 }
 #profile_sub1 div p{
-    width: 80px;
+    width: 70px;
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -66,7 +72,16 @@ body{
 @media all and (max-width: 425px) {
     #profile_container img{
         display: none;
-    }   
+    } 
+    #profile_sub1 div button{
+        width: 55%;
+        font-size: 16px;
+        height: 40px;
+        background-color: white;
+        border: 0ch;
+        border-radius: 5px;
+        border: 2px solid green;
+    }  
     #profile_container{
         display: block;
     }

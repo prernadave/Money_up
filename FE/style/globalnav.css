@@ -12,7 +12,9 @@ a{
     text-decoration: none;
     color: black;
 }
-
+#user_name{
+color:black
+}
 
 #brand_name {
     font-size: 30px;

@@ -68,19 +68,24 @@ function home(){
 let flag="3bar"
 function toogle(){
     let responsive=document.querySelector("#responsive");
-    
+    let profile_container=document.querySelector("#profile_container") || null
+    let foot=document.querySelector(".foot") || null
     let body=document.querySelector("body")
     if(flag=="3bar"){
         threebar.innerHTML=`<i class="fa-solid fa-x"></i>`;
         flag="x";
         responsive.style.display="block"
-        body.style.position="fixed"
+        profile_container?null:body.style.position="fixed"
+        profile_container?profile_container.style.display='none':null
+        foot?foot.style.display='none':null
 
     }else{
         threebar.innerHTML=`<i class="fa-solid fa-bars"></i>`
         responsive.style.display="none"
         flag="3bar";
-        body.style.position="relative";
+        profile_container?null:body.style.position="relative";
+        profile_container?profile_container.style.display='block':null
+        foot?foot.style.display='block':null
     }
 }
 function profile(){

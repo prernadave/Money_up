@@ -21,7 +21,7 @@ for (let i = 0; i < Navadd.length; i++) {
         <li>
             <div><button id="logoutnow" onClick="logout_now()" onmouseover="toggle2on()"> Logout </button>
                 <div id="toggle2" onmouseover="toggle2on()" onmouseout="toggle2off()">
-                    <div>My Profile</div>
+                    <div onClick="profile()">My Profile</div>
                     <div>My Accounts</div>
                     <div>My Budget</div>
                     <div>Customer Service </div>
@@ -34,7 +34,7 @@ for (let i = 0; i < Navadd.length; i++) {
 <div id="responsive">
 <p>Hi, ${sessionStorage.getItem("username")}!</p>
 <div >
-    <div><a href="">My Profile </a></div>
+    <div><a onClick="profile()">My Profile </a></div>
     <div><a href="account.html">My Accounts </a></div>
     <div><a href="budget.html">My Budget </a></div>
     <div><a>Customer Service </a> </div>
@@ -68,6 +68,7 @@ function home(){
 let flag="3bar"
 function toogle(){
     let responsive=document.querySelector("#responsive");
+    
     let body=document.querySelector("body")
     if(flag=="3bar"){
         threebar.innerHTML=`<i class="fa-solid fa-x"></i>`;
@@ -82,4 +83,7 @@ function toogle(){
         body.style.position="relative";
     }
 }
+function profile(){
+    window.location.href = "./profile.html";
+};
 // ************NAVBAR END***********

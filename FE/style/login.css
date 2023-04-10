@@ -6,20 +6,14 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
-/* body{
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-} */
+
 main{
   min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position:relative ;
-  /* padding: 30px; */
+  
 }
 .container{
   position: relative;
@@ -157,7 +151,7 @@ main{
 .form-content .input-box input:focus,
 .form-content .input-box input:valid{
   border-color: rgb(230,222,227,0.9);
-  /* border-color: #7d2ae8; */
+  
 }
 .form-content .input-box i{
   position: absolute;

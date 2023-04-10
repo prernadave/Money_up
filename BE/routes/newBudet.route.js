@@ -16,6 +16,29 @@ newBudgetRouter.get("/alltask",authenticator,async(req,res)=>{
     }
 })
 
+newBudgetRouter.get("/task/:id",authenticator,async(req,res)=>{
+    try {
+        let taskID=req.params.id
+        let task=await newTaskModel.find({_id:taskID})
+        res.send({"task":task})
+    } catch (error) {
+        console.log(error.message)
+        res.status(401).send({msg:"server error"})
+    }
+})
+
+newBudgetRouter.get("/bank/:id",authenticator,async(req,res)=>{
+    try {
+        let bankID=req.params.id
+        let bank=await Accountmodel.find({_id:bankID})
+        res.send({"bank":bank})
+    } catch (error) {
+        console.log(error.message)
+        res.status(401).send({msg:"server error"})
+    }
+})
+
+
 newBudgetRouter.post('/create',authenticator,async(req,res)=>{
     try {
         req.body.createdDate=get_date()
@@ -120,24 +143,3 @@ newBudgetRouter.get("/bankaccount",authenticator,async(req,res)=>{
 module.exports={
     newBudgetRouter
 }
-
-// {
-//     "email":"raj88@gmail.com",
-//     "name":"raj",
-//     "password":"raj",
-//     "mob_no":"8959294632",
-//     "dob":"21/2/2000"
-//   }
-
-// {
-//     "name":"AXIS",
-//      "acc_no":1968465498,
-//      "balance":8000,
-//      "userID":"642fb936c7e914ec71b08234"
-//  }
-
-// {
-//     "bankID":"642fbcc1edd63bef8afa8e9d",
-//     "taskname":"mobile balance",
-//     "taskprize":"450"
-// }

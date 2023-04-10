@@ -120,15 +120,42 @@ compButton.forEach(elem=>{
         if(temp==1){
             flag=true
         }
-       }else{
-        swal("Task is already completed","Your are not able to change the status of task.","error")
-       }
         let obj={
             completed:flag
         }
-        updateData(taskID,obj)
+        checkbalance(taskID,obj)
+       }else{
+        swal("Task is already completed","Your are not able to change the status of task.","error")
+       }
+        
     })
 })
+
+
+async function checkbalance(id,obj){
+    try {
+        let getBalance=await fetch(`${baseURL}/newbudget/account/balance/${id}`,{
+        method:"GET",
+        headers:{  
+            Authorization:sessionStorage.getItem("email")
+        },
+    })
+        if(getBalance.ok){
+          let check=await getBalance.json()
+          if(check.flag){
+            updateData(id,obj)
+          }else{
+           swal("Sorry,Task not Completed","Your account balance is lower that taskprize.","error")
+          }
+        }else{
+            console.log(getBalance)
+        }
+    } catch (error) {
+        alert('Server Error')
+        console.log(error.message)
+    }
+    
+}
 
 let getUpdattBtn=document.querySelectorAll(".task-update-task")
 getUpdattBtn.forEach(elem=>{

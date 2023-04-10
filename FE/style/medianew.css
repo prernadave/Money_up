@@ -69,84 +69,29 @@
 
 /* ---------------------------BUTTON MEDIA QUERY ENDED--------------------------------------------- */
 
-@media all {
-    .button {
-        display: inline-block;
-        line-height: 1;
-        background-color: #818a91;
-        font-size: 15px;
-        padding: 12px 24px;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        color: #fff;
-        fill: #fff;
-        text-align: center;
-        -webkit-transition: all .3s;
-        -o-transition: all .3s;
-        transition: all .3s;
-    }
-
-    .animation-grow {
-        transition-duration: .3s;
-        transition-property: transform;
-    }
-
-    #button-tag {
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        text-decoration: none;
-    }
-
-    #button-tag:visited {
-        color: #5fd657;
-    }
-
-    #button-tag:hover {
-        color: #1f88e4;
-    }
-}
-
-/* -----------------------------------------------------FOR PURPLE  BUTTON-------------------------------------------------------------- */
-@media all {
-    .button {
-        width: auto;
-    }
-
-    .button.size {
-        font-size: 16px;
-        padding: 15px 30px;
-        -webkit-border-radius: 4px;
-        border-radius: 4px;
-        background-color: #8b4dfe;
-    }
-
-    .button:hover,
-    .button:visited {
-        color: #30db1d;
-    }
-
-    .animation-grow:hover {
-        transform: scale(1.1);
-    }
-}
 
 
 
-@media only screen and (min-width: 768px) {
-    #button-tag {
-        min-width: 238px;
-    }
-}
+
 
 
 /* -----------------------------------------------------------MOBILE DEVICES------------------------------------------------------------------------- */
 
 @media (max-width: 468px) {
-    .main_heading {
-        margin-top: 20%;
-        font-size: 25px;
+    
+
+    #id-head{
+     margin-top: 3%;
     }
 
+    #para{
+        display: inline;
+    }
+
+#button-tag{
+    display: none;
+}
+    
     .small_para {
         font-size: 15px;
         margin-top: -2%;
@@ -362,11 +307,11 @@
         width: 50%;
     }
 
-    .phone{
+    .phone {
         width: 50%;
     }
 
-    .laptop{
+    .laptop {
         width: 50%;
     }
 
@@ -616,12 +561,12 @@
         width: 50%;
     }
 
-    .phone{
+    .phone {
         width: 50%;
     }
 
-    .laptop{
-        width: 50%; 
+    .laptop {
+        width: 50%;
     }
 }
 
@@ -772,7 +717,7 @@
         line-height: 26px;
         text-align: center;
 
-        /* vertical-align: baseline; */
+       
         letter-spacing: normal;
         font-weight: 400;
         text-transform: none;
@@ -1151,7 +1096,7 @@
 
     }
 
-    
+
 
     /* --------------------------------BUTTON PART---------------------------------------------- */
 

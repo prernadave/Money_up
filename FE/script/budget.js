@@ -1,5 +1,5 @@
-// let baseURL="https://busy-sock-fawn.cyclic.app"
-let baseURL="http://localhost:9168"
+let baseURL="https://busy-sock-fawn.cyclic.app"
+// let baseURL="http://localhost:9168"
 
 let loggedInUser = (sessionStorage.getItem("email"))
 if(!loggedInUser){    
@@ -71,7 +71,7 @@ function renderBlank(){
     let showComp=document.getElementById("comptaskatag")
     showComp.innerHTML=""
     showComp.innerHTML=`
-    <p>You Didn't created any Created...</p>
+    <p>You Didn't Created Any Account...</p>
     <p>For Creating Account <a href="./account.html"" id="clickhere">Click here...</a></p>
 
     `

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money UP</title>
+    <link rel="stylesheet" href="style/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/f90c67bbfa.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/globalnav.css">
+    <link rel="icon" href="icon.png" type="image/gif">
+</head>
+
+<body>
+    <div id="render_navbar"></div>
+    <div id="profile_container" >
+        <div id="profile_sub2" data-aos="fade-up-right">
+            <p>Your Profile</p><img
+                src="https://img.freepik.com/premium-vector/software-developer-programmer_24908-49156.jpg?w=2000">
+        </div>
+        <div id="profile_sub1" data-aos="fade-up-left">
+            <div>
+                <p>Name: </p><button id="profile_name">Chetan Bhagat</button>
+            </div>
+            <div>
+                <p>Email: </p><button id="email">Chetan Bhagat</button>
+            </div>
+            <div>
+                <p>Mobile: </p><button id="mob_no">Chetan Bhagat</button>
+            </div>
+            <div>
+                <p>Date of birth: </p><button id="dob">Chetan Bhagat</button>
+            </div>
+            <button onClick="goback()" id="profile_goback">Go Back <i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="./script/globalnavbar.js"></script>
+<script src="./script/profile.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>

@@ -75,7 +75,10 @@ async function loginFun(event){
               "success"
             );
             sessionStorage.setItem("username",datares.username)
-            sessionStorage.setItem("email",obj.email)
+            sessionStorage.setItem("email",obj.email);
+            sessionStorage.setItem("mob_no",datares.userData.mob_no);
+            sessionStorage.setItem("dob",datares.userData.dob);
+            // console.log(datares.userData)
             window.location.href = "../home.html";
 
         return;

@@ -9,11 +9,7 @@ function closeNav() {
 }
 let sec = document.getElementsByClassName('sec-1')
 
-function myFunction() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
 
-}
 
 
 

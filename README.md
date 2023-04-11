@@ -2,7 +2,6 @@
 
 <h1 align="center">MONEY UP</h1>
 <p align="center">
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/svdLQLq/icon.png" alt="icon"  width="20%" border="0" align="center"></a>
 </p>
 
 
@@ -10,19 +9,37 @@
 <h3 align="center" >Money Up is a budget tracker for the modern age.Say no more to carrying paper
                     envelopes. This virtual budget program keeps you on
                     track with family and friends with the time-tested envelope budgeting method.</h3>
-                    
+            
 <p align="center">
-<a href="https://ibb.co/kQWRBvK"><img src="https://i.ibb.co/86SWstM/money-up.png" alt="money-up" border="0" /></a>
+<a href="https://ibb.co/k28J0rm"><img src="https://i.ibb.co/hFWcHnY/money-1.png" alt="money-1" border="0"></a><br /><br />
 </p>
 
 <p align="center">
-<a  href="https://ibb.co/vwdDz7g"><img src="https://i.ibb.co/PmWtC73/Money-up-second.png" alt="Money-up-second" border="0"></a>
+<a href="https://ibb.co/7gHdFmr"><img src="https://i.ibb.co/pWgBpF4/money-2.png" alt="money-2" border="0"></a><br /><br />
 </p>
+
+<p align="center">
+<a href="https://ibb.co/PmNHPfn"><img src="https://i.ibb.co/ZLVDFkP/money-3.png" alt="money-3" border="0"></a><br /><br />
+</p>
+
+<p align="center">
+<a href="https://ibb.co/41MW84N"><img src="https://i.ibb.co/GHk7WCP/login-money.png" alt="login-money" border="0"></a><br /><br />
+</p>
+
+<p align="center">
+<a href="https://ibb.co/gyDFQPJ"><img src="https://i.ibb.co/NxLnfmK/home-money.png" alt="home-money" border="0"></a><br /><br />
+</p>
+
+<p align="center">
+<a href="https://ibb.co/HK1BsQF"><img src="https://i.ibb.co/TwpYS5v/money-task.png" alt="money-task" border="0"></a><br /><br />
+</p>
+
+# Live Demo - https://money-up.netlify.app/
 
 ## Tech Stack
 
-### Client: HTML|CSS|JavaScript
-### Server: NodeJS|Express|MongoDB|
+### Client: HTML | CSS | JavaScript
+### Server: NodeJS | Express | MongoDB | Redis
 
 ## Frontend Part
  - WELCOMING PAGE
@@ -47,6 +64,7 @@ Redis
 - create budget
 - edit and delete budget
 - add bank 
+- Logout
 
 ## How it works?
 - Click on link

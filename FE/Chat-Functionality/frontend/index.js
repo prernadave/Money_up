@@ -22,7 +22,6 @@ window.onload = function () {
   left_tone = new Audio("./frontend/left_tone.mp3");
   //  left_tone.autoplay="true";
   defaultMessage(name);
-  
 };
 message_submit_button.disabled = true;
 message_input.addEventListener("input", () => {
@@ -41,7 +40,6 @@ function defaultMessage(name) {
   // appendData(name,message,left)
 }
 
-
 function appendData(name, message, position) {
   if (message !== "joined the chat." && message !== "left the chat.") {
     container.innerHTML += `
@@ -56,10 +54,9 @@ function appendData(name, message, position) {
   container.scrollTo(0, container.scrollHeight);
 }
 
- name =
+name =
   prompt("Enter your name to join the chat.") ||
   `Guest-${Math.floor(Math.random() * 100000 + 1)}`;
-  
 
 socket.emit("new-user-joined", name);
 

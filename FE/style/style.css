@@ -47,6 +47,7 @@ body {
 #nav-img {
     width: 10%;
     height: 60px;
+    cursor: pointer;
 }
 
 #bg-video {

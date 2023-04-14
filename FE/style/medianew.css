@@ -187,8 +187,9 @@
     .flex-button {
         text-align: center;
         margin-top: 5%;
-
+        cursor: pointer;
     }
+
 
     .sec5 {
         display: inline;
@@ -332,7 +333,7 @@
     }
 
     .flexlist {
-
+        cursor: pointer;
         width: 95%;
         margin: auto;
         margin-bottom: 2%;

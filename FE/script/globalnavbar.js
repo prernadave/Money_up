@@ -1,7 +1,9 @@
 // *****RENDER NAVBAR*********
 let Navadd = document.querySelectorAll("#render_navbar");
 for (let i = 0; i < Navadd.length; i++) {
-    Navadd[i].innerHTML = `<div id="navbar"onmouseleave="toogle1off()" onmouseout="toggle2off()" >
+    Navadd[
+      i
+    ].innerHTML = `<div id="navbar"onmouseleave="toogle1off()" onmouseout="toggle2off()" >
     <ul onClick="home()" ><img id="gif" src="https://thumbs.gfycat.com/PleasingSelfreliantAustraliankelpie.webp">
         <li id="brand_name">Money Up</li>
     </ul>
@@ -12,7 +14,7 @@ for (let i = 0; i < Navadd.length; i++) {
         <li><a href="" onmouseover="toogle1on()">Help <i class="fa-sharp fa-solid fa-caret-down"></i></a>
             <div id="toggle1" onmouseleave="toogle1off()">
                 <a href="Userguide.html"> User Guide <i class="fa-sharp fa-solid fa-circle-info"></i></a>
-                <a href="">Get Live Support <i class="fa-solid fa-comments"></i></a>
+                <a href="" onclick = "chat()" >Get Live Support <i class="fa-solid fa-comments"></i></a>
             </div>
         </li>
     </ul>
@@ -41,7 +43,7 @@ for (let i = 0; i < Navadd.length; i++) {
 </div>
 <button id="logoutnow" onClick="logout_now()" onmouseover="toggle2on()"> Logout </button>
 </div>
-</div>`
+</div>`;
 }
 let toggle1 = document.querySelector("#toggle1");
 let toggle2 = document.querySelector("#toggle2");
@@ -91,4 +93,10 @@ function toogle(){
 function profile(){
     window.location.href = "./profile.html";
 };
+
+function chat() {
+    window.open("https://unique-sunflower-716f0a.netlify.app/");
+}
+
+
 // ************NAVBAR END***********

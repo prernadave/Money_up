@@ -15,6 +15,7 @@ header {
   justify-content: space-between;
   padding: 0 50px;
   font-family: "Times New Roman", Times, serif;
+  /* border: 1px solid red; */
 }
 header h2 {
   color: #457d58;
@@ -24,7 +25,38 @@ header h2 {
   display: block;
   margin: auto;
   object-fit: cover;
+  cursor: pointer;
 }
+
+#vc-img{
+  width: 30px;
+  cursor: pointer;
+  /* border: 1px solid red; */
+  position: relative;
+  /* margin-left: 90%; */
+}
+
+#vc{
+  /* margin-left: 90px; */
+}
+
+
+
+
+#vc-text{
+  /* border: 1px solid red; */
+  visibility: hidden;
+  position: absolute;
+  
+}
+
+#vc-img:hover  ~ #vc-text{
+  visibility: visible;
+  color: white;
+  font-size: larger;
+  margin-top: 10px;
+}
+
 
 #container {
   margin: auto;
@@ -114,7 +146,19 @@ form input:nth-child(2) {
   header {
     padding: 0 10px;
   }
+
+
+
+  
+#vc-img:hover  ~ #vc-text{
+  visibility: visible;
+  color: white;
+  font-size: small;
+  margin-top: 10px;
+}
+
   header h2 {
+    display: none;
     font-size: 15px;
   }
   .message {
@@ -124,3 +168,4 @@ form input:nth-child(2) {
     font-size: 12px;
   }
 }
+

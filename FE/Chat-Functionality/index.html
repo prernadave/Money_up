@@ -10,7 +10,11 @@
       href="./frontend/favicon.ico"
       type="image/x-icon"
     /> -->
-    <link rel="icon" href="./frontend/favicon_io/fav-removebg-preview.png" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="./frontend/favicon_io/fav-removebg-preview.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./frontend/style.css" />
     <script
       defer
@@ -23,9 +27,20 @@
   <body>
     <header>
       <h2>Money Up</h2>
-      <nav id="logo">
+      <nav id="logo" onclick="window.open('https://money-up.netlify.app/')">
         <img src="./frontend/moneyupbg1.png" alt="Chat Logo" />
       </nav>
+
+      <div id="vc">
+        <img
+          id="vc-img"
+          src="./frontend/video-call.png"
+          alt="video call"
+          onclick="window.open('https://glowing-snickerdoodle-052320.netlify.app/')"
+        />
+        <h3 id="vc-text">Make a Video Call</h3>
+      </div>
+
       <h2>Customer Service</h2>
     </header>
 

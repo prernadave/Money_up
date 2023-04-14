@@ -21,6 +21,7 @@ navigator.mediaDevices
     addStream(video, stream);
     UserSas = stream;
 
+    
     //When Someone call us
     myPeer.on("call", (call) => {
       //--For receiving Calls--
@@ -162,5 +163,4 @@ let hangup = document.getElementById("hangup");
 hangup.onclick = () => {
   // console.log("Call cut");
   window.open("https://money-up.netlify.app/");
-  
 };

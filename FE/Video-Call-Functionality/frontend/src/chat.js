@@ -21,7 +21,6 @@ navigator.mediaDevices
     addStream(video, stream);
     UserSas = stream;
 
-    
     //When Someone call us
     myPeer.on("call", (call) => {
       //--For receiving Calls--

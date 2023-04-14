@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Up Customer Service</title>
+    <!-- <link
+      rel="shortcut icon"
+      href="./frontend/favicon.ico"
+      type="image/x-icon"
+    /> -->
+    <link rel="icon" href="./frontend/favicon_io/fav-removebg-preview.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./frontend/style.css" />
+    <script
+      defer
+      src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+      integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./frontend/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h2>Money Up</h2>
+      <nav id="logo">
+        <img src="./frontend/moneyupbg1.png" alt="Chat Logo" />
+      </nav>
+      <h2>Customer Service</h2>
+    </header>
+
+    <div id="container">
+      <div id="date_section" class="message center"></div>
+    </div>
+
+    <div id="send_form">
+      <form id="send_message">
+        <input
+          type="text"
+          name="message_input"
+          id="message_input"
+          placeholder="Type a message"
+        />
+        <input type="submit" id="message_submit_button" value="Send" />
+      </form>
+    </div>
+  </body>
+</html>

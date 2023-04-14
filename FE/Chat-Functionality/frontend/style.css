@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: Verdana,sans-serif;
+    line-height: 1.5;
+    background-color: #F0F2F5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    padding : 0 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+header h2{
+    color:#457d58 ;
+}
+#logo img   {
+    width: 150px;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+
+#container{
+    margin: auto;
+    height: 75vh;
+    max-height: 75vh;
+    padding: 20px 10px;
+    background-image: url("./bg2.png ");
+    overflow-y: auto;
+}
+.message{
+    padding: 4px 10px;
+    border-radius: 6px; 
+    margin: 10px;   
+    background-color: #F0F2F5;
+    display: block;
+    width: fit-content;
+    max-width: 45%;
+    box-shadow: rgb(193 193 193 / 32%) 0px 1px 4px;
+}
+.user_name{
+    font-weight: 700;
+    color: #22785b;
+}
+.left{
+    float: left;
+    clear: both;
+    min-width: 10%;
+}
+.right{
+    float: right;
+    clear: both;
+    min-width: 10%;
+}
+.time{
+    color: #5B6E80;
+    float: right;
+    padding-top: 2px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+.center{
+    display: block;
+    /* width: 100%; */
+    margin: auto; 
+    margin-top: 10px;   
+    margin-bottom: 10px;   
+    clear: both;
+}
+#send_form{
+    position: absolute;
+    bottom:0px;
+    padding: 15px 30px;
+    background-color: #F0F2F5;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+form{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly   ;
+}
+form input:nth-child(1){
+    width: 88%;
+}
+form input{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 2px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+form input:focus, form textarea:focus, form select:focus{
+    outline: none;
+}
+form input:nth-child(2){
+    width: 7%;
+    min-width: 70px;
+    background-color: #457d58 ;
+    color: white;
+    cursor: pointer;
+}
+@media (min-width: 180px) and (max-width: 568px){
+    header{
+        padding : 0 10px;
+    }
+    header h2{
+        font-size : 15px;
+    }
+    .message{
+        font-size: 14px;
+    }
+    .user_name{
+        font-size: 12px;
+    }
+}

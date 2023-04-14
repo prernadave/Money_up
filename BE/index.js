@@ -43,6 +43,7 @@ app.get("/", (req, res) => {
 });
 
 
+
 //CONNECTING TO THE SERVER
 app.listen(process.env.port, async () => {
     try {

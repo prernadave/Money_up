@@ -1,4 +1,3 @@
-// require("dotenv").config({ path: "/Users/owaisazmi/Desktop/melted-group-7444/Backend/.env" });
 require("dotenv").config();
 const express = require("express");
 const { Server } = require("socket.io");

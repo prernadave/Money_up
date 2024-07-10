@@ -1,4 +1,7 @@
-const socket = io("https://openchatbackend.onrender.com", {
+// const socket = io("https://openchatbackend.onrender.com", {
+//   transports: ["websocket"],
+// });
+const socket = io("http://localhost:5500", {
   transports: ["websocket"],
 });
 

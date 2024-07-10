@@ -15,8 +15,8 @@ app.get("/about", (req, res) => {
   res.send("aboutpage");
 });
 
-httpServer.listen(4400, () => {
-  console.log("Listening on 4400");
+httpServer.listen(5500, () => {
+  console.log("Listening on 5500");
 });
 
 // Combining http server using express with web socket.io server
